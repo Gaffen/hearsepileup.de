@@ -15,12 +15,12 @@
 #lightbox img{ border: none; clear: both;} 
 #overlay img{ border: none; }
 
-#overlay{ background-image: url(overlay.png); }
+#overlay{ background-image: url(http://www.hearsepileup.co.uk/images/overlay.png); }
 
 * html #overlay{
 	background-color: #333;
-	back\ground-color: transparent;
-	background-image: url(blank.gif);
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="overlay.png", sizingMethod="scale");
+	background-color: transparent;
+	background-image: url(http://www.hearsepileup.co.uk/images/blank.gif);
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.hearsepileup.co.uk/images/overlay.png", sizingMethod="scale");
 	}
 	
