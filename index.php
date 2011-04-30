@@ -20,6 +20,19 @@ _-_-                                          -__ /\\     ,,
 		<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
 		<script type="text/javascript" src="script/lightbox.js"></script>
 		<!--<link rel="alternate" type="application/rss+xml" title="rss_feed_title" href="link_to_your_rss_feed" />-->
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-9918791-5']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
 	</head>
 	
 	<body>
