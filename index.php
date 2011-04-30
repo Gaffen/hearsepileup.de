@@ -17,6 +17,8 @@ _-_-                                          -__ /\\     ,,
 		<meta content="Matt, Gaffen, Matthew, Music, QOTSA, Dead Weather, Tony Hoang, Wojciech Tybus, Birthday Party, Tone-Deaf Messiah" name="keywords" />
 		<link rel="stylesheet" type="text/css" href="css/screen.css" />
 		<link rel="shortcut icon" href="favicon.png" />
+		<link rel="stylesheet" href="lightbox.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="lightbox.js"></script>
 		<!--<link rel="alternate" type="application/rss+xml" title="rss_feed_title" href="link_to_your_rss_feed" />-->
 	</head>
 	
