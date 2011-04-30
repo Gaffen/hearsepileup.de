@@ -1,6 +1,7 @@
 <h1>NEXT GIG:</h1>
-<p><strong><a href="/images/flyers/11052011.jpg" rel="lightbox" title="DOA @ The Comedy 11/05/2011">HEARSE PILEUP</strong><br /> 
-play Dead or Alive @ The Comedy,</a><br />
-7 Oxendon St., London, SW1Y 4EE <br />
+<p><strong><a href="/images/flyers/11052011.jpg" rel="lightbox" title="DOA @ The Comedy 11/05/2011">HEARSE PILEUP</strong><br /> </a>
+play Dead or Alive @ The Comedy,<br />
+<a href="http://maps.google.co.uk/maps?f=q&source=s_q&hl=en&geocode=&q=7+Oxendon+St.,+London,+SW1Y+4EE+&ie=UTF8&hq=&hnear=7+Oxendon+St,+London+SW1Y+4EE,+United+Kingdom&z=16">7 Oxendon St., London, SW1Y 4EE</a> <br />
 (next door to The Comedy Store; tubes: Leicester Sq. & Piccadilly Circus) <br />
 Wednesday 11th May; 8.00pm</p>
+<p><a href="/images/flyers/11052011.jpg" rel="lightbox" title="DOA @ The Comedy 11/05/2011">&pound;5 entry with this flyer</a>
