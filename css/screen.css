@@ -19,3 +19,8 @@ a {
 	width: 600px;
 	margin: auto;
 }
+
+#content {
+	width: 300px;
+	margin-left: 50px;
+}
