@@ -29,3 +29,9 @@ a {
 	margin-top: 50px;
 	margin: auto;
 }
+
+#footer {
+	width: 100px;
+	margin: auto;
+	font-size: 9pt;
+}

@@ -33,6 +33,7 @@ _-_-                                          -__ /\\     ,,
 			<div id="content"><?php include("php/gigs.php"); ?>
 			</div>
 			<div id="footer">
+			<a href="http://www.facebook.com/Hearse.Pileup">www.facebook.com/Hearse.Pileup</a>
 			</div>
 		</div>
 	</body>
