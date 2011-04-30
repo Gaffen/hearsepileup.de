@@ -38,8 +38,8 @@
 //
 
 // If you would like to use a custom loading image or close button reference them in the next two lines.
-var loadingImage = 'loading.gif';		
-var closeButton = 'close.gif';		
+var loadingImage = 'http://www.hearsepileup.co.uk/images/loading.gif';		
+var closeButton = 'http://www.hearsepileup.co.uk/images/close.gif';		
 
 
 
