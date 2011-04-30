@@ -8,6 +8,7 @@ h1 {
 }
 
 #holder {
-	margin-top: 50px;
+	padding-top: 100px;
+	width: 600px;
 	margin: auto;
 }
