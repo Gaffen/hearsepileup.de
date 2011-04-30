@@ -15,8 +15,6 @@ a {
 }
 
 #wrapper{
-	text-align: center;
-	/*margin: auto;*/
 }
 
 #holder {
@@ -29,4 +27,5 @@ a {
 	width: 300px;
 	margin-left: 200-px;
 	margin-top: 50px;
+	margin: auto;
 }
