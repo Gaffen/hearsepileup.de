@@ -6,3 +6,8 @@ body {
 h1 {
 	color: #FFFFFF;
 }
+
+#holder {
+	margin-top: 50px;
+	margin: auto;
+}
