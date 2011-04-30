@@ -25,7 +25,7 @@ a {
 
 #content {
 	width: 300px;
-	margin-left: 200-px;
+	margin-left: -200px;
 	margin-top: 50px;
 	margin: auto;
 }
