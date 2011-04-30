@@ -11,7 +11,7 @@ _-_-                                          -__ /\\     ,,
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>HEARSE PILUP... COMING BACK FROM THE DEAD... SOON...</title>
+		<title>HEARSE PILEUP... COMING BACK FROM THE DEAD... SOON...</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 		<meta content="Hearse Pileup; Zombie Rock and Roll" name="description" />
 		<meta content="Matt, Gaffen, Matthew, Music, QOTSA, Dead Weather, Tony Hoang, Wojciech Tybus, Birthday Party, Tone-Deaf Messiah" name="keywords" />
@@ -33,7 +33,8 @@ _-_-                                          -__ /\\     ,,
 			<div id="content"><?php include("php/gigs.php"); ?>
 			</div>
 			<div id="footer">
-			<a href="http://www.facebook.com/Hearse.Pileup" target="_blank">www.facebook.com/Hearse.Pileup</a>
+			<p><a href="http://www.facebook.com/Hearse.Pileup" target="_blank">www.facebook.com/Hearse.Pileup</a><p>
+			<p class="ninja">Hearsepileup.co.uk is an open source website, with its code released on <a href="https://github.com/Gaffen/hearsepileup.co.uk" target="_blank">github.com</p></a>
 			</div>
 		</div>
 	</body>
