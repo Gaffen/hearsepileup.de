@@ -332,10 +332,6 @@ function initLightbox()
 		objLoadingImage.setAttribute('id','loadingImage');
 		objLoadingImage.style.position = 'absolute';
 		objLoadingImage.style.zIndex = '150';
-		objLightbox.style.background-color = '#453657';
-		objLightbox.style.border-style = 'solid';
-		objLightbox.style.border-width = '1px';
-		objLightbox.style.border-color = '#241F2B';
 		objLoadingImageLink.appendChild(objLoadingImage);
 		imgPreloader.onload=function(){};	//	clear onLoad, as IE will flip out w/animated gifs
 
