@@ -332,8 +332,11 @@ function initLightbox()
 		objLoadingImage.setAttribute('id','loadingImage');
 		objLoadingImage.style.position = 'absolute';
 		objLoadingImage.style.zIndex = '150';
+		objLightbox.style.background-color = '#453657';
+		objLightbox.style.border-style = 'solid';
+		objLightbox.style.border-width = '1px';
+		objLightbox.style.border-color = '#241F2B';
 		objLoadingImageLink.appendChild(objLoadingImage);
-
 		imgPreloader.onload=function(){};	//	clear onLoad, as IE will flip out w/animated gifs
 
 		return false;
@@ -347,6 +350,7 @@ function initLightbox()
 	objLightbox.style.display = 'none';
 	objLightbox.style.position = 'absolute';
 	objLightbox.style.zIndex = '100';	
+
 	objBody.insertBefore(objLightbox, objOverlay.nextSibling);
 	
 	// create link

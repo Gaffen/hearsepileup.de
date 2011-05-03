@@ -17,13 +17,6 @@
 
 #overlay{ background-image: url(http://www.hearsepileup.co.uk/images/overlay.png); }
 
-#loadingImage{
-	background-color: #453657;
-	border-style: solid;
-	border-width: 1px;
-	border-color: #241F2B;
-}
-
 * html #overlay{
 	background-color: #333;
 	background-color: transparent;
