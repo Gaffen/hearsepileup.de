@@ -1,7 +1,7 @@
 <h1>NEXT GIG:</h1>
-<p><strong><a href="images/flyers/11052011.png" rel="lightbox" title="DOA @ The Comedy 11/05/2011">HEARSE PILEUP</strong><br /> </a>
-play Dead or Alive @ The Comedy,<br />
-<a href="http://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=7+Oxendon+St.,+London,+SW1Y+4EE+&amp;ie=UTF8&amp;hq=&amp;hnear=7+Oxendon+St,+London+SW1Y+4EE,+United+Kingdom&amp;z=16" target="_blank">7 Oxendon St., London, SW1Y 4EE</a> <br />
-(next door to The Comedy Store; tubes: Leicester Sq. &amp; Piccadilly Circus) <br />
-Wednesday 11th May; 8.00pm</p>
-<p><a href="php/11052011.php" title="DOA @ The Comedy 11/05/2011">&pound;5 entry with this flyer</a>
+<p><strong><a href="images/flyers/22052011.png" rel="lightbox" title="SE13 RECORDS @ The HOB 22/05/2011">HEARSE PILEUP</strong><br /> </a>
+SE13 Records @ The Pub,<br />
+<a href="http://maps.google.co.uk/maps?ie=UTF8&q=the+hob+forest+hill&fb=1&gl=uk&hq=the+hob+forest+hill&hnear=0x48761b5dedeb3be5:0x54f085cb18ec65c9,Islington&hl=en&view=map&cid=2754844324650035941&z=16&iwloc=A" target="_blank">7 Devonshire Road, London, SE23 3HE</a> <br />
+(Opposite Forest Hill Rail Station) <br />
+Sunday 22th May; 4.00pm</p>
+<p><a href="php/22052011.php" title="DOA @ The Comedy 11/05/2011">&pound;2 entry with this flyer</a>
