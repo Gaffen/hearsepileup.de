@@ -18,7 +18,7 @@ _-_-                                          -__ /\\     ,,
 		<link rel="stylesheet" type="text/css" href="css/screen.css" />
 		<link rel="shortcut icon" href="favicon.png" />
 		<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/reset.css" type="text/css" />
 		<script type="text/javascript" src="script/lightbox.js"></script>
 		<!--<link rel="alternate" type="application/rss+xml" title="rss_feed_title" href="link_to_your_rss_feed" />-->
 		<script type="text/javascript">
