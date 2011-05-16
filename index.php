@@ -37,9 +37,7 @@ _-_-                                          -__ /\\     ,,
 	
 	<body>
 		<div id="wrapper">
-			<div id="holder">
-				<img src="images/comingback.png" alt="Coming back from the dead... Soon" />
-			</div>
+			<img id="holder" src="images/comingback.png" alt="Coming back from the dead... Soon" />
 			<div id="header">
 				<div id="navbar"></div>
 			</div>
