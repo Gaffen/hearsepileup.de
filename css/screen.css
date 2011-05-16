@@ -28,9 +28,10 @@ a {
 
 #holder {
 	padding-top: 100px;
-	margin: auto;
-	padding-bottom: 50px;
 	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 50px;
 }
 
 #content {
