@@ -30,6 +30,7 @@ a {
 	padding-top: 100px;
 	margin: auto;
 	padding-bottom: 50px;
+	display: block;
 }
 
 #content {
