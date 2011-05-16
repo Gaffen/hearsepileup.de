@@ -30,8 +30,7 @@ a {
 #holder {
 	padding-top: 100px;
 	display: block;
-	margin-right: auto;
-	margin-left: auto;
+	margin: 0 auto;
 	padding-bottom: 50px;
 }
 
