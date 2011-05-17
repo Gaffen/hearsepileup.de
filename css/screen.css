@@ -48,3 +48,7 @@ a {
 	/*margin: auto;*/
 	font-size: 9pt;
 }
+
+#gigs {
+	text-align: left;
+}
