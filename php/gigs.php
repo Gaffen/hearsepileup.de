@@ -1,3 +1,4 @@
+<div id="gigs">
 <h1>NEXT GIG:</h1>
 <p><strong><a href="images/flyers/22052011.png" rel="lightbox" title="SE13 RECORDS @ The HOB 22/05/2011">HEARSE PILEUP</strong><br /> </a>
 Play SE13 Records @ The Hob,<br />
@@ -5,3 +6,4 @@ Play SE13 Records @ The Hob,<br />
 (Opposite Forest Hill Rail Station) <br />
 Sunday 22th May; 4.00pm</p>
 <p><a href="php/22052011.php" title="DOA @ The Comedy 11/05/2011">&pound;2 entry with this flyer</a>
+</div>
