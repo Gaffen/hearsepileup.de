@@ -52,8 +52,7 @@ _-_-                                          -__ /\\     ,,
         <iframe width="460" height="264" src="http://www.youtube.com/embed/7JmL0z-bJR0?rel=0" frameborder="0" allowfullscreen></iframe>
         <div id="gigs">
         <h1>Hearse Pileup's next gig:</h1>
-        <p>The Hearse Pileup website is currently being refurbished, it will take a little longer gefore our gig linstings are available once again.</p>
-        <p>In the mean time we can announce that our next gig is at the Macbeth in Shoreditch on Wednesday the 16th November. £7 entry, £5 guestlist. Reserve guestlist places <a href="http://www.facebook.com/Hearse.Pileup">on our facebook page</a>.</p>
+        <script src="http://feeds.feedburner.com/HearsePileup?format=sigpro" type="text/javascript" ></script>
         </div>
 			<h2 class="ninja">Hearsepileup.co.uk is an open source website, with its code released on <a href="https://github.com/Gaffen/hearsepileup.co.uk" target="_blank">github.com</h2></a>
         </div>
