@@ -265,12 +265,12 @@ header {
     width: 100%;
     height: 252px;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: top center;
     top: 0px;
 }
 
 #obituaries {
-    position: fixed;
+    position: absolute;
     height:100px;
     top: 300px;
     right: 0px;
