@@ -285,6 +285,9 @@ header {
     padding: 0px;
 }
 
+#creditfooter { 
+    display: none; 
+
 .ninja {
     color:#333333;
     font-size: 10px;
