@@ -49,7 +49,7 @@ _-_-                                          -__ /\\     ,,
             <a href="http://www.youtube.com/user/tonedeafmessiah"><img src="images/HearsePileupYoutube.png" alt="Watch us, for whatever reasons you might have..." /></a>
         </div>
         <div id="content" role="main">
-        <iframe width="460" height="264" src="http://www.youtube.com/embed/7JmL0z-bJR0?rel=0" frameborder="0" allowfullscreen></iframe>
+        <iframe width="460" height="264" src="http://www.youtube.com/embed/7JmL0z-bJR0?wmode=opaque&rel=0" frameborder="0" allowfullscreen></iframe>
         <div id="gigs">
         <h1>Hearse Pileup's next gig:</h1>
         <script src="http://feeds.feedburner.com/HearsePileup?format=sigpro" type="text/javascript" ></script>
