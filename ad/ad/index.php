@@ -26,6 +26,7 @@ _-_-                                          -__ /\\     ,,
 	<meta content="Matt, Gaffen, Matthew, Music, QOTSA, Dead Weather, Tony Hoang, Wojciech Tybus, Birthday Party, Tone-Deaf Messiah" name="keywords" />
 	<link rel="stylesheet" type="text/css" href="css/HearseLooks.css" />
 	<link rel="stylesheet" type="text/css" href="css/lightbox.css" />
+	<link rel="stylesheet" type="text/css" href="css/fonts.css" />
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -36,26 +37,37 @@ _-_-                                          -__ /\\     ,,
 
 <body>
     <div id="wrapper">
-        <header>
-            <div id="sky">&nbsp
-            </div>
-            <div id="logo">&nbsp
-            </div>
-        </header>
-        <div id="obituaries">
-            <a href="http://twitter.com/#!/HearsePileup"><img src="images/HearsePileupTwitter.png" alt="Squark Squark" /></a>
-            <a href="http://www.facebook.com/Hearse.Pileup"><img src="images/HearsePileupFacebook.png" alt="'Like' us, but surely you already do?!'" /></a>
-            <a href="http://soundcloud.com/hearse-pileup"><img src="images/HearsePileupSoundcloud.png" alt="What you came here for; the music" /></a>
-            <a href="http://www.youtube.com/user/tonedeafmessiah"><img src="images/HearsePileupYoutube.png" alt="Watch us, for whatever reasons you might have..." /></a>
-        </div>
-        <div id="content" role="main">
-        <iframe width="460" height="264" src="http://www.youtube.com/embed/7JmL0z-bJR0?wmode=opaque&rel=0" frameborder="0" allowfullscreen></iframe>
-        <div id="gigs">
-        <h1>Hearse Pileup's next gig:</h1>
-        <script src="http://feeds.feedburner.com/HearsePileup?format=sigpro" type="text/javascript" ></script>
-        </div>
+	<div id="content" role="main">
+	    <header id="nav">
+		<div id="rightnav"><h2>GIGS</h2><h2>GALLERY</h2><h2>MUSIC</h2></div>
+		<div id="logo">
+		    <img src="images/HearsePileupLogo.png" alt="Hearse Pileup" />
+		</div>
+		<div id="leftnav"><h2>MERCH</h2><h2>CONTACT</h2></div>
+	    </header>
+	    <div id="gaffangry">
+	    </div>
+	    <div id="nextgig">
+		<h4>NEXT GIG</h4>
+		<p>17th April @ Nambuca</p>
+		<p><a href="#">Click for Details</a></p>
+	    </div>
+	    <div id="feature">
+		<h4>COMING SOON</h4>
+		<h3>PRETTY <br/>SHINY <br/>THINGS</h3>
+		<div class="info">
+		    <h5>The single</h5>
+		    <p>Sign up for the Hearse Pileup</p>
+		    <p>newsletter for updates</p>
+		</div>
+		<div id="rig">
+		</div>
+	    </div>
+	</div>
+	<footer>
+    	<h6>NEWSLETTER SIGNUP</h6><input type="text" value="Please enter your e-mail address" />
+	</footer>
 			<h2 class="ninja">Hearsepileup.co.uk is an open source website, with its code released on <a href="https://github.com/Gaffen/hearsepileup.co.uk" target="_blank">github.com</h2></a>
-        </div>
     </div>
 
     <!-- JavaScript at the bottom for fast page loading -->
