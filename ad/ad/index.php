@@ -37,13 +37,22 @@ _-_-                                          -__ /\\     ,,
 
 <body>
     <div id="wrapper">
+	<div id="CntntDiv">
 	<div id="content" role="main">
+	    <div id="topscratch"></div>
+	    <div id="botscratch"></div>
+	    <div id="lefscratch"></div>
+	    <div id="rigscratch"></div>
+	    <div id="tl"></div>
+	    <div id="tr"></div>
+	    <div id="bl"></div>
+	    <div id="br"></div>
 	    <header id="nav">
-		<div id="rightnav"><h2>GIGS</h2><h2>GALLERY</h2><h2>MUSIC</h2></div>
+		<div id="rightnav"><h2 class="grey">GIGS</h2><h2 class="grey">GALLERY</h2><h2 class="grey">MUSIC</h2></div>
 		<div id="logo">
 		    <img src="images/HearsePileupLogo.png" alt="Hearse Pileup" />
 		</div>
-		<div id="leftnav"><h2>MERCH</h2><h2>CONTACT</h2></div>
+		<div id="leftnav"><h2 class="grey">MERCH</h2><h2 class="grey">CONTACT</h2></div>
 	    </header>
 	    <div id="gaffangry">
 	    </div>
@@ -65,9 +74,82 @@ _-_-                                          -__ /\\     ,,
 	    </div>
 	</div>
 	<footer>
-    	<h6>NEWSLETTER SIGNUP</h6><input type="text" value="Please enter your e-mail address" />
+    	<script language="Javascript" type="text/javascript">
+
+function checkform() {
+  for (i=0;i<fieldstocheck.length;i++) {
+    if (eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].type") == "checkbox") {
+      if (document.subscribeform.elements[fieldstocheck[i]].checked) {
+      } else {
+        alert("Please enter your "+fieldnames[i]);
+        eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].focus()");
+        return false;
+      }
+    }
+    else {
+      if (eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].value") == "") {
+        alert("Please enter your "+fieldnames[i]);
+        eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].focus()");
+        return false;
+      }
+    }
+  }
+  for (i=0;i<groupstocheck.length;i++) {
+    if (!checkGroup(groupstocheck[i],groupnames[i])) {
+      return false;
+    }
+  }
+  
+  return true;
+}
+
+var fieldstocheck = new Array();
+var fieldnames = new Array();
+function addFieldToCheck(value,name) {
+  fieldstocheck[fieldstocheck.length] = value;
+  fieldnames[fieldnames.length] = name;
+}
+var groupstocheck = new Array();
+var groupnames = new Array();
+function addGroupToCheck(value,name) {
+  groupstocheck[groupstocheck.length] = value;
+  groupnames[groupnames.length] = name;
+}
+
+function compareEmail()
+{
+  return (document.subscribeform.elements["email"].value == document.subscribeform.elements["emailconfirm"].value);
+}
+function checkGroup(name,value) {
+  option = -1;
+  for (i=0;i<document.subscribeform.elements[name].length;i++) {
+    if (document.subscribeform.elements[name][i].checked) {
+      option = i;
+    }
+  }
+  if (option == -1) {
+    alert ("Please enter your "+value);
+    return false;
+  }
+  return true;
+}
+
+</script><form method=post action="http://www.gaffen.co.uk/hearsemail/?p=subscribe" name="subscribeform" target="windowName" onsubmit="window.open('', this.target,
+'dialog,modal,scrollbars=no,resizable=no,width=550,height=300,left=0,top=0');" _lpchecked="1"><input type="hidden" name="formtoken" value="f831dcad5b7b469fef03120e5cf63096" /><table border=0>
+  <tr><td><div class="required"><h6>NEWSLETTER SIGNUP</h6></div></td>
+  <td class="attributeinput"><input type=text name=email value="" size="20">
+  <script language="Javascript" type="text/javascript">addFieldToCheck("email","Email");</script></td><td><input type="hidden" name="htmlemail" value="1">
+<input type="hidden" name="list[2]" value="signup"><input type="hidden" name="listname[2]" value="Hearse Mail"/><div style="display:none"><input type="text" name="VerificationCodeX" value="" size="20"></div><input type=submit name="subscribe" value="Submit" onClick="return checkform();" class="button"></tr></table>
+    </form>
+	<div id="links">
+	<a href="http://www.facebook.com/Hearse.Pileup"><img src="images/HearsePileupFacebook.jpg" /></a>
+	<a href="http://www.facebook.com/Hearse.Pileup"><img src="images/HearsePileupTwitter.jpg" /></a>
+	<a href="http://www.facebook.com/Hearse.Pileup"><img src="images/HearsePileupSoundcloud.jpg" /></a>
+	<img src="images/ratedr.jpg" />
+	</div>
 	</footer>
 			<h2 class="ninja">Hearsepileup.co.uk is an open source website, with its code released on <a href="https://github.com/Gaffen/hearsepileup.co.uk" target="_blank">github.com</h2></a>
+    </div>
     </div>
 
     <!-- JavaScript at the bottom for fast page loading -->
@@ -75,7 +157,8 @@ _-_-                                          -__ /\\     ,,
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.4.min.js"><\/script>')</script>
-	<script type="text/javascript" src="js/lightbox.js"></script>
+    <script type="text/javascript" src="js/lightbox.js"></script>
+    <script src="js/page_resolution.js" type="text/javascript" language="javascript"></script>
 
     <!-- scripts concatenated and minified via build script -->
     <script defer src="js/plugins.js"></script>

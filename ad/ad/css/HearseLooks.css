@@ -207,8 +207,95 @@ td { vertical-align: top; }
    Author:
    ========================================================================== */
 
-#nav h2 {
+#nav h2, footer form {
     float: left;
+}
+
+#links{
+    float: right;
+}
+
+.grey{
+    color: #555555;
+}
+
+#bl{
+    position: absolute;
+    background: url(../images/scratchbl.png) no-repeat;
+    width: 102px;
+    height: 82px;
+    bottom: 68px;
+    z-index: 9999; 
+}
+
+#br{
+    position: absolute;
+    background: url(../images/scratchbr.png) no-repeat;
+    width: 53px;
+    height: 57px;
+    bottom: 68px;
+    z-index: 9998;
+    margin-left: 887px;
+}
+
+#tr{
+    position: absolute;
+    background: url(../images/scratchtr.png) no-repeat;
+    width: 70px;
+    height: 77px;
+    top: 10px;
+    z-index: 9998;
+    margin-left: 870px;
+}
+
+#tl{
+    position: absolute;
+    background: url(../images/scratchtl.png) no-repeat;
+    width: 102px;
+    height: 85px;
+    top: 10px;
+    z-index: 9998;
+    margin-left: 0px;
+}
+
+#topscratch{
+    position: absolute;
+    background: url(../images/topscratch.png) repeat-x;
+    width: 940px;
+    height: 20px;
+    top: 10px;
+    z-index: 9998;
+    margin-left: 0px;
+}
+
+#botscratch{
+    position: absolute;
+    background: url(../images/botscratch.png) repeat-x;
+    width: 940px;
+    height: 20px;
+    bottom: 68px;
+    z-index: 9998;
+    margin-left: 0px;
+}
+
+#lefscratch{
+    position: absolute;
+    background: url(../images/lefscratch.png) repeat-y;
+    width: 20px;
+    height: 630px;
+    bottom: 68px;
+    z-index: 9998;
+    margin-left: 0px;
+}
+
+#rigscratch{
+    position: absolute;
+    background: url(../images/rigscratch.png) repeat-y;
+    width: 20px;
+    height: 630px;
+    bottom: 68px;
+    z-index: 9998;
+    margin-left: 920px;
 }
 
 a {
@@ -336,9 +423,24 @@ header {
     display: none; 
 }
 
+footer{
+    width: 960px;
+    margin: 0px auto 0px auto;
+}
+
+
+footer .button{
+    background-image: url(../images/newsletterbutton.jpg);
+    font-weight: bold;
+    border: 0px;
+    height: 16px;
+    width: 54px;
+}
+
 .ninja {
     color:#333333;
     font-size: 10px;
+    clear: both;
 }
 
 .ninja a {

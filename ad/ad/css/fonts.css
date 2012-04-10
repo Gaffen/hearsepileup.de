@@ -88,7 +88,14 @@ h1 {
 }
 
 footer h6{
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'MuseoSlab';
-    margin: 10px;
+    margin: 10px 20px 10px 10px;;
+}
+
+footer input{
+    color: #000000;
+    font-size: 12px;
+    border: 0px;
+    margin: 13px 0 13px 0;
 }
