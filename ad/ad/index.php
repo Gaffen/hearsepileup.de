@@ -33,33 +33,32 @@ _-_-                                          -__ /\\     ,,
 	<link rel="shortcut icon" href="favicon.png" />
   
     <script src="js/libs/modernizr-2.0.6.min.js"></script>
+    <script src="js/page_resolution.js" type="text/javascript" language="javascript"></script>
 </head>
 
 <body>
     <div id="wrapper">
 	<div id="CntntDiv">
-	<div id="content" role="main">
+	<div id="content" role="main" class="gaffangry">
 	    <div id="topscratch"></div>
 	    <div id="botscratch"></div>
 	    <div id="lefscratch"></div>
 	    <div id="rigscratch"></div>
-	    <div id="tl"></div>
-	    <div id="tr"></div>
 	    <div id="bl"></div>
 	    <div id="br"></div>
 	    <header id="nav">
-		<div id="rightnav"><h2 class="grey">GIGS</h2><h2 class="grey">GALLERY</h2><h2 class="grey">MUSIC</h2></div>
+		<div id="tl"></div>
+		<div id="tr"></div>
+		<div id="rightnav"><h2 class="grey">MUSIC</h2><h2 class="grey">GIGS</h2><h2 class="grey">GALLERY</h2></div>
 		<div id="logo">
 		    <img src="images/HearsePileupLogo.png" alt="Hearse Pileup" />
 		</div>
-		<div id="leftnav"><h2 class="grey">MERCH</h2><h2 class="grey">CONTACT</h2></div>
+		<div id="leftnav"><h2 class="grey">BIO</h2><h2 class="grey">MERCH</h2><h2 class="grey">CONTACT</h2></div>
 	    </header>
-	    <div id="gaffangry">
-	    </div>
 	    <div id="nextgig">
 		<h4>NEXT GIG</h4>
-		<p>17th April @ Nambuca</p>
-		<p><a href="#">Click for Details</a></p>
+		<p>17th April @ Nambuca<br/>
+		<a href="#">Click for Details</a></p>
 	    </div>
 	    <div id="feature">
 		<h4>COMING SOON</h4>
@@ -69,8 +68,8 @@ _-_-                                          -__ /\\     ,,
 		    <p>Sign up for the Hearse Pileup</p>
 		    <p>newsletter for updates</p>
 		</div>
-		<div id="rig">
-		</div>
+	    </div>
+	    <div id="rig">
 	    </div>
 	</div>
 	<footer>
@@ -158,7 +157,7 @@ function checkGroup(name,value) {
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.4.min.js"><\/script>')</script>
     <script type="text/javascript" src="js/lightbox.js"></script>
-    <script src="js/page_resolution.js" type="text/javascript" language="javascript"></script>
+    
 
     <!-- scripts concatenated and minified via build script -->
     <script defer src="js/plugins.js"></script>

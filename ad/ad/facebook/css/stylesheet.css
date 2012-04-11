@@ -1,15 +1,26 @@
-/*
- * HTML5 ✰ Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- *
- * Detailed information about this CSS: h5bp.com/css
- *
- * ==|== normalize ==========================================================
- */
+@font-face {
+    font-family: 'MuseoSlab';
+    src: url('../fonts/museo_slab_100-webfont.eot');
+    src: url('../fonts/museo_slab_100-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo_slab_100-webfont.woff') format('woff'),
+         url('../fonts/museo_slab_100-webfont.ttf') format('truetype'),
+         url('../fonts/museo_slab_100-webfont.svg#ArvoRegular') format('svg');
+    font-weight: 100;
+    font-style: normal;
 
+}
+
+@font-face {
+    font-family: 'BigMummyRegular';
+    src: url('../fonts/bigmummy-webfont.eot');
+    src: url('../fonts/bigmummy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bigmummy-webfont.woff') format('woff'),
+         url('../fonts/bigmummy-webfont.ttf') format('truetype'),
+         url('../fonts/bigmummy-webfont.svg#BigMummyRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 /* =============================================================================
    HTML5 display definitions
@@ -25,36 +36,22 @@ audio:not([controls]) { display: none; }
    Base
    ========================================================================== */
 
-/*
- * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
- * 2. Force vertical scrollbar in non-IE
- * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
- */
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 
-html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { position: relative; max-width: 810px!important; width: 810px!important; overflow: hidden!important; margin: 0px!important; font-size: 13px; line-height: 1.231; color: #291c06; background-color:  #a84012;} 
 
-body { margin: 0; font-size: 12px; line-height: 1.231; }
+body, button, input, select, textarea { font-family: HelveticaNeueLTStd57Condensed, sans-serif; color: #291c06; font-weight:normal;}
 
-body, button, input, select, textarea { font-family: sans-serif; color: #fff; }
-
-::-moz-selection { background: #890000; color: #fff; text-shadow: none; }
-::selection { background: #890000; color: #fff; text-shadow: none; }
-
+::-moz-selection { background: #f1ca45; color: #fff; text-shadow: none; }
+::selection { background: #f1ca45; color: #fff; text-shadow: none; }
 
 /* =============================================================================
    Links
    ========================================================================== */
 
-a { 
-    color: #ffffff;
-    text-decoration: underline;
-}
-a:visited { 
-    color: #ffffff;
-}
-a:hover { 
-    color: #ffffff;
-}
+a { color: #291c06; text-decoration: underline;}
+a:visited { color: #291c06; }
+a:hover { color: #291c06; text-decoration: none;}
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
@@ -207,21 +204,40 @@ td { vertical-align: top; }
    Author:
    ========================================================================== */
 
-#nav h2, footer form, #rightnav, #logo {
-    float: left;
+h6{
+    font-size: 20px;
+    font-family: 'MuseoSlab';
+    margin: 10px 20px 10px 10px;;
 }
 
-#links, #leftnav{
-    float: right;
+.button{
+    background-image: url(../../images/newsletterbutton.jpg);
+    font-weight: bold;
+    border: 0px;
+    height: 16px;
+    width: 54px;
 }
 
-.grey{
-    color: #555555;
+input{
+    color: #000000;
+    font-size: 12px;
+    border: 0px;
+    margin: 13px 0 13px 0;
+}
+
+.centered {
+    margin: auto;
+}
+
+#overlay{
+	background-image: url(http://www.hearsepileup.de/ad/images/overlay.png);
+	height: 100%;
+	width: 100%;
 }
 
 #bl{
     position: absolute;
-    background: url(../images/scratchbl.png) no-repeat;
+    background: url(../../images/scratchbl.png) no-repeat;
     width: 102px;
     height: 82px;
     bottom: 0px;
@@ -230,7 +246,7 @@ td { vertical-align: top; }
 
 #br{
     position: absolute;
-    background: url(../images/scratchbr.png) no-repeat;
+    background: url(../../images/scratchbr.png) no-repeat;
     width: 53px;
     height: 57px;
     bottom: 0px;
@@ -240,7 +256,7 @@ td { vertical-align: top; }
 
 #tr{
     position: absolute;
-    background: url(../images/scratchtr.png) no-repeat;
+    background: url(../../images/scratchtr.png) no-repeat;
     width: 70px;
     height: 77px;
     top: 0px;
@@ -250,7 +266,7 @@ td { vertical-align: top; }
 
 #tl{
     position: absolute;
-    background: url(../images/scratchtl.png) no-repeat;
+    background: url(../../images/scratchtl.png) no-repeat;
     width: 102px;
     height: 85px;
     top: 0px;
@@ -260,7 +276,7 @@ td { vertical-align: top; }
 
 #topscratch{
     position: absolute;
-    background: url(../images/topscratch.png) repeat-x;
+    background: url(../../images/topscratch.png) repeat-x;
     width: 100%;
     height: 20px;
     top: 0px;
@@ -270,7 +286,7 @@ td { vertical-align: top; }
 
 #botscratch{
     position: absolute;
-    background: url(../images/botscratch.png) repeat-x;
+    background: url(../../images/botscratch.png) repeat-x;
     width: 100%;
     height: 20px;
     bottom: 0px;
@@ -280,7 +296,7 @@ td { vertical-align: top; }
 
 #lefscratch{
     position: absolute;
-    background: url(../images/lefscratch.png) repeat-y;
+    background: url(../../images/lefscratch.png) repeat-y;
     width: 20px;
     height: 100%;
     bottom: 0px;
@@ -290,7 +306,7 @@ td { vertical-align: top; }
 
 #rigscratch{
     position: absolute;
-    background: url(../images/rigscratch.png) repeat-y;
+    background: url(../../images/rigscratch.png) repeat-y;
     width: 20px;
     height: 100%;
     bottom: 0px;
@@ -298,83 +314,13 @@ td { vertical-align: top; }
     right: 0px;
 }
 
-a {
-}
-
-a:visited {
-}
-
-body {
-    background-color: #000000;
-    text-align: center;
-    margin: auto;
-}
-
-header {
-    height: 184px;
-}
-
-#wrapper {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    margin: auto;
-}
-
-#nav {
-    height: 94px;
-    background-position: top;
-    background-repeat: repeat-x;
-    width: 100%;
-    background-image: url(../images/navbar.jpg);
-    text-align: center;
-    position: relative;
-    z-index: 9001;
-}
-
-#rightnav{
-    margin-left: 13px;
-    margin: 20px 0px 20px 32px;
-    float: left;
-    position: relative;
-    z-index: 10002;
-}
-
-#leftnav{
-    width: 348px;
-    margin: 20px 2px 20px 0px;
-    position: relative;
-    z-index: 10001
-}
-
-#content {
-    width: 940px;
-    background-color: #a84012;
-    margin: auto;
-    text-align: left;
-    border: 10px solid #ffffff;
-    min-height: 630px;
-    height: auto !important;
-    height: 630px;
-    position: relative;
-}
-
-.gaffangry{
-    background-image: url(../images/gaffangry.jpg);
-    background-repeat: no-repeat;
-    background-position: bottom left;
-}
-
 #rig{
-    background-image: url(../images/rig.jpg);
+    background-image: url(../../images/rig.jpg);
     background-repeat: no-repeat;
     width: 215px;
     height: 190px;
-    position: absolute;
     margin-top: 23px;
     margin-left: 136px;
-    bottom: 0px;
-    right: 95px;
 }
 
 #logo {
@@ -387,80 +333,251 @@ header {
     margin-left: -150px;
 }
 
-#nextgig{
-    text-align: right;
-    margin-right: 10px;
-    margin-top: -15px;
-    position: absolute;
-    right: 0px;
-    z-index: 10100;
+h2 {
+    color: #f5f1ea;
+    font-weight:normal;
+    font-size:16px;
+    line-height:1;
+    padding: 0px 0px 13px 20px;
+    margin: 0px;
 }
 
-#feature{
-    z-index: 20;
-    margin-left: 480px;
-    margin-top: 55px;
-    position: relative;
-    z-index: 10999;
+h3 {
+    color: #f1ca45;
+    font-weight:normal;
+    font-size:10px;
+    padding: 0px 0px 0 20px;
+    margin: 0px;
+    line-height:0;
 }
 
-#feature .info{
-    margin-left: 160px;
+h4 {
+    color: #f5f1ea;
+    font-weight:normal;
+    font-size:14px;
+    line-height: 1;
+    padding: 20px 0px 00px 20px;
+    margin: 0px;
 }
 
-#obituaries {
-    position: absolute;
-    height:100px;
-    top: 300px;
-    right: 0px;
-    width: 60px;
+h5 {
+    color:#f5f1ea;
+    line-height:0.2;
+    font-weight: normal;
+    text-align: center;
 }
 
-#gigs {
-    width: 300px;
-    margin: auto;
-    text-align: left;
+p { margin: 0px; }
+
+.title {
+    float: left;
 }
 
-#gigs ul {
-    list-style: none;
-    text-align: left;
-    padding: 0px;
+.headerblock {
+    padding: 19px 0px 20px 0px;
+    float: left;
+    width: 100%;
 }
 
-#creditfooter { 
-    display: none; 
+.headcoltop {
+    height:10px;
+    float: left;
+    width: 100%
 }
 
-footer{
-    width: 960px;
-    margin: 0px auto 0px auto;
+.headercol {
+    padding: 10px 0px 10px 0px;
+    float: left;
+    width: 250px;
 }
 
-
-footer .button{
-    background-image: url(../images/newsletterbutton.jpg);
-    font-weight: bold;
-    border: 0px;
-    height: 16px;
-    width: 54px;
+.headerspace {
+    float: left;
+    background-image: url(../img/headerdiv.jpg);
+    background-repeat: repeat-y;
+    background-position: 10px;
 }
 
-footer input{
-    color: #000000;
-    font-size: 12px;
-    border: 0px;
-    margin: 13px 0 13px 0;
-}
-
-.ninja {
-    color:#333333;
-    font-size: 10px;
+article {
+    background-repeat: repeat-x;
+    background-position: top;
     clear: both;
 }
 
-.ninja a {
-    color:#333333;
+.more {
+    width: 100%;
+}
+
+.push {
+    background-image: url(../img/button.jpg);
+    width:120px;
+    height:38px;
+    float: right;
+    margin-right: 60px;
+}
+
+.more a {
+    text-decoration:none;
+}
+
+.content {
+    padding: 20px;
+}
+
+#featured {
+    background-image: url(../img/featured.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-color: #291c06;
+    padding: 22px 0px 26px 0px;
+    float: left;
+    width: 100%;
+}
+
+#social {
+    padding: 20px;
+}
+
+.social {
+    margin-top: 20px;
+}
+
+.headerbox {
+    height: 40px;
+    background-image: url(../img/headerdiv.jpg);
+    background-position: center;
+    background-repeat: repeat-y;
+}
+
+.twocol {
+    float: left;
+    width: 240px;
+}
+
+.twocoldiv {
+    float: left;
+    width: 235px;
+    background-image: url(../img/headerdiv.jpg);
+    background-repeat: repeat-y;
+    background-position: left;
+}
+
+.spacer {
+    clear: both;
+    height: 10px;
+}
+
+.tweetcon {
+    width: 235px;
+    background-image: url(../img/tweet.jpg);
+    background-repeat: repeat-y;
+    padding-left: 4px;
+    margin-left: 6px;
+}
+
+.fix {
+    background-image: url(../img/div-spacer.jpg);
+    background-position:bottom left;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.tweet {
+    width: 238px;
+    background-image: url(../img/tweet.jpg);
+    background-repeat: repeat-y;
+    margin-left: 8px;
+}
+
+.tweet p {
+    padding: 10px;
+}
+
+.tweetshadow {
+    margin-left: 8px;
+    width: 238px;
+    height: 10px;
+}
+
+.blog {
+    width: 480px;
+    background-color:#291c06;
+    padding: 0 0 20px 0px;
+    margin: 0px;
+}
+
+#container {
+    width: 488px;
+    background-image: url(../img/full.jpg);
+    background-repeat: repeat-y;
+    padding-left: 4px;
+    margin-top: 4px;
+}
+
+.post {
+    padding: 10px;
+    color: #291c06;
+}
+
+.post p {
+    margin-right: 8px;
+    color: #291c06;
+}
+
+.icon a {
+    margin-left: 8px;
+    margin: 0px;
+    margin-right: 8px;
+}
+
+.iconshad {
+    height: 15px;
+    width: 54px;
+    background-image: url(../img/iconshad.jpg);
+}
+
+.shadow-bl {
+    float: left;
+    background-image: url(../img/corner-left.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    height: 9px;
+    width: 14px;
+    clear: both;
+}
+
+.shadow-btm {
+    float: left;
+    background-image: url(../img/postshadow.jpg);
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    height: 9px;
+    width: 488px;
+    margin: 0px;
+    padding: 0px;
+    left: 0px;
+}
+
+.shadowtweet-btm {
+    float: left;
+    background-image: url(../img/boxshadow.jpg);
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    height: 9px;
+    width: 204px;
+}
+
+.shadow-br {
+    float: left;
+    background-image: url(../img/corner-right.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    height: 9px;
+    width: 14px;
+}
+
+.shadowbox {
+    padding: 17px;
 }
 
 /* ==|== media queries ======================================================

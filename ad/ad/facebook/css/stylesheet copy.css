@@ -1,15 +1,50 @@
-/*
- * HTML5 ✰ Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- *
- * Detailed information about this CSS: h5bp.com/css
- *
- * ==|== normalize ==========================================================
- */
+@font-face {
+    font-family: 'HelveticaNeueLTStd77BdCnOb';
+    src: url('../fonts/helveticaneueltstd-bdcno-webfont.eot');
+    src: url('../fonts/helveticaneueltstd-bdcno-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneueltstd-bdcno-webfont.woff') format('woff'),
+         url('../fonts/helveticaneueltstd-bdcno-webfont.ttf') format('truetype'),
+         url('../fonts/helveticaneueltstd-bdcno-webfont.svg#HelveticaNeueLTStd77BdCnOb') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLTStd57Condensed';
+    src: url('../fonts/helveticaneueltstd-cn-webfont.eot');
+    src: url('../fonts/helveticaneueltstd-cn-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneueltstd-cn-webfont.woff') format('woff'),
+         url('../fonts/helveticaneueltstd-cn-webfont.ttf') format('truetype'),
+         url('../fonts/helveticaneueltstd-cn-webfont.svg#HelveticaNeueLTStd57Condensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLTStd77BdCn';
+    src: url('../fonts/helveticaneueltstd-bdcn-webfont.eot');
+    src: url('../fonts/helveticaneueltstd-bdcn-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneueltstd-bdcn-webfont.woff') format('woff'),
+         url('../fonts/helveticaneueltstd-bdcn-webfont.ttf') format('truetype'),
+         url('../fonts/helveticaneueltstd-bdcn-webfont.svg#HelveticaNeueLTStd77BdCn') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLTStd57CnOb';
+    src: url('../fonts/helveticaneueltstd-cno-webfont.eot');
+    src: url('../fonts/helveticaneueltstd-cno-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneueltstd-cno-webfont.woff') format('woff'),
+         url('../fonts/helveticaneueltstd-cno-webfont.ttf') format('truetype'),
+         url('../fonts/helveticaneueltstd-cno-webfont.svg#HelveticaNeueLTStd57CnOb') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 /* =============================================================================
    HTML5 display definitions
@@ -25,36 +60,22 @@ audio:not([controls]) { display: none; }
    Base
    ========================================================================== */
 
-/*
- * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
- * 2. Force vertical scrollbar in non-IE
- * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
- */
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 
-html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { position: relative; max-width: 520px!important; width: 520px!important; overflow: hidden!important; margin: 0px!important; font-size: 13px; line-height: 1.231; color: #291c06; background-color: #f5f1ea;} 
 
-body { margin: 0; font-size: 12px; line-height: 1.231; }
+body, button, input, select, textarea { font-family: HelveticaNeueLTStd57Condensed, sans-serif; color: #291c06; font-weight:normal;}
 
-body, button, input, select, textarea { font-family: sans-serif; color: #fff; }
-
-::-moz-selection { background: #890000; color: #fff; text-shadow: none; }
-::selection { background: #890000; color: #fff; text-shadow: none; }
-
+::-moz-selection { background: #f1ca45; color: #fff; text-shadow: none; }
+::selection { background: #f1ca45; color: #fff; text-shadow: none; }
 
 /* =============================================================================
    Links
    ========================================================================== */
 
-a { 
-    color: #ffffff;
-    text-decoration: underline;
-}
-a:visited { 
-    color: #ffffff;
-}
-a:hover { 
-    color: #ffffff;
-}
+a { color: #291c06; text-decoration: underline;}
+a:visited { color: #291c06; }
+a:hover { color: #291c06; text-decoration: none;}
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
@@ -207,260 +228,258 @@ td { vertical-align: top; }
    Author:
    ========================================================================== */
 
-#nav h2, footer form, #rightnav, #logo {
-    float: left;
+h2 {
+    color: #f5f1ea;
+    font-weight:normal;
+    font-size:16px;
+    line-height:1;
+    padding: 0px 0px 13px 20px;
+    margin: 0px;
 }
 
-#links, #leftnav{
-    float: right;
+h3 {
+    color: #f1ca45;
+    font-weight:normal;
+    font-size:10px;
+    padding: 0px 0px 0 20px;
+    margin: 0px;
+    line-height:0;
 }
 
-.grey{
-    color: #555555;
+h4 {
+    color: #f5f1ea;
+    font-weight:normal;
+    font-size:14px;
+    line-height: 1;
+    padding: 20px 0px 00px 20px;
+    margin: 0px;
 }
 
-#bl{
-    position: absolute;
-    background: url(../images/scratchbl.png) no-repeat;
-    width: 102px;
-    height: 82px;
-    bottom: 0px;
-    z-index: 9999; 
-}
-
-#br{
-    position: absolute;
-    background: url(../images/scratchbr.png) no-repeat;
-    width: 53px;
-    height: 57px;
-    bottom: 0px;
-    z-index: 9998;
-    left: 0px;
-}
-
-#tr{
-    position: absolute;
-    background: url(../images/scratchtr.png) no-repeat;
-    width: 70px;
-    height: 77px;
-    top: 0px;
-    z-index: 9998;
-    right: 0px;
-}
-
-#tl{
-    position: absolute;
-    background: url(../images/scratchtl.png) no-repeat;
-    width: 102px;
-    height: 85px;
-    top: 0px;
-    z-index: 9998;
-    left: 0px;
-}
-
-#topscratch{
-    position: absolute;
-    background: url(../images/topscratch.png) repeat-x;
-    width: 100%;
-    height: 20px;
-    top: 0px;
-    z-index: 9998;
-    left: 0px;
-}
-
-#botscratch{
-    position: absolute;
-    background: url(../images/botscratch.png) repeat-x;
-    width: 100%;
-    height: 20px;
-    bottom: 0px;
-    z-index: 9998;
-    left: 0px;
-}
-
-#lefscratch{
-    position: absolute;
-    background: url(../images/lefscratch.png) repeat-y;
-    width: 20px;
-    height: 100%;
-    bottom: 0px;
-    z-index: 9998;
-    left: 0px;
-}
-
-#rigscratch{
-    position: absolute;
-    background: url(../images/rigscratch.png) repeat-y;
-    width: 20px;
-    height: 100%;
-    bottom: 0px;
-    z-index: 9998;
-    right: 0px;
-}
-
-a {
-}
-
-a:visited {
-}
-
-body {
-    background-color: #000000;
+h5 {
+    color:#f5f1ea;
+    line-height:0.2;
+    font-weight: normal;
     text-align: center;
-    margin: auto;
 }
+
+p { margin: 0px; }
 
 header {
-    height: 184px;
-}
-
-#wrapper {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    margin: auto;
-}
-
-#nav {
-    height: 94px;
-    background-position: top;
-    background-repeat: repeat-x;
-    width: 100%;
-    background-image: url(../images/navbar.jpg);
-    text-align: center;
-    position: relative;
-    z-index: 9001;
-}
-
-#rightnav{
-    margin-left: 13px;
-    margin: 20px 0px 20px 32px;
-    float: left;
-    position: relative;
-    z-index: 10002;
-}
-
-#leftnav{
-    width: 348px;
-    margin: 20px 2px 20px 0px;
-    position: relative;
-    z-index: 10001
-}
-
-#content {
-    width: 940px;
-    background-color: #a84012;
-    margin: auto;
-    text-align: left;
-    border: 10px solid #ffffff;
-    min-height: 630px;
-    height: auto !important;
-    height: 630px;
-    position: relative;
-}
-
-.gaffangry{
-    background-image: url(../images/gaffangry.jpg);
-    background-repeat: no-repeat;
-    background-position: bottom left;
-}
-
-#rig{
-    background-image: url(../images/rig.jpg);
-    background-repeat: no-repeat;
-    width: 215px;
-    height: 190px;
-    position: absolute;
-    margin-top: 23px;
-    margin-left: 136px;
-    bottom: 0px;
-    right: 95px;
-}
-
-#logo {
-    margin: 0px -60px;
-    padding-top: 10px;
-    left: 0px;
-    z-index: 10000;
-    position: absolute;
-    left: 50%;
-    margin-left: -150px;
-}
-
-#nextgig{
-    text-align: right;
-    margin-right: 10px;
-    margin-top: -15px;
-    position: absolute;
-    right: 0px;
-    z-index: 10100;
-}
-
-#feature{
-    z-index: 20;
-    margin-left: 480px;
-    margin-top: 55px;
-    position: relative;
-    z-index: 10999;
-}
-
-#feature .info{
-    margin-left: 160px;
-}
-
-#obituaries {
-    position: absolute;
-    height:100px;
-    top: 300px;
-    right: 0px;
-    width: 60px;
-}
-
-#gigs {
-    width: 300px;
-    margin: auto;
-    text-align: left;
-}
-
-#gigs ul {
-    list-style: none;
-    text-align: left;
-    padding: 0px;
-}
-
-#creditfooter { 
-    display: none; 
-}
-
-footer{
-    width: 960px;
-    margin: 0px auto 0px auto;
-}
-
-
-footer .button{
-    background-image: url(../images/newsletterbutton.jpg);
-    font-weight: bold;
-    border: 0px;
-    height: 16px;
-    width: 54px;
-}
-
-footer input{
-    color: #000000;
-    font-size: 12px;
-    border: 0px;
-    margin: 13px 0 13px 0;
-}
-
-.ninja {
-    color:#333333;
-    font-size: 10px;
+    background-color: #291c06;
+    min-height: 80px;
     clear: both;
 }
 
-.ninja a {
-    color:#333333;
+.title {
+    float: left;
+}
+
+.headerblock {
+    padding: 19px 0px 20px 0px;
+    float: left;
+    width: 100%;
+}
+
+.headcoltop {
+    height:10px;
+    float: left;
+    width: 100%
+}
+
+.headercol {
+    padding: 10px 0px 10px 0px;
+    float: left;
+    width: 250px;
+}
+
+.headerspace {
+    float: left;
+    background-image: url(../img/headerdiv.jpg);
+    background-repeat: repeat-y;
+    background-position: 10px;
+}
+
+article {
+    background-image: url(../img/headershadow.jpg);
+    background-repeat: repeat-x;
+    background-position: top;
+    clear: both;
+}
+
+.more {
+    width: 100%;
+}
+
+.push {
+    background-image: url(../img/button.jpg);
+    width:120px;
+    height:38px;
+    float: right;
+    margin-right: 60px;
+}
+
+.more a {
+    text-decoration:none;
+}
+
+.content {
+    padding: 20px;
+}
+
+#featured {
+    background-image: url(../img/featured.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-color: #291c06;
+    padding: 22px 0px 26px 0px;
+    float: left;
+    width: 100%;
+}
+
+#social {
+    padding: 20px;
+}
+
+.social {
+    margin-top: 20px;
+}
+
+.headerbox {
+    height: 40px;
+    background-image: url(../img/headerdiv.jpg);
+    background-position: center;
+    background-repeat: repeat-y;
+}
+
+.twocol {
+    float: left;
+    width: 240px;
+}
+
+.twocoldiv {
+    float: left;
+    width: 235px;
+    background-image: url(../img/headerdiv.jpg);
+    background-repeat: repeat-y;
+    background-position: left;
+}
+
+.spacer {
+    clear: both;
+    height: 10px;
+}
+
+.tweetcon {
+    width: 235px;
+    background-image: url(../img/tweet.jpg);
+    background-repeat: repeat-y;
+    padding-left: 4px;
+    margin-left: 6px;
+}
+
+.fix {
+    background-image: url(../img/div-spacer.jpg);
+    background-position:bottom left;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.tweet {
+    width: 238px;
+    background-image: url(../img/tweet.jpg);
+    background-repeat: repeat-y;
+    margin-left: 8px;
+}
+
+.tweet p {
+    padding: 10px;
+}
+
+.tweetshadow {
+    margin-left: 8px;
+    width: 238px;
+    height: 10px;
+}
+
+.blog {
+    width: 480px;
+    background-color:#291c06;
+    padding: 0 0 20px 0px;
+    margin: 0px;
+}
+
+#container {
+    width: 488px;
+    background-image: url(../img/full.jpg);
+    background-repeat: repeat-y;
+    padding-left: 4px;
+    margin-top: 4px;
+}
+
+.post {
+    padding: 10px;
+    color: #291c06;
+}
+
+.post p {
+    margin-right: 8px;
+    color: #291c06;
+}
+
+.icon a {
+    margin-left: 8px;
+    margin: 0px;
+    margin-right: 8px;
+}
+
+.iconshad {
+    height: 15px;
+    width: 54px;
+    background-image: url(../img/iconshad.jpg);
+}
+
+.shadow-bl {
+    float: left;
+    background-image: url(../img/corner-left.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    height: 9px;
+    width: 14px;
+    clear: both;
+}
+
+.shadow-btm {
+    float: left;
+    background-image: url(../img/postshadow.jpg);
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    height: 9px;
+    width: 488px;
+    margin: 0px;
+    padding: 0px;
+    left: 0px;
+}
+
+.shadowtweet-btm {
+    float: left;
+    background-image: url(../img/boxshadow.jpg);
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    height: 9px;
+    width: 204px;
+}
+
+.shadow-br {
+    float: left;
+    background-image: url(../img/corner-right.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    height: 9px;
+    width: 14px;
+}
+
+.shadowbox {
+    padding: 17px;
 }
 
 /* ==|== media queries ======================================================

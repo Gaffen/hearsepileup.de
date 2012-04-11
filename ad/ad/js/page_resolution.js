@@ -15,6 +15,23 @@ function getWindowHeight() {
     return windowHeight;
 }
 
+function getWindowWidth() {
+	var windowWidth = 0;
+    if (typeof (window.innerWidth) == 'number') {
+		windowWidth = window.innerWidth;
+    } else 
+	{	
+        if (document.documentElement && document.documentElement.clientWidth) {
+            windowWidth = document.documentElement.clientWidth;
+        } else {
+            if (document.body && document.body.clientHeight) {
+                windowWidth = document.body.clientWidth;
+            }
+        }
+    }
+    return windowWidth;
+}
+
 function setContent() {
     if (document.getElementById) {
         var windowHeight = getWindowHeight();
@@ -25,13 +42,36 @@ function setContent() {
 			var contentHeight = contentElement.offsetHeight;
 			
 			if (windowHeight - contentHeight > 1) {
-				contentElement.style.position = 'relative';
+				contentElement.style.position = 'absolute';
 				contentElement.style.top = ((windowHeight-(contentHeight))/2) + 'px';
 				
             } else {
 				var top_bottom_margin=20;
-                contentElement.style.position = 'relative';
+                contentElement.style.position = 'absolute';
 				contentElement.style.top = (top_bottom_margin) + 'px';
+				
+				/*arrowLElement.style.top = (headertHeight+top_bottom_margin+((contentHeight+arrowtHeight)/2)) + 'px';
+				arrowRElement.style.top = (headertHeight+top_bottom_margin+((contentHeight+arrowtHeight)/2)) + 'px';*/
+
+				//arrowRElement.style.top = ((contentHeight)/2+headertHeight) + 'px';
+            }
+        }
+	var windowWidth = getWindowWidth();
+        if (windowWidth > 0) {
+            var contentElement = document.getElementById('CntntDiv');
+			
+			
+			var contentWidth = contentElement.offsetWidth;
+			
+			if (windowWidth - contentWidth > 1) {
+				contentElement.style.position = 'absolute';
+				contentElement.style.left = ((windowWidth-(contentWidth))/2) + 'px';
+				
+            } else {
+				var left_bottom_margin=0;
+                contentElement.style.position = 'absolute';
+				contentElement.style.left = (left_bottom_margin) + 'px';
+				
 				
 				/*arrowLElement.style.top = (headertHeight+top_bottom_margin+((contentHeight+arrowtHeight)/2)) + 'px';
 				arrowRElement.style.top = (headertHeight+top_bottom_margin+((contentHeight+arrowtHeight)/2)) + 'px';*/

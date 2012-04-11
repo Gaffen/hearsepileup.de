@@ -5,7 +5,7 @@
          url('../fonts/museo_slab_100-webfont.woff') format('woff'),
          url('../fonts/museo_slab_100-webfont.ttf') format('truetype'),
          url('../fonts/museo_slab_100-webfont.svg#ArvoRegular') format('svg');
-    font-weight: normal;
+    font-weight: 100;
     font-style: normal;
 
 }
@@ -28,10 +28,18 @@ h1 {
     font-size: 20px;
 }
 
-#nav h2{
+#leftnav h2{
     font-size: 27px;
     line-height: 27px;
     margin: 0px 20px 0 0;
+    font-weight: 100;
+}
+
+#rightnav h2{
+    font-size: 27px;
+    line-height: 27px;
+    margin: 0px 20px 0 0;
+    font-weight: 100;
 }
 
 #nav{
@@ -91,11 +99,4 @@ footer h6{
     font-size: 20px;
     font-family: 'MuseoSlab';
     margin: 10px 20px 10px 10px;;
-}
-
-footer input{
-    color: #000000;
-    font-size: 12px;
-    border: 0px;
-    margin: 13px 0 13px 0;
 }
