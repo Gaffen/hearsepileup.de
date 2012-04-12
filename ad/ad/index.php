@@ -57,7 +57,7 @@ _-_-                                          -__ /\\     ,,
 	    </header>
 	    <div id="nextgig">
 		<h4>NEXT GIG</h4>
-		<p>17th April @ Nambuca<br/>
+		<p>13th April &#64; Water Rats,<br/><strong>&pound;8 entry or FREE GUESTLIST</strong><br/>
 		<a href="#">Click for Details</a></p>
 	    </div>
 	    <div id="feature">

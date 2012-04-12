@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
 	<link rel="stylesheet" href="css/jquery.tweet.css" type="text/css" charset="utf-8" />
 	<script src="js/libs/modernizr-2.0.6.min.js"></script>
+	<script src="../js/page_resolution.js" type="text/javascript" language="javascript"></script>
 </head>
 
 <body>
@@ -28,7 +29,7 @@
   <div id="tr"></div>
   <header>
     <div>
-	<div id="logo"><img src="../images/HearsePileuplogo.png" /></div>
+	<div id="logo"><img src="http://www.hearsepileup.de/ad/images/HearsePileupLogo.png" /></div>
     </div>
   </header>
   <article>
@@ -99,6 +100,8 @@ function checkGroup(name,value) {
   <script language="Javascript" type="text/javascript">addFieldToCheck("email","Email");</script></td><td><input type="hidden" name="htmlemail" value="1">
 <input type="hidden" name="list[2]" value="signup"><input type="hidden" name="listname[2]" value="Hearse Mail"/><div style="display:none"><input type="text" name="VerificationCodeX" value="" size="20"></div><input type=submit name="subscribe" value="Submit" onClick="return checkform();" class="button"></tr></table>
     </form>
+<h3>NEXT GIG</h3>
+<p><a href="http://www.facebook.com/events/382013581838767/">Hearse Pileup @ Mondo Water Rats<br/>&pound;8 admission, FREE GUESTLIST</a></p>
 </div>
   </article>
   <div id="overlay">

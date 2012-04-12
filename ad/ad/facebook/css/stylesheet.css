@@ -38,9 +38,9 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 
-body { position: relative; max-width: 810px!important; width: 810px!important; overflow: hidden!important; margin: 0px!important; font-size: 13px; line-height: 1.231; color: #291c06; background-color:  #a84012;} 
+body { position: relative; max-width: 810px!important; width: 810px!important; overflow: hidden!important; margin: 0px!important; font-size: 13px; line-height: 1.231; color: #ffffff; background-color:  #a84012;} 
 
-body, button, input, select, textarea { font-family: HelveticaNeueLTStd57Condensed, sans-serif; color: #291c06; font-weight:normal;}
+body, button, input, select, textarea { font-family: arial, sans-serif; color: #ffffff; font-weight:normal;}
 
 ::-moz-selection { background: #f1ca45; color: #fff; text-shadow: none; }
 ::selection { background: #f1ca45; color: #fff; text-shadow: none; }
@@ -49,9 +49,9 @@ body, button, input, select, textarea { font-family: HelveticaNeueLTStd57Condens
    Links
    ========================================================================== */
 
-a { color: #291c06; text-decoration: underline;}
-a:visited { color: #291c06; }
-a:hover { color: #291c06; text-decoration: none;}
+a { color: #ffffff; text-decoration: underline;}
+a:visited { color: #ffffff; }
+a:hover { color: #ffffff; text-decoration: none;}
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
@@ -207,7 +207,8 @@ td { vertical-align: top; }
 h6{
     font-size: 20px;
     font-family: 'MuseoSlab';
-    margin: 10px 20px 10px 10px;;
+    margin: 10px 20px 10px 10px;
+    color: #ffffff;
 }
 
 .button{
@@ -227,12 +228,34 @@ input{
 
 .centered {
     margin: auto;
+    z-index: 10000;
+    position: relative;
+    top: 200px;
+    left: 50%;
+    margin-left: -250px;
+    width: 500px;
+    text-align: center;
+    background: #000000;
+    margin-bottom: 200px;
+}
+
+h3 {
+    font-family: 'BigMummyRegular';
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 100;
+    margin-bottom: 20px;
 }
 
 #overlay{
-	background-image: url(http://www.hearsepileup.de/ad/images/overlay.png);
-	height: 100%;
-	width: 100%;
+	z-index: 99;
+	filter: alpha(opacity=50); /*older IE*/
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50); /* IE */
+	-moz-opacity: .50; /*older Mozilla*/
+	-khtml-opacity: 0.5;   /*older Safari*/
+	opacity: 0.5;   /*supported by current Mozilla, Safari, and Opera*/
+	background-color:#000000;
+	position:fixed; top:0px; left:0px; width:100%; height:100%; color:#FFFFFF; text-align:center; vertical-align:middle;
 }
 
 #bl{
@@ -342,15 +365,6 @@ h2 {
     margin: 0px;
 }
 
-h3 {
-    color: #f1ca45;
-    font-weight:normal;
-    font-size:10px;
-    padding: 0px 0px 0 20px;
-    margin: 0px;
-    line-height:0;
-}
-
 h4 {
     color: #f5f1ea;
     font-weight:normal;
@@ -367,7 +381,9 @@ h5 {
     text-align: center;
 }
 
-p { margin: 0px; }
+p { margin: 0px;
+    padding-bottom: 20px;
+}
 
 .title {
     float: left;
