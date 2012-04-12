@@ -14,8 +14,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
 	<link rel="stylesheet" href="css/jquery.tweet.css" type="text/css" charset="utf-8" />
-	<script src="js/libs/modernizr-2.0.6.min.js"></script>
-	<script src="../js/page_resolution.js" type="text/javascript" language="javascript"></script>
+	<script src="js/libs/modernizr-2.0.6.min.js"></script>cript>
 </head>
 
 <body>
