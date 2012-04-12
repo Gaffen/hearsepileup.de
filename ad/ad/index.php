@@ -58,7 +58,7 @@ _-_-                                          -__ /\\     ,,
 	    <div id="nextgig">
 		<h4>NEXT GIG</h4>
 		<p>13th April &#64; Water Rats,<br/><strong>&pound;8 entry or FREE GUESTLIST</strong><br/>
-		<a href="http://www.facebook.com/events/382013581838767/">Click for Details</a></p>
+		<a href="http://www.facebook.com/events/382013581838767/" target="_blank">Click for Details</a></p>
 	    </div>
 	    <div id="feature">
 		<h4>COMING SOON</h4>
