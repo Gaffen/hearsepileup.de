@@ -57,8 +57,8 @@ _-_-                                          -__ /\\     ,,
 	    </header>
 	    <div id="nextgig">
 		<h4>NEXT GIG</h4>
-		<p>17th April &#64; Nambucca,<br/><strong>&pound;7 entry or &pound;5 CHEAPLIST</strong><br/>
-		<a href="http://www.facebook.com/events/382013581838767/" target="_blank">Click for Details</a></p>
+		<p>16th May &#64; 229 The Venue,<br/><strong>&pound;7 tickets</strong><br/>
+		<a href="mailto:hearse.pileup@gmail.com" target="_blank">Email us for tickets</a></p>
 	    </div>
 	    <div id="feature">
 		<h4>COMING SOON</h4>
