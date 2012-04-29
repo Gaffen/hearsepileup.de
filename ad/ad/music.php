@@ -21,7 +21,9 @@
 		</div>
 	    </div>
 	    <div class="horizon">
-		
+		<h3>Like what you hear?</h3>
+		<p>Hearse Pileup have a free to download live album on Bandcamp. Stay tuned for the official release of the Hearse Pileup EP!</p>
+		<a href="http://hearsepileup.bandcamp.com/" target="_blank" title="Hearse Pileup on Bandcamp"><img src="images/bandcamp.png" alt="Hearse Pileup on Bandcamp" /></a>
 	    </div>
 	</div>
 	<link rel="stylesheet" type="text/css" href="css/flashblock.css" />

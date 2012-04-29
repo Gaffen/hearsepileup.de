@@ -502,10 +502,22 @@ footer input{
 
 .horizon{
     background: #000;
-    width: 940px;
+    width: 920px;
     height: 268px;
     position: absolute;
     bottom: 0px;
+    padding: 0 0 0 20px;
+}
+
+.horizon p{
+    width: 300px;
+    float: left;
+    text-align: right;
+}
+
+.horizon img{
+    float: left;
+    margin-left: 20px;
 }
 
 /* ==|== media queries ======================================================
