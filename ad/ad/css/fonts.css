@@ -23,11 +23,17 @@
 }
 
 h1 {
+    font-family: 'BigMummyRegular', sans-serif;
     text-align: left;
-    font-weight: 100;
-    font-size: 20px;
+    font-size: 22px;
+    position: absolute;
+    top: 62px;
+    left: 10px;
+    text-shadow: 2px 2px 0 #000;
 }
-
+#leftnav h2 a, #rightnav h2 a{
+    text-decoration: none;
+}
 #leftnav h2{
     font-size: 27px;
     line-height: 27px;
@@ -43,13 +49,13 @@ h1 {
 }
 
 #nav{
-    font-family: 'MuseoSlab';
+    font-family: 'MuseoSlab', sans-serif;
     font-size: 20px;
     font-weight: normal;
 }
 
 #nextgig h4{
-    font-family: 'BigMummyRegular';
+    font-family: 'BigMummyRegular', sans-serif;
     font-size: 22px;
     margin: 0;
     line-height: 1;
@@ -66,14 +72,14 @@ h1 {
 }
 
 #feature h4{
-    font-family: 'MuseoSlab';
+    font-family: 'MuseoSlab', sans-serif;
     font-size: 27px;
     margin: 0px 0px;
     font-weight: normal;
 }
 
 #feature h3{
-    font-family: 'BigMummyRegular';
+    font-family: 'BigMummyRegular', sans-serif;
     color: #000000;
     text-shadow: 2px 2px #ffffff;
     font-size: 62px;
@@ -83,7 +89,7 @@ h1 {
 }
 
 #feature h5{
-    font-family: 'BigMummyRegular';
+    font-family: 'BigMummyRegular', sans-serif;
     color: #ffffff;
     font-size: 27px;
     margin: 0px;
@@ -97,6 +103,13 @@ h1 {
 
 footer h6{
     font-size: 20px;
-    font-family: 'MuseoSlab';
-    margin: 10px 20px 10px 10px;;
+    font-family: 'MuseoSlab', sans-serif;
+    margin: 10px 20px 10px 10px;
+    font-weight: 100;
+}
+
+footer .strap h2{
+    font-size: 27px;
+    font-family: 'BigMummyRegular', sans-serif;
+    text-shadow: 2px 2px 0 #000;
 }

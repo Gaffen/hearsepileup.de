@@ -365,6 +365,12 @@ header {
     background-position: bottom left;
 }
 
+.records{
+        background-image: url(../images/records.jpg);
+    background-repeat: no-repeat;
+    background-position-y: 70px;
+}
+
 #rig{
     background-image: url(../images/rig.jpg);
     background-repeat: no-repeat;
@@ -461,6 +467,45 @@ footer input{
 
 .ninja a {
     color:#333333;
+}
+
+.strap{
+    width: 960px;
+    position: absolute;
+    text-align: center;
+    bottom: 69px;
+}
+
+.music{
+    position: absolute;
+    width: 768px;
+    text-align: center;
+    left: 95px;
+    bottom: 289px;
+    z-index: 5000;
+}
+.player1{
+    float: left;
+    width: 256px;
+    background: url(../images/player1.png) no-repeat 36px 45px;
+}
+.player2{
+    float: left;
+    width: 256px;
+    background: url(../images/player2.png) no-repeat 36px 45px;
+}
+.player3{
+    float: left;
+    width: 256px;
+    background: url(../images/player3.png) no-repeat 36px 45px;
+}
+
+.horizon{
+    background: #000;
+    width: 940px;
+    height: 268px;
+    position: absolute;
+    bottom: 0px;
 }
 
 /* ==|== media queries ======================================================
