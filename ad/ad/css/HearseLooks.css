@@ -520,6 +520,22 @@ footer input{
     margin-left: 30px;
 }
 
+.onecol{
+    width: 800px;
+    position: relative;
+    left: 70px;
+    top: 30px;
+}
+
+.twocol {
+    width: 400px;
+    float: left;
+    position: relative;
+    left: 70px;
+    top: 30px;
+    margin-right: 20px;
+}
+
 /* ==|== media queries ======================================================
    PLACEHOLDER Media Queries for Responsive Design.
    These override the primary ('mobile first') styles

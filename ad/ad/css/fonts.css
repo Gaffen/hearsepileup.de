@@ -78,7 +78,7 @@ h1 {
     font-weight: normal;
 }
 
-#feature h3{
+h3{
     font-family: 'BigMummyRegular', sans-serif;
     color: #000000;
     text-shadow: 2px 2px #ffffff;
@@ -118,4 +118,10 @@ footer .strap h2{
     font-size: 20px;
     width: 300px;
     text-align: right;
+    color: white;
+    text-shadow: none;
+}
+
+h2{
+    font-family: 'MuseoSlab', sans-serif;
 }
