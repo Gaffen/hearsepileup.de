@@ -366,7 +366,7 @@ header {
 }
 
 .records{
-        background-image: url(../images/records.jpg);
+    background-image: url(../images/records.jpg);
     background-repeat: no-repeat;
     background-position-y: 70px;
 }
@@ -531,9 +531,18 @@ footer input{
     width: 400px;
     float: left;
     position: relative;
-    left: 70px;
-    top: 30px;
+    left: 90px;
+    top: 70px;
     margin-right: 20px;
+}
+
+.biobg {
+    background: url(../images/bioback.jpg) no-repeat 0px 68px;
+}
+
+.biobg p {
+    font-size: 14px;
+    line-height: 18px;
 }
 
 /* ==|== media queries ======================================================
