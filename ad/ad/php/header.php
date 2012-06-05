@@ -55,7 +55,7 @@ _-_-                                          -__ /\\     ,,
 		<div id="logo">
 		    <a href="index.php"><img src="images/HearsePileupLogo.png" alt="Hearse Pileup" /></a>
 		</div>
-		<div id="leftnav"><h2><a href="bio.php">BIO</a></h2><h2 class="grey">MERCH</h2><h2 class="grey">CONTACT</h2></div>
+		<div id="leftnav"><h2><a href="bio.php">BIO</a></h2><h2 class="grey">MERCH</h2><h2><a href="contact.php">CONTACT</a></h2></div>
 	    </header>
 	    <div id="nextgig">
 		<h4>NEXT GIG</h4>
