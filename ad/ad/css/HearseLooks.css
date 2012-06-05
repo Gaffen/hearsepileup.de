@@ -536,8 +536,30 @@ footer input{
     margin-right: 20px;
 }
 
+.logocol{
+    width: 300px;
+    text-align: left;
+    position: absolute;
+    left: 320px;
+    top: 146px;
+}
+
+.logocol p{
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.logocol span{
+    float: right;
+}
+
 .biobg {
     background: url(../images/bioback.jpg) no-repeat 0px 68px;
+}
+
+.contactbg {
+    background: url(../images/contactback.jpg) no-repeat 0px 68px;
 }
 
 .biobg p {
