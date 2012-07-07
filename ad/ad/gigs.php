@@ -25,12 +25,12 @@
 		artists = "<dt>Also Featuring:</dt>"
 		$.each(data["resultsPage"]["results"]["event"][i]["performance"], function(a, artist){
 		    if(data["resultsPage"]["results"]["event"][i]["performance"][a]["artist"]["displayName"] != "Hearse Pileup"){
-			artists += '<dd><a href="' + data["resultsPage"]["results"]["event"][i]["performance"][a]["artist"]["uri"] + '" target="_blank">' + data["resultsPage"]["results"]["event"][i]["performance"][a]["artist"]["displayName"] + '</a></dd>'
+			artists += '<dd><a href="' + 	data["resultsPage"]["results"]["event"][i]["performance"][a]["artist"]["uri"] + '" target="_blank">' + data["resultsPage"]["results"]["event"][i]["performance"][a]["artist"]["displayName"] + '</a></dd>'
 		    }
 		})
 	    }
 	    if(artists === ""){
-		artists += "<dt>No further information has been provided at this time<br/><br/>If you would like to know more, please contact us via Facebook, Twitter or E-mail</dt>"
+		artists += "<dt>No further information has been provided at this time<br/><br/>If you would like to know more, please contact us via <a href='http://www.facebook.com/Hearse.Pileup' target='_blank'>Facebook</a>, <a href='http://www.twitter.com/hearsepileup' target='_blank'>Twitter</a> or <a href='mailto:hearse.pileup@gmail.com'>E-mail</a></dt>"
 	    }
 	    
 	    $("#events").append('<li><h2><a href="'+ data["resultsPage"]["results"]["event"][i]["uri"] + '" target="_blank"><span>'
