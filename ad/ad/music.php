@@ -26,9 +26,6 @@
 		<a href="http://hearsepileup.bandcamp.com/" target="_blank" title="Hearse Pileup on Bandcamp"><img src="images/bandcamp.png" alt="Hearse Pileup on Bandcamp" /></a>
 	    </div>
 	</div>
-	<link rel="stylesheet" type="text/css" href="css/flashblock.css" />
-	<link rel="stylesheet" type="text/css" href="css/360player.css" />
-	<link rel="stylesheet" type="text/css" href="css/360player-visualization.css" />
 	<!--[if IE]><script type="text/javascript" src="script/excanvas.js"></script><![endif]-->
 	<script type="text/javascript" src="js/libs/360/berniecode-animator.js"></script>
 

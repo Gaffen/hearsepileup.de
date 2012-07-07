@@ -25,9 +25,6 @@ _-_-                                          -__ /\\     ,,
 	<meta content="Hearse Pileup; Zombie Rock and Roll" name="description" />
 	<meta content="Matt, Gaffen, Matthew, Music, QOTSA, Dead Weather, Tony Hoang, Wojciech Tybus, Birthday Party, Tone-Deaf Messiah" name="keywords" />
 	<link rel="stylesheet" type="text/css" href="css/HearseLooks.css" />
-	<link rel="stylesheet" type="text/css" href="css/lightbox.css" />
-	<link rel="stylesheet" type="text/css" href="css/fonts.css" />
-
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<link rel="shortcut icon" href="favicon.png" />
@@ -36,6 +33,28 @@ _-_-                                          -__ /\\     ,,
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.4.min.js"><\/script>')</script>
     <script src="js/page_resolution.js" type="text/javascript" language="javascript"></script>
+    <script type="text/javascript">
+	$(document).ready(function() {
+
+	    $.ajax({
+	  
+		url:  "http://api.songkick.com/api/3.0/artists/5287493/calendar.json?apikey=dzuyzOvYY0uXyUcS&jsoncallback=?",
+	      
+		dataType:   "jsonp", // <== JSON-P request
+		
+		success:    function(data){ 
+		
+		    if(data["resultsPage"]["totalEntries"] === 0){
+			$("#nextgig").append('<p><strong>No new Hearse gigs for now</strong> <br/>we must be busy getting drunk,<br/>come back soon for more gigs!<p>');
+		    } else {
+			var prettyDate = data["resultsPage"]["results"]["event"][0]["displayName"].match(/\(.*\)/).toString();
+			prettyDate = prettyDate.substring(1, prettyDate.length - 1);
+			$("#nextgig").append('<p>' + prettyDate + ' &#64; <a href="' + data["resultsPage"]["results"]["event"][0]["venue"]["uri"] + '" target="_blank">' + data["resultsPage"]["results"]["event"][0]["venue"]["displayName"] + '</a><br/>' + '<strong>' + data["resultsPage"]["results"]["event"][0]["location"]["city"] + '<br/><a href="' + data["resultsPage"]["results"]["event"][0]["uri"] + '" target="_blank">Click for details</a><p>');
+		    }
+		}     
+	    });
+	});
+    </script>
 </head>
 
 <body>
@@ -51,14 +70,12 @@ _-_-                                          -__ /\\     ,,
 	    <header id="nav">
 		<div id="tl"></div>
 		<div id="tr"></div>
-		<div id="rightnav"><h2><a href="music.php">MUSIC</a></h2><h2 class="grey">GIGS</h2><h2 class="grey">GALLERY</h2></div>
+		<div id="rightnav"><h2><a href="music.php">MUSIC</a></h2><h2><a href="gigs.php">GIGS</a></h2><h2 class="grey">GALLERY</h2></div>
 		<div id="logo">
 		    <a href="index.php"><img src="images/HearsePileupLogo.png" alt="Hearse Pileup" /></a>
 		</div>
 		<div id="leftnav"><h2><a href="bio.php">BIO</a></h2><h2 class="grey">MERCH</h2><h2><a href="contact.php">CONTACT</a></h2></div>
 	    </header>
 	    <div id="nextgig">
-		<h4>NEXT GIG</h4>
-		<p>16th May &#64; 229 The Venue,<br/><strong>&pound;7 tickets</strong><br/>
-		<a href="mailto:hearse.pileup@gmail.com" target="_blank">Email us for tickets</a></p>
+		<a href="http://www.songkick.com/artists/5287493-hearse-pileup" title="Gig listings courtesy of the Songkick API"><img src="images/songkick.png" /></a><h4>NEXT GIG</h4>
 	    </div>

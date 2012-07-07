@@ -1,5 +1,5 @@
 /*
- * HTML5 ✰ Boilerplate
+ * HTML5 ? Boilerplate
  *
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -9,625 +9,1392 @@
  *
  * ==|== normalize ==========================================================
  */
-
-
 /* =============================================================================
    HTML5 display definitions
    ========================================================================== */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block; }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
-audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
-audio:not([controls]) { display: none; }
-[hidden] { display: none; }
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
 
+audio:not([controls]) {
+  display: none; }
+
+[hidden] {
+  display: none; }
 
 /* =============================================================================
    Base
    ========================================================================== */
-
 /*
  * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
  * 2. Force vertical scrollbar in non-IE
  * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
  */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
 
-html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.231; }
 
-body { margin: 0; font-size: 12px; line-height: 1.231; }
+body, button, input, select, textarea {
+  font-family: sans-serif;
+  color: #fff; }
 
-body, button, input, select, textarea { font-family: sans-serif; color: #fff; }
+::-moz-selection {
+  background: #890000;
+  color: #fff;
+  text-shadow: none; }
 
-::-moz-selection { background: #890000; color: #fff; text-shadow: none; }
-::selection { background: #890000; color: #fff; text-shadow: none; }
-
+::selection {
+  background: #890000;
+  color: #fff;
+  text-shadow: none; }
 
 /* =============================================================================
    Links
    ========================================================================== */
+a {
+  color: #ffffff;
+  text-decoration: underline; }
 
-a { 
-    color: #ffffff;
-    text-decoration: underline;
-}
-a:visited { 
-    color: #ffffff;
-}
-a:hover { 
-    color: #ffffff;
-}
-a:focus { outline: thin dotted; }
+a:visited {
+  color: #ffffff; }
+
+a:hover {
+  color: #ffffff; }
+
+a:focus {
+  outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
-a:hover, a:active { outline: 0; }
-
+a:hover, a:active {
+  outline: 0; }
 
 /* =============================================================================
    Typography
    ========================================================================== */
+abbr[title] {
+  border-bottom: 1px dotted; }
 
-abbr[title] { border-bottom: 1px dotted; }
+b, strong {
+  font-weight: bold; }
 
-b, strong { font-weight: bold; }
+blockquote {
+  margin: 1em 40px; }
 
-blockquote { margin: 1em 40px; }
+dfn {
+  font-style: italic; }
 
-dfn { font-style: italic; }
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
 
-hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none; }
 
-ins { background: #ff9; color: #000; text-decoration: none; }
-
-mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
 
 /* Redeclare monospace font family: h5bp.com/j */
-pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+pre, code, kbd, samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em; }
 
 /* Improve readability of pre-formatted text in all browsers */
-pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
 
-q { quotes: none; }
-q:before, q:after { content: ""; content: none; }
+q {
+  quotes: none; }
 
-small { font-size: 85%; }
+q:before, q:after {
+  content: "";
+  content: none; }
+
+small {
+  font-size: 85%; }
 
 /* Position subscript and superscript content without affecting line-height: h5bp.com/k */
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
 
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
 
 /* =============================================================================
    Lists
    ========================================================================== */
+ul, ol {
+  margin: 1em 0;
+  padding: 0 0 0 40px; }
 
-ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
-dd { margin: 0 0 0 40px; }
-nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+dd {
+  margin: 0 0 0 40px; }
 
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0; }
 
 /* =============================================================================
    Embedded content
    ========================================================================== */
-
 /*
  * 1. Improve image quality when scaled in IE7: h5bp.com/d
  * 2. Remove the gap between images and borders on image containers: h5bp.com/e
  */
-
-img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle; }
 
 /*
  * Correct overflow not hidden in IE9
  */
-
-svg:not(:root) { overflow: hidden; }
-
+svg:not(:root) {
+  overflow: hidden; }
 
 /* =============================================================================
    Figures
    ========================================================================== */
-
-figure { margin: 0; }
-
+figure {
+  margin: 0; }
 
 /* =============================================================================
    Forms
    ========================================================================== */
+form {
+  margin: 0; }
 
-form { margin: 0; }
-fieldset { border: 0; margin: 0; padding: 0; }
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
 
 /* Indicate that 'label' will shift focus to the associated form element */
-label { cursor: pointer; }
+label {
+  cursor: pointer; }
 
 /*
  * 1. Correct color not inheriting in IE6/7/8/9
  * 2. Correct alignment displayed oddly in IE6/7
  */
-
-legend { border: 0; *margin-left: -7px; padding: 0; }
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0; }
 
 /*
  * 1. Correct font-size not inheriting in all browsers
  * 2. Remove margins in FF3/4 S5 Chrome
  * 3. Define consistent vertical alignment display in all browsers
  */
-
-button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
 
 /*
  * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
  */
-
-button, input { line-height: normal; }
+button, input {
+  line-height: normal; }
 
 /*
  * 1. Display hand cursor for clickable form elements
  * 2. Allow styling of clickable form elements in iOS
  * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
  */
-
-button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible; }
 
 /*
  * Consistent box sizing and appearance
  */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
 
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
-input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
-input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
 
 /*
  * Remove inner padding and border in FF3/4: h5bp.com/l
  */
-
-button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
 
 /*
  * 1. Remove default vertical scrollbar in IE6/7/8/9
  * 2. Allow only vertical resizing
  */
-
-textarea { overflow: auto; vertical-align: top; resize: vertical; }
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical; }
 
 /* Colors for form validity */
-input:valid, textarea:valid {  }
-input:invalid, textarea:invalid { background-color: #f0dddd; }
-
+input:invalid, textarea:invalid {
+  background-color: #f0dddd; }
 
 /* =============================================================================
    Tables
    ========================================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
-table { border-collapse: collapse; border-spacing: 0; }
-td { vertical-align: top; }
+td {
+  vertical-align: top; }
 
-
-/* ==|== primary styles =====================================================
-   Author:
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
    ========================================================================== */
+/* For image replacement */
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr; }
 
-#nav h2, footer form, #rightnav, #logo {
-    float: left;
-}
+.ir br {
+  display: none; }
 
-#links, #leftnav{
-    float: right;
-}
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
 
-.grey{
-    color: #555555;
-}
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
 
-#bl{
-    position: absolute;
-    background: url(../images/scratchbl.png) no-repeat;
-    width: 102px;
-    height: 82px;
-    bottom: 0px;
-    z-index: 9999; 
-}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
 
-#br{
-    position: absolute;
-    background: url(../images/scratchbr.png) no-repeat;
-    width: 53px;
-    height: 57px;
-    bottom: 0px;
-    z-index: 9998;
-    left: 0px;
-}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden; }
 
-#tr{
-    position: absolute;
-    background: url(../images/scratchtr.png) no-repeat;
-    width: 70px;
-    height: 77px;
-    top: 0px;
-    z-index: 9998;
-    right: 0px;
-}
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
 
-#tl{
-    position: absolute;
-    background: url(../images/scratchtl.png) no-repeat;
-    width: 102px;
-    height: 85px;
-    top: 0px;
-    z-index: 9998;
-    left: 0px;
-}
+.clearfix:after {
+  clear: both; }
 
-#topscratch{
-    position: absolute;
-    background: url(../images/topscratch.png) repeat-x;
-    width: 100%;
-    height: 20px;
-    top: 0px;
-    z-index: 9998;
-    left: 0px;
-}
-
-#botscratch{
-    position: absolute;
-    background: url(../images/botscratch.png) repeat-x;
-    width: 100%;
-    height: 20px;
-    bottom: 0px;
-    z-index: 9998;
-    left: 0px;
-}
-
-#lefscratch{
-    position: absolute;
-    background: url(../images/lefscratch.png) repeat-y;
-    width: 20px;
-    height: 100%;
-    bottom: 0px;
-    z-index: 9998;
-    left: 0px;
-}
-
-#rigscratch{
-    position: absolute;
-    background: url(../images/rigscratch.png) repeat-y;
-    width: 20px;
-    height: 100%;
-    bottom: 0px;
-    z-index: 9998;
-    right: 0px;
-}
-
-a {
-}
-
-a:visited {
-}
-
-body {
-    background-color: #000000;
-    text-align: center;
-    margin: auto;
-}
-
-header {
-    height: 184px;
-}
-
-#wrapper {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    margin: auto;
-}
-
-#nav {
-    height: 94px;
-    background-position: top;
-    background-repeat: repeat-x;
-    width: 100%;
-    background-image: url(../images/navbar.jpg);
-    text-align: center;
-    position: relative;
-    z-index: 9001;
-}
-
-#rightnav{
-    margin-left: 13px;
-    margin: 20px 0px 20px 32px;
-    float: left;
-    position: relative;
-    z-index: 10002;
-}
-
-#leftnav{
-    width: 348px;
-    margin: 20px 2px 20px 0px;
-    position: relative;
-    z-index: 10001
-}
-
-#content {
-    width: 940px;
-    background-color: #a84012;
-    margin: auto;
-    text-align: left;
-    border: 10px solid #ffffff;
-    min-height: 630px;
-    height: auto !important;
-    height: 630px;
-    position: relative;
-}
-
-.gaffangry{
-    background-image: url(../images/gaffangry.jpg);
-    background-repeat: no-repeat;
-    background-position: bottom left;
-}
-
-.records{
-    background-image: url(../images/records.jpg);
-    background-repeat: no-repeat;
-    background-position-y: 70px;
-}
-
-#rig{
-    background-image: url(../images/rig.jpg);
-    background-repeat: no-repeat;
-    width: 215px;
-    height: 190px;
-    position: absolute;
-    margin-top: 23px;
-    margin-left: 136px;
-    bottom: 0px;
-    right: 95px;
-}
-
-#logo {
-    margin: 0px -60px;
-    padding-top: 10px;
-    left: 0px;
-    z-index: 10000;
-    position: absolute;
-    left: 50%;
-    margin-left: -150px;
-}
-
-#nextgig{
-    text-align: right;
-    margin-right: 10px;
-    margin-top: -15px;
-    position: absolute;
-    right: 0px;
-    z-index: 10100;
-}
-
-#feature{
-    z-index: 20;
-    margin-left: 480px;
-    margin-top: 55px;
-    position: relative;
-    z-index: 10999;
-}
-
-#feature .info{
-    margin-left: 160px;
-}
-
-#obituaries {
-    position: absolute;
-    height:100px;
-    top: 300px;
-    right: 0px;
-    width: 60px;
-}
-
-#gigs {
-    width: 300px;
-    margin: auto;
-    text-align: left;
-}
-
-#gigs ul {
-    list-style: none;
-    text-align: left;
-    padding: 0px;
-}
-
-#creditfooter { 
-    display: none; 
-}
-
-footer{
-    width: 960px;
-    margin: 0px auto 0px auto;
-}
-
-
-footer .button{
-    background-image: url(../images/newsletterbutton.jpg);
-    font-weight: bold;
-    border: 0px;
-    height: 16px;
-    width: 54px;
-}
-
-footer input{
-    color: #000000;
-    font-size: 12px;
-    border: 0px;
-    margin: 13px 0 13px 0;
-}
-
-.ninja {
-    color:#333333;
-    font-size: 10px;
-    clear: both;
-}
-
-.ninja a {
-    color:#333333;
-}
-
-.strap{
-    width: 960px;
-    position: absolute;
-    text-align: center;
-    bottom: 69px;
-}
-
-.music{
-    position: absolute;
-    width: 768px;
-    text-align: center;
-    left: 95px;
-    bottom: 289px;
-    z-index: 5000;
-}
-.player1{
-    float: left;
-    width: 256px;
-    background: url(../images/player1.png) no-repeat 36px 45px;
-}
-.player2{
-    float: left;
-    width: 256px;
-    background: url(../images/player2.png) no-repeat 36px 45px;
-}
-.player3{
-    float: left;
-    width: 256px;
-    background: url(../images/player3.png) no-repeat 36px 45px;
-}
-
-.horizon{
-    background: #000;
-    width: 880px;
-    height: 268px;
-    position: absolute;
-    bottom: 0px;
-    padding: 0 0 0 60px;
-}
-
-.horizon p{
-    width: 300px;
-    float: left;
-    text-align: right;
-}
-
-.horizon img{
-    float: left;
-    margin-left: 30px;
-}
-
-.onecol{
-    width: 800px;
-    position: relative;
-    left: 70px;
-    top: 30px;
-}
-
-.twocol {
-    width: 400px;
-    float: left;
-    position: relative;
-    left: 90px;
-    top: 70px;
-    margin-right: 20px;
-}
-
-.logocol{
-    width: 300px;
-    text-align: left;
-    position: absolute;
-    left: 320px;
-    top: 146px;
-}
-
-.logocol p{
-    margin: 0;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.logocol span{
-    float: right;
-}
-
-.biobg {
-    background: url(../images/bioback.jpg) no-repeat 0px 68px;
-}
-
-.contactbg {
-    background: url(../images/contactback.jpg) no-repeat 0px 68px;
-}
-
-.biobg p {
-    font-size: 14px;
-    line-height: 18px;
-}
+.clearfix {
+  *zoom: 1; }
 
 /* ==|== media queries ======================================================
    PLACEHOLDER Media Queries for Responsive Design.
    These override the primary ('mobile first') styles
    Modify as content requires.
    ========================================================================== */
-
 @media only screen and (min-width: 480px) {
-  /* Style adjustments for viewports 480px and over go here */
-
-}
-
+  /* Style adjustments for viewports 480px and over go here */ }
 @media only screen and (min-width: 768px) {
-  /* Style adjustments for viewports 768px and over go here */
-
-}
-
-
-
-/* ==|== non-semantic helper classes ========================================
-   Please define your styles before this section.
-   ========================================================================== */
-
-/* For image replacement */
-.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
-.ir br { display: none; }
-
-/* Hide from both screenreaders and browsers: h5bp.com/u */
-.hidden { display: none !important; visibility: hidden; }
-
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
-
-/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
-
-/* Hide visually and from screenreaders, but maintain layout */
-.invisible { visibility: hidden; }
-
-/* Contain floats: h5bp.com/q */
-.clearfix:before, .clearfix:after { content: ""; display: table; }
-.clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }
-
-
-
+  /* Style adjustments for viewports 768px and over go here */ }
 /* ==|== print styles =======================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
-
 @media print {
-  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
-  a, a:visited { text-decoration: underline; }
-  a[href]:after { content: " (" attr(href) ")"; }
-  abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; } /* h5bp.com/t */
-  tr, img { page-break-inside: avoid; }
-  img { max-width: 100% !important; }
-  @page { margin: 0.5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3 { page-break-after: avoid; }
-}
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important; }
+
+  /* Black prints faster: h5bp.com/s */
+  a, a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: ""; }
+
+  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group; }
+
+  /* h5bp.com/t */
+  tr, img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2, h3 {
+    page-break-after: avoid; } }
+/* ==|== FONTS =====================================================
+   Author:
+   ========================================================================== */
+@font-face {
+  font-family: 'MuseoSlab';
+  src: url("../fonts/museo_slab_100-webfont.eot");
+  src: url("../fonts/museo_slab_100-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/museo_slab_100-webfont.woff") format("woff"), url("../fonts/museo_slab_100-webfont.ttf") format("truetype"), url("../fonts/museo_slab_100-webfont.svg#ArvoRegular") format("svg");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'BigMummyRegular';
+  src: url("../fonts/bigmummy-webfont.eot");
+  src: url("../fonts/bigmummy-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/bigmummy-webfont.woff") format("woff"), url("../fonts/bigmummy-webfont.ttf") format("truetype"), url("../fonts/bigmummy-webfont.svg#BigMummyRegular") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+h1 {
+  font-family: 'BigMummyRegular', sans-serif;
+  text-align: left;
+  font-size: 22px;
+  position: absolute;
+  top: 62px;
+  left: 10px;
+  text-shadow: 2px 2px 0 #000; }
+
+#leftnav h2 a, #rightnav h2 a {
+  text-decoration: none; }
+
+#leftnav h2 {
+  font-size: 27px;
+  line-height: 27px;
+  margin: 0px 20px 0 0;
+  font-weight: 100; }
+
+#rightnav h2 {
+  font-size: 27px;
+  line-height: 27px;
+  margin: 0px 20px 0 0;
+  font-weight: 100; }
+
+#nav {
+  font-family: 'MuseoSlab', sans-serif;
+  font-size: 20px;
+  font-weight: normal; }
+
+#nextgig h4 {
+  font-family: 'BigMummyRegular', sans-serif;
+  font-size: 22px;
+  margin: 0;
+  line-height: 1;
+  font-weight: normal; }
+
+#nextgig p {
+  font-family: Arial, sans-serif;
+  margin: 0; }
+
+#nextgig a {
+  font-weight: bold; }
+
+#feature h4 {
+  font-family: 'MuseoSlab', sans-serif;
+  font-size: 27px;
+  margin: 0px 0px;
+  font-weight: normal; }
+
+h3 {
+  font-family: 'BigMummyRegular', sans-serif;
+  color: #000000;
+  text-shadow: 2px 2px #ffffff;
+  font-size: 62px;
+  margin: 0px;
+  line-height: 60px;
+  font-weight: normal; }
+
+#feature h5 {
+  font-family: 'BigMummyRegular', sans-serif;
+  color: #ffffff;
+  font-size: 27px;
+  margin: 0px;
+  line-height: 27px;
+  font-weight: normal; }
+
+#feature .info p {
+  margin: 0px; }
+
+footer h6 {
+  font-size: 20px;
+  font-family: 'MuseoSlab', sans-serif;
+  margin: 10px 20px 10px 10px;
+  font-weight: 100; }
+
+footer .strap h2 {
+  font-size: 27px;
+  font-family: 'BigMummyRegular', sans-serif;
+  text-shadow: 2px 2px 0 #000; }
+
+.horizon h3 {
+  font-family: 'MuseoSlab', sans-serif;
+  font-size: 20px;
+  width: 300px;
+  text-align: right;
+  color: white;
+  text-shadow: none; }
+
+h2 {
+  font-family: 'MuseoSlab', sans-serif; }
+
+/* ==|== Music Player =====================================================
+   Author:
+   ========================================================================== */
+/**
+ * SoundManager 2 + useFlashBlock
+ * ------------------------------
+ * Flash positioning and flashblock / clicktoflash handling
+ */
+#sm2-container {
+  /**
+   * where the SM2 flash movie goes. by default, relative container.
+   * set relative or absolute here, and don't touch it later or bad things will happen (see below comments.)
+   */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  /* screw IE 6, just make it display nice */
+  _overflow: hidden; }
+
+#sm2-container object,
+#sm2-container embed {
+  /**
+   * the actual SWF movie bit.
+   * important: The SWF needs to be able to be moved off-screen without display: or position: changes.
+   * changing display: or position: or overflow: here or on parent can cause SWF reload or other weird issues after unblock
+   * e.g., SM2 starts but strange errors, no whileplaying() etc.
+   */
+  width: 48px;
+  height: 48px;
+  /* some flash blockers may also respect this rule */
+  max-width: 48px;
+  max-height: 48px; }
+
+#sm2-container.swf_timedout {
+  /* expand to show the timed-out SWF content */
+  position: relative;
+  width: 48px;
+  height: 48px; }
+
+#sm2-container.swf_timedout,
+#sm2-container.swf_timedout object,
+#sm2-container.swf_timedout embed {
+  /**
+   * when SM2 didn't start normally, time-out case. flash blocked, missing SWF, no flash?
+   * 48px square flash placeholder is typically used by blockers.
+   */
+  min-width: 48px;
+  min-height: 48px; }
+
+#sm2-container.swf_unblocked {
+  /* SWF unblocked, or was never blocked to begin with; try to collapse container as much as possible. */
+  width: 1px;
+  height: 1px; }
+
+#sm2-container.swf_loaded object,
+#sm2-container.swf_loaded embed,
+#sm2-container.swf_unblocked object,
+#sm2-container.swf_unblocked embed {
+  /* hide flash off-screen (relative to container) when it has loaded OK */
+  left: -9999em;
+  top: -9999em; }
+
+#sm2-container.swf_error {
+  /* when there is a fatal error (flash loaded, but SM2 failed) */
+  display: none; }
+
+#sm2-container.high_performance,
+#sm2-container.high_performance.swf_timeout {
+  /* "high performance" case: keep on-screen at all times */
+  position: absolute;
+  position: fixed; }
+
+#sm2-container.high_performance {
+  overflow: hidden;
+  _top: -9999px;
+  /* IE 6 hax, no position:fixed */
+  _left: -9999px;
+  bottom: 0px;
+  left: 0px;
+  /**
+   * special case: show at first with w/h, hide when unblocked.
+   * might be bad/annoying.
+   * try to stay within ClickToFlash "invisible" limits (so it won't be blocked.)
+   */
+  z-index: 99;
+  /* try to stay on top */ }
+
+#sm2-container.high_performance.swf_loaded,
+#sm2-container.high_performance.swf_unblocked {
+  z-index: auto; }
+
+#sm2-container.high_performance.swf_loaded,
+#sm2-container.high_performance.swf_unblocked,
+#sm2-container.high_performance.swf_unblocked object,
+#sm2-container.high_performance.swf_unblocked embed {
+  /**
+   * 8x8px is required minimum to load in fx/win32 in some cases(?)
+   * 6x6+ good for fast performance, even better when on-screen via position:fixed
+   * also, clickToFlash (Safari <5.1) may auto-load "invisible" SWFs at this size
+   */
+  height: 8px;
+  width: 8px; }
+
+#sm2-container.high_performance.swf_loaded {
+  /* stay bottom/left */
+  top: auto;
+  bottom: 0px;
+  left: 0px; }
+
+#sm2-container.high_performance.swf_loaded object,
+#sm2-container.high_performance.swf_loaded embed,
+#sm2-container.high_performance.swf_unblocked object,
+#sm2-container.high_performance.swf_unblocked embed {
+  /* high-performance case must stay on-screen */
+  left: auto;
+  top: auto; }
+
+#sm2-container.high_performance.swf_timedout {
+  z-index: 99;
+  /* try to stay on top */ }
+
+/* General warning: Beta-ish. Code could be a bit cleaner. */
+.ui360,
+.sm2-360ui {
+  /* canvas container */
+  position: relative; }
+
+.ui360,
+.sm2-360ui {
+  min-width: 50px;
+  /* should always be at least this. */
+  min-height: 50px; }
+
+.sm2-360ui {
+  width: 50px;
+  height: 50px; }
+
+.ui360,
+.ui360 * {
+  vertical-align: middle; }
+
+.sm2-360ui {
+  position: relative;
+  display: inline-block;
+  /* firefox 3 et al */
+  float: left;
+  /* IE 6+7, firefox 2 needs this, inline-block would work with fx3 and others */
+  *display: inline;
+  /*
+   clear:left;
+  */ }
+
+.sm2-360ui.sm2_playing,
+.sm2-360ui.sm2_paused {
+  /* bump on top when active */
+  z-index: 10; }
+
+.ui360 a {
+  /* .sm2_link class added to playable links by SM2 */
+  float: left;
+  display: inline;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  left: 3px;
+  /* slight spacing on left UI */
+  top: 18px;
+  /* vertical align */
+  text-indent: 50px;
+  /* make room for UI at left */ }
+
+.ui360 a.sm2_link {
+  /* SM2 has now started */
+  text-indent: 0px;
+  /* UI now in place. */ }
+
+.ui360 .sm2-canvas {
+  position: absolute;
+  left: 0px;
+  top: 0px; }
+
+.ui360 .sm2-timing {
+  position: absolute;
+  display: block;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  font: 11px "helvetica neue",helvetica,monaco,lucida,terminal,monospace;
+  color: #666;
+  text-align: center;
+  line-height: 50px; }
+
+.ui360 .sm2-timing.alignTweak {
+  text-indent: 1px;
+  /* devious center-alignment tweak for Safari (might break things for others.) */ }
+
+.ui360 .sm2-cover {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: none;
+  background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==);
+  /* old-skool bug: IE 9 won't catch mouse events otherwise. /smash */ }
+
+.ui360 .sm2-360btn {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  /*
+   width:22px;
+   height:22px;
+   margin-left:-11px;
+   margin-top:-11px;
+  */
+  /* by default, cover whole space. make smaller when playing. */
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+  border-radius: 25px;
+  cursor: pointer;
+  z-index: 3; }
+
+.ui360 .sm2-360data {
+  display: inline-block;
+  font-family: helvetica; }
+
+.sm2-inline-block .ui360 .sm2-360btn,
+.ui360 .sm2-360ui.sm2_playing .sm2-360btn,
+.ui360 .sm2-360ui.sm2_paused .sm2-360btn {
+  /* smaller clickable button, in center */
+  width: 22px;
+  height: 22px;
+  margin-left: -11px;
+  margin-top: -11px; }
+
+.ui360 .sm2-360ui.sm2_playing .sm2-cover,
+.ui360 .sm2-360ui.sm2_paused .sm2-cover {
+  display: block; }
+
+/* this could be optimized a fair bit. */
+.ui360,
+.ui360 .sm2-360btn-default,
+.ui360 .sm2-360ui.sm2_paused .sm2-360btn {
+  background: transparent url(360-button-play.png) no-reoeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAABoUlEQVR42sWVu2oCQRhGU/s8gpVYJeQJNkZSbiH4QNuLlQZS21sJayGYaOEFVFDxNiremj9zig2uzk5YQpKFg8PMd75ZZle9E5Ff4e+Ll8tlQuNoPI2vUcCYOdbIxCmm9F5T0YgNMmS/LebSwWdNa7VayXq9ls1mI9vtVna7nQBj5lgjQxYHN7KY3QkiUbDf7+V4PMrpdArBHGtkyOJc3/n1mVaUUl+F5/PZSrABDi4dpmKH3QkixQEHlw5TsccZmsRCoSD1et1ajkuHqdg/HA5GKZPJCOTzeanVasYMLh2mYsXDIGAoDuG6rlSr1WCdBxrcsTIWazgrQiHS6bSRYJ3XDzeq2O/3+9Ltdm9IpVIhstmslEqlUAY36ii8ZrMpjUbjhmQyKeA4jhSLRWMGN+rhOZ1Oh8ANuVxOyuUy40hwo163RK/XeyPQbrdjgYNr/ILAYDB41Gf1wZnFAQfX+iM0HA5fxuPx+2g0Ej22QoYsDq61mGsymTxMp9NX/Sk2yJDFsRZfXpzXbDZ7WiwW3nw+9zUKGDPHGpkL5V//mn7OJyJZApyzeUS5AAAAAElFTkSuQmCC);
+  *background-image: url(360-button-play.png);
+  background-repeat: no-repeat; }
+
+.ui360 {
+  /*
+   "fake" button shown before SM2 has started, non-JS/non-SM2 case etc.
+   background image will be removed via JS, in threeSixyPlayer.init()
+  */
+  background-position: 14px 50%;
+  _background: transparent url(360-button-play.gif) no-repeat 14px 50%;
+  /* IE 6-only: special crap GIF */ }
+
+.ui360 .sm2-360btn-default,
+.ui360 .sm2-360ui.sm2_paused .sm2-360btn {
+  background-position: 50% 50%;
+  _background: transparent url(360-button-play.gif) no-repeat 50% 50%;
+  /* IE 6-only: special crap GIF */ }
+
+.ui360 .sm2-360btn-default,
+.ui360 .sm2-360ui.sm2_paused .sm2-360btn {
+  cursor: pointer; }
+
+.ui360 .sm2-360btn-default:hover,
+.ui360 .sm2-360ui.sm2_paused .sm2-360btn:hover {
+  background: transparent url(360-button-play-light.png) no-repeat 50% 50%;
+  _background: transparent url(360-button-play.gif) no-repeat 50% 50%;
+  cursor: pointer; }
+
+.ui360 .sm2-360ui.sm2_playing .sm2-360btn:hover,
+.ui360 .sm2-360btn-playing:hover {
+  background: transparent url(360-button-pause-light.png) no-repeat 50% 50%;
+  _background: transparent url(360-button-pause-light.gif) no-repeat 50% 50%;
+  cursor: pointer; }
+
+.ui360 .sm2-360ui.sm2_playing .sm2-timing {
+  visibility: visible; }
+
+.ui360 .sm2-360ui.sm2_buffering .sm2-timing {
+  visibility: hidden; }
+
+.ui360 .sm2-360ui .sm2-timing,
+.ui360 .sm2-360ui .sm2-360btn:hover + .sm2-timing,
+.ui360 .sm2-360ui.sm2_paused .sm2-timing {
+  visibility: hidden; }
+
+.ui360 .sm2-360ui.sm2_dragging .sm2-timing,
+.ui360 .sm2-360ui.sm2_dragging .sm2-360btn:hover + .sm2-timing {
+  /* paused + dragging */
+  visibility: visible; }
+
+.ui360 .sm2-360ui.sm2_playing .sm2-360btn,
+.ui360 .sm2-360ui.sm2_dragging .sm2-360btn,
+.ui360 .sm2-360ui.sm2_dragging .sm2-360btn:hover,
+.ui360 .sm2-360ui.sm2_dragging .sm2-360btn-playing:hover {
+  /* don't let pause button show on hover when dragging (or paused and dragging) */
+  background: transparent;
+  cursor: auto; }
+
+.ui360 .sm2-360ui.sm2_buffering .sm2-360btn,
+.ui360 .sm2-360ui.sm2_buffering .sm2-360btn:hover {
+  background: transparent url(icon_loading_spinner.gif) no-repeat 50% 50%;
+  opacity: 0.5;
+  visibility: visible; }
+
+/* inline list style */
+.sm2-inline-list .ui360,
+.sm2-inline-block .ui360 {
+  position: relative;
+  display: inline-block;
+  float: left;
+  _display: inline;
+  margin-bottom: -15px; }
+
+.sm2-inline-list .ui360 {
+  /* inline player: minor tweak, tighten spacing */
+  margin-right: -2px; }
+
+.sm2-inline-block .ui360 {
+  margin-right: 8px; }
+
+.sm2-inline-list .ui360 a {
+  display: none; }
+
+/* annotations */
+ul.ui360playlist {
+  list-style-type: none; }
+
+ul.ui360playlist,
+ul.ui360playlist li {
+  margin: 0px;
+  padding: 0px; }
+
+div.ui360 div.metadata {
+  display: none; }
+
+div.ui360 a span.metadata,
+div.ui360 a span.metadata * {
+  /* name of track, note etc. */
+  vertical-align: baseline; }
+
+/* larger canvas, spectrum + EQ visualization and other items */
+.ui360-vis,
+.ui360-vis .sm2-360ui,
+.sm2-inline-list .ui360-vis {
+  /* size of the container for the circle, etc. */
+  width: 256px;
+  height: 256px; }
+
+.ui360-vis {
+  position: relative;
+  /* a little extra spacing */
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-bottom: -18px;
+  /* approximate "line height" we want */
+  padding-left: 248px;
+  margin-left: 0px;
+  background-position: 22.6% 50%;
+  /* (~109px) initial play button position */ }
+
+.sm2-inline-list .ui360-vis {
+  cursor: pointer; }
+
+.ui360-vis a {
+  font: 14px "MuseoSlab",helvetica,monaco,lucida,terminal,monospace;
+  white-space: nowrap;
+  text-indent: 0px;
+  /* undo inline style */
+  top: 230px;
+  /* ehh. */
+  margin-left: -256px;
+  width: 256px;
+  color: white;
+  text-shadow: 2px 2px 0 #a84114; }
+
+.sm2-inline-list .ui360-vis a {
+  line-height: 256px;
+  top: auto; }
+
+.ui360-vis .sm2-360ui {
+  margin-left: -256px; }
+
+.ui360-vis .sm2-timing {
+  font: bold 24px "helvetica neue", helvetica, monaco, lucida, terminal, monospace;
+  color: #ffca28;
+  text-align: center;
+  line-height: 256px;
+  text-indent: 0px;
+  text-shadow: 2px 2px 0 #a84114; }
+
+.sm2-inline-list .ui360-vis,
+.sm2-inline-list .ui360-vis .sm2-360ui {
+  margin-left: 0px; }
+
+.sm2-inline-list .ui360-vis {
+  margin: 8px 13px 7px 0px;
+  padding-left: 0px;
+  background-position: 50% 50%;
+  /* initial play button position */ }
+
+.sm2-inline-list .ui360-vis .sm2-360ui {
+  border: 1px solid #eee;
+  /* offset the border */
+  margin-left: -1px;
+  margin-top: -1px; }
+
+.sm2-inline-list .ui360-vis a {
+  position: absolute;
+  display: inline;
+  left: 0px;
+  bottom: 0px;
+  top: 1px;
+  width: 100%;
+  /* 2px padding in box */
+  height: 99%;
+  /* dumb vertical hack */
+  *height: 256px;
+  /* IE is dumb. */
+  overflow: hidden;
+  font-size: small;
+  font-weight: 300;
+  color: #333;
+  margin: 0px;
+  padding: 0px;
+  line-height: 488px;
+  /* bottom vertical alignment for text */
+  *line-height: 480px;
+  /* IE again */
+  text-align: center;
+  border-radius: 0px; }
+
+.sm2-inline-list .ui360 a:hover {
+  background-color: transparent;
+  /* reset */ }
+
+.sm2-inline-list .ui360-vis:hover .sm2-360ui,
+.sm2-inline-list .ui360-vis a.sm2_link:hover,
+.sm2-inline-list .ui360-vis a.sm2_link:active,
+.sm2-inline-list .ui360-vis a.sm2_link:focus {
+  background-color: transparent; }
+
+/* Use a bigger loading image for this layout */
+.ui360-vis .sm2-360btn,
+.ui360-vis .sm2-360ui.sm2_paused .sm2-360btn,
+.ui360-vis .sm2-360ui.sm2_playing .sm2-360btn {
+  width: 48px;
+  height: 48px;
+  margin-left: -24px;
+  margin-top: -24px;
+  border-radius: none; }
+
+.ui360-vis,
+.ui360-vis .sm2-360ui.sm2_paused .sm2-360btn,
+.ui360-vis .sm2-360btn-default {
+  background: transparent url(../images/play.png) no-repeat 50% 50%;
+  background-image: url(../images/play.png);
+  *background-image: url(../images/play.png);
+  _background: transparent url(../images/play.gif) no-repeat 50% 50%;
+  cursor: pointer; }
+
+.ui360-vis:hover .sm2-360btn,
+.ui360-vis .sm2-360btn-default:hover,
+.ui360-vis .sm2-360ui.sm2_paused .sm2-360btn:hover {
+  background: transparent url(3../images/play.png) no-repeat 50% 50%;
+  _background: transparent url(../images/play.gif) no-repeat 50% 50%;
+  cursor: pointer; }
+
+.ui360-vis .sm2-360ui.sm2_playing .sm2-360btn:hover,
+.ui360-vis .sm2-360btn-playing:hover {
+  background: transparent url(../images/pause.png) no-repeat 50% 50%;
+  _background: transparent url(../images/pause.png) no-repeat 50% 50%;
+  cursor: pointer; }
+
+.ui360-vis {
+  /* non-JS / before-loaded state */
+  background-position: 21% 50%;
+  _background: transparent url(360-button-vis-play.gif) no-repeat 21% 50%;
+  /* IE 6-only: special crap GIF */ }
+
+.ui360-vis .sm2-360btn-default {
+  /* real button, post-loaded state */
+  _background: transparent url(360-button-vis-play.gif) no-repeat 50% 50%;
+  /* IE 6-only: special crap GIF */ }
+
+.ui360-vis .sm2-360ui.sm2_dragging .sm2-360btn {
+  visibility: hidden; }
+
+/* ==|== LIGHTBOX =====================================================
+   Author:
+   ========================================================================== */
+#lightbox {
+  background-color: #eee;
+  padding: 10px;
+  border-bottom: 2px solid #666;
+  border-right: 2px solid #666; }
+
+#lightboxDetails {
+  font-size: 0.8em;
+  padding-top: 0.4em; }
+
+#lightboxCaption {
+  float: left; }
+
+#keyboardMsg {
+  float: right; }
+
+#closeButton {
+  top: 5px;
+  right: 5px; }
+
+#lightbox img {
+  border: none;
+  clear: both; }
+
+#overlay img {
+  border: none; }
+
+#overlay {
+  background-image: url(http://www.hearsepileup.de/ad/images/overlay.png); }
+
+* html #overlay {
+  background-color: #333;
+  back\ground-color: transparent;
+  background-image: url(blank.gif);
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.hearsepileup.de/ad/images/overlay.png", sizingMethod="scale"); }
+
+/* ==|== primary styles =====================================================
+   Author:
+   ========================================================================== */
+body {
+  background-color: #000000;
+  text-align: center;
+  margin: auto; }
+
+header {
+  height: 184px; }
+
+#nav h2, footer form, #rightnav, #logo {
+  float: left; }
+
+#links, #leftnav {
+  float: right; }
+
+.grey {
+  color: #555555; }
+
+#bl {
+  position: absolute;
+  background: url(../images/scratchbl.png) no-repeat;
+  width: 102px;
+  height: 82px;
+  bottom: 0px;
+  z-index: 9999; }
+
+#br {
+  position: absolute;
+  background: url(../images/scratchbr.png) no-repeat;
+  width: 53px;
+  height: 57px;
+  bottom: 0px;
+  z-index: 9998;
+  left: 0px; }
+
+#tr {
+  position: absolute;
+  background: url(../images/scratchtr.png) no-repeat;
+  width: 70px;
+  height: 77px;
+  top: 0px;
+  z-index: 9998;
+  right: 0px; }
+
+#tl {
+  position: absolute;
+  background: url(../images/scratchtl.png) no-repeat;
+  width: 102px;
+  height: 85px;
+  top: 0px;
+  z-index: 9998;
+  left: 0px; }
+
+#topscratch {
+  position: absolute;
+  background: url(../images/topscratch.png) repeat-x;
+  width: 100%;
+  height: 20px;
+  top: 0px;
+  z-index: 9998;
+  left: 0px; }
+
+#botscratch {
+  position: absolute;
+  background: url(../images/botscratch.png) repeat-x;
+  width: 100%;
+  height: 20px;
+  bottom: 0px;
+  z-index: 9998;
+  left: 0px; }
+
+#lefscratch {
+  position: absolute;
+  background: url(../images/lefscratch.png) repeat-y;
+  width: 20px;
+  height: 100%;
+  bottom: 0px;
+  z-index: 9998;
+  left: 0px; }
+
+#rigscratch {
+  position: absolute;
+  background: url(../images/rigscratch.png) repeat-y;
+  width: 20px;
+  height: 100%;
+  bottom: 0px;
+  z-index: 9998;
+  right: 0px; }
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: auto; }
+
+#nav {
+  height: 94px;
+  background-position: top;
+  background-repeat: repeat-x;
+  width: 100%;
+  background-image: url(../images/navbar.jpg);
+  text-align: center;
+  position: relative;
+  z-index: 9001; }
+
+#rightnav {
+  margin-left: 13px;
+  margin: 20px 0px 20px 32px;
+  float: left;
+  position: relative;
+  z-index: 10002; }
+
+#leftnav {
+  width: 348px;
+  margin: 20px 2px 20px 0px;
+  position: relative;
+  z-index: 10001; }
+
+#content {
+  width: 940px;
+  background-color: #a84012;
+  margin: auto;
+  text-align: left;
+  border: 10px solid #ffffff;
+  min-height: 630px;
+  height: auto !important;
+  height: 630px;
+  position: relative; }
+
+.gaffangry {
+  background-image: url(../images/gaffangry.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom left; }
+
+.records {
+  background-image: url(../images/records.jpg);
+  background-repeat: no-repeat;
+  background-position-y: 70px; }
+
+.gigback {
+  background-image: url(../images/gigback.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom; }
+
+#rig {
+  background-image: url(../images/rig.jpg);
+  background-repeat: no-repeat;
+  width: 215px;
+  height: 190px;
+  position: absolute;
+  margin-top: 23px;
+  margin-left: 136px;
+  bottom: 0px;
+  right: 95px; }
+
+#logo {
+  margin: 0px -60px;
+  padding-top: 10px;
+  left: 0px;
+  z-index: 10000;
+  position: absolute;
+  left: 50%;
+  margin-left: -150px; }
+
+#nextgig {
+  text-align: right;
+  margin-right: 10px;
+  margin-top: -15px;
+  position: absolute;
+  right: 0px;
+  z-index: 10100; }
+  #nextgig img {
+    display: inline-block;
+    margin: 0px 8px 10px 0px; }
+  #nextgig h4 {
+    display: inline-block; }
+
+#feature {
+  z-index: 20;
+  margin-left: 480px;
+  margin-top: 55px;
+  position: relative;
+  z-index: 10999; }
+
+#feature .info {
+  margin-left: 160px; }
+
+#obituaries {
+  position: absolute;
+  height: 100px;
+  top: 300px;
+  right: 0px;
+  width: 60px; }
+
+#gigs {
+  width: 300px;
+  margin: auto;
+  text-align: left; }
+
+#gigs ul {
+  list-style: none;
+  text-align: left;
+  padding: 0px; }
+
+#creditfooter {
+  display: none; }
+
+footer {
+  width: 960px;
+  margin: 0px auto 0px auto; }
+  footer .button {
+    background-image: url(../images/newsletterbutton.jpg);
+    font-weight: bold;
+    border: 0px;
+    height: 16px;
+    width: 54px; }
+  footer input {
+    color: #000000;
+    font-size: 12px;
+    border: 0px;
+    margin: 13px 0 13px 0; }
+
+.ninja {
+  color: #333333;
+  font-size: 10px;
+  clear: both; }
+  .ninja a {
+    color: #333333; }
+
+.strap {
+  width: 960px;
+  position: absolute;
+  text-align: center;
+  bottom: 69px; }
+
+.music {
+  position: absolute;
+  width: 768px;
+  text-align: center;
+  left: 95px;
+  bottom: 289px;
+  z-index: 5000; }
+
+.player1 {
+  float: left;
+  width: 256px;
+  background: url(../images/player1.png) no-repeat 36px 45px; }
+
+.player2 {
+  float: left;
+  width: 256px;
+  background: url(../images/player2.png) no-repeat 36px 45px; }
+
+.player3 {
+  float: left;
+  width: 256px;
+  background: url(../images/player3.png) no-repeat 36px 45px; }
+
+.horizon {
+  background: #000;
+  width: 880px;
+  height: 268px;
+  position: absolute;
+  bottom: 0px;
+  padding: 0 0 0 60px; }
+  .horizon p {
+    width: 300px;
+    float: left;
+    text-align: right; }
+  .horizon img {
+    float: left;
+    margin-left: 30px; }
+
+.onecol {
+  width: 800px;
+  position: relative;
+  left: 70px;
+  top: 30px; }
+
+.twocol {
+  width: 400px;
+  float: left;
+  position: relative;
+  left: 90px;
+  top: 70px;
+  margin-right: 20px; }
+
+.logocol {
+  width: 300px;
+  text-align: left;
+  position: absolute;
+  left: 320px;
+  top: 146px; }
+  .logocol p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold; }
+  .logocol span {
+    float: right; }
+
+.biobg {
+  background: url(../images/bioback.jpg) no-repeat 0px 68px; }
+  .biobg p {
+    font-size: 14px;
+    line-height: 18px; }
+
+.contactbg {
+  background: url(../images/contactback.jpg) no-repeat 0px 68px; }
+
+/* ==|== Gigs =====================================================
+   Author:
+   ========================================================================== */
+.events {
+  width: 380px;
+  float: right;
+  margin: 57px 150px 60px 0;
+  list-style: none;
+  padding: 0; }
+  .events li {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    clear: both;
+    display: block;
+    width: 380px; }
+  .events h2 {
+    display: block;
+    float: left;
+    width: 180px;
+    margin: 0; }
+  .events dl {
+    margin: 0; }
+  .events dd {
+    float: right;
+    text-align: right;
+    display: block;
+    clear: both; }
+  .events dt {
+    float: left;
+    clear: both; }
+  .events .doortime {
+    display: inline;
+    clear: none;
+    margin-bottom: 10px; }
+  .events .eventdetail {
+    float: left;
+    width: 180px; }
+
+.clr {
+  clear: both; }
