@@ -1,11 +1,11 @@
-<!-- 
+<!--
 _-_-                                          -__ /\\     ,,
   /,              _                             ||  \\  ' ||
-  || __    _-_   < \, ,._-_  _-_,  _-_         /||__|| \\ ||  _-_  \\ \\ -_-_  
- ~||-  -  || \\  /-||  ||   ||_.  || \\        \||__|| || || || \\ || || || \\ 
-  ||===|| ||/   (( ||  ||    ~ || ||/           ||  |, || || ||/   || || || || 
- ( \_, |  \\,/   \/\\  \\,  ,-_-  \\,/        _-||-_/  \\ \\ \\,/  \\/\\ ||-'  
-       `                                        ||                       |/    
+  || __    _-_   < \, ,._-_  _-_,  _-_         /||__|| \\ ||  _-_  \\ \\ -_-_
+ ~||-  -  || \\  /-||  ||   ||_.  || \\        \||__|| || || || \\ || || || \\
+  ||===|| ||/   (( ||  ||    ~ || ||/           ||  |, || || ||/   || || || ||
+ ( \_, |  \\,/   \/\\  \\,  ,-_-  \\,/        _-||-_/  \\ \\ \\,/  \\/\\ ||-'
+       `                                        ||                       |/
                                               Zombie rock and roll       '
 -->
 
@@ -28,7 +28,7 @@ _-_-                                          -__ /\\     ,,
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<link rel="shortcut icon" href="favicon.png" />
-  
+
     <script src="js/libs/modernizr-2.0.6.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.4.min.js"><\/script>')</script>
@@ -37,21 +37,21 @@ _-_-                                          -__ /\\     ,,
 	$(document).ready(function() {
 
 	    $.ajax({
-	  
+
 		url:  "http://api.songkick.com/api/3.0/artists/5287493/calendar.json?apikey=dzuyzOvYY0uXyUcS&jsoncallback=?",
-	      
+
 		dataType:   "jsonp", // <== JSON-P request
-		
-		success:    function(data){ 
-		
-		    if(data["resultsPage"]["totalEntries"] === 0){
+
+		success:    function(data){
+
+		    if(data["resultsPage"]["totalEntries"] === 0 || data == null){
 			$("#nextgig").append('<p><strong>No new Hearse gigs for now</strong> <br/>we must be busy getting drunk,<br/>come back soon for more gigs!<p>');
 		    } else {
-			var prettyDate = data["resultsPage"]["results"]["event"][0]["displayName"].match(/\(.*\)/).toString();
-			prettyDate = prettyDate.substring(1, prettyDate.length - 1);
-			$("#nextgig").append('<p>' + prettyDate + ' &#64; <a href="' + data["resultsPage"]["results"]["event"][0]["venue"]["uri"] + '" target="_blank">' + data["resultsPage"]["results"]["event"][0]["venue"]["displayName"] + '</a><br/>' + '<strong>' + data["resultsPage"]["results"]["event"][0]["location"]["city"] + '<br/><a href="' + data["resultsPage"]["results"]["event"][0]["uri"] + '" target="_blank">Click for details</a><p>');
+			//var prettyDate = data["resultsPage"]["results"]["event"][0]["displayName"].match(/\(.*\)/).toString();
+			//prettyDate = prettyDate.substring(1, prettyDate.length - 1);
+			$("#nextgig").append('<p>' + data["resultsPage"]["results"]["event"][0]["displayName"] + ' &#64; <a href="' + data["resultsPage"]["results"]["event"][0]["venue"]["uri"] + '" target="_blank">' + data["resultsPage"]["results"]["event"][0]["venue"]["displayName"] + '</a><br/>' + '<strong>' + data["resultsPage"]["results"]["event"][0]["location"]["city"] + '<br/><a href="' + data["resultsPage"]["results"]["event"][0]["uri"] + '" target="_blank">Click for details</a><p>');
 		    }
-		}     
+		}
 	    });
 	});
     </script>
