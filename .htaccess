@@ -1,3 +1,0 @@
-Options +FollowSymLinks
-RewriteEngine on
-RewriteRule (.*) http://www.hearsepileup.de/ad/$1 [R=301,L]
