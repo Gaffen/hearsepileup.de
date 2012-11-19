@@ -271,9 +271,6 @@ textarea {
   resize: vertical; }
 
 /* Colors for form validity */
-input:invalid, textarea:invalid {
-  background-color: #f0dddd; }
-
 /* =============================================================================
    Tables
    ========================================================================== */

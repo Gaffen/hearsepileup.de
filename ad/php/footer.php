@@ -1,72 +1,23 @@
 <footer>
 <div class="strap"><h2>Zombie Rock and Roll to play off the apocalypse</h2></div>
-    	<script language="Javascript" type="text/javascript">
 
-function checkform() {
-  for (i=0;i<fieldstocheck.length;i++) {
-    if (eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].type") == "checkbox") {
-      if (document.subscribeform.elements[fieldstocheck[i]].checked) {
-      } else {
-        alert("Please enter your "+fieldnames[i]);
-        eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].focus()");
-        return false;
-      }
-    }
-    else {
-      if (eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].value") == "") {
-        alert("Please enter your "+fieldnames[i]);
-        eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].focus()");
-        return false;
-      }
-    }
-  }
-  for (i=0;i<groupstocheck.length;i++) {
-    if (!checkGroup(groupstocheck[i],groupnames[i])) {
-      return false;
-    }
-  }
-  
-  return true;
-}
-
-var fieldstocheck = new Array();
-var fieldnames = new Array();
-function addFieldToCheck(value,name) {
-  fieldstocheck[fieldstocheck.length] = value;
-  fieldnames[fieldnames.length] = name;
-}
-var groupstocheck = new Array();
-var groupnames = new Array();
-function addGroupToCheck(value,name) {
-  groupstocheck[groupstocheck.length] = value;
-  groupnames[groupnames.length] = name;
-}
-
-function compareEmail()
-{
-  return (document.subscribeform.elements["email"].value == document.subscribeform.elements["emailconfirm"].value);
-}
-function checkGroup(name,value) {
-  option = -1;
-  for (i=0;i<document.subscribeform.elements[name].length;i++) {
-    if (document.subscribeform.elements[name][i].checked) {
-      option = i;
-    }
-  }
-  if (option == -1) {
-    alert ("Please enter your "+value);
-    return false;
-  }
-  return true;
-}
-
-</script><form method=post action="http://www.gaffen.co.uk/hearsemail/?p=subscribe" name="subscribeform" target="windowName" onsubmit="window.open('', this.target,
-'dialog,modal,scrollbars=no,resizable=no,width=550,height=300,left=0,top=0');" _lpchecked="1"><input type="hidden" name="formtoken" value="f831dcad5b7b469fef03120e5cf63096" /><table border=0>
-  <tr><td><div class="required"><h6>NEWSLETTER SIGNUP</h6></div></td>
-  <td class="attributeinput"><input type=text name=email value="" size="20">
-  <script language="Javascript" type="text/javascript">addFieldToCheck("email","Email");</script></td><td><input type="hidden" name="htmlemail" value="1">
-<input type="hidden" name="list[2]" value="signup"><input type="hidden" name="listname[2]" value="Hearse Mail"/><div style="display:none"><input type="text" name="VerificationCodeX" value="" size="20"></div><input type=submit name="subscribe" value="Submit" onClick="return checkform();" class="button"></tr></table>
-    </form>
+  <form action="http://hearsepileup.us6.list-manage.com/subscribe/post?u=4724a5095edd201a3cecb6360&amp;id=c5487bab87" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+  <table border=0>
+    <tr>
+      <td>
+        <div class="required">
+          <h6>NEWSLETTER SIGNUP</h6>
+        </div>
+      </td>
+      <td class="attributeinput">
+        <input type="text" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="" required>
+      </td>
+      <td>
+        <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button">
+      </td>
+    </tr>
+  </table>
+  </form>
 	<div id="links">
 	<a href="http://www.facebook.com/Hearse.Pileup"><img src="images/HearsePileupFacebook.jpg" /></a>
 	<a href="http://www.facebook.com/Hearse.Pileup"><img src="images/HearsePileupTwitter.jpg" /></a>
