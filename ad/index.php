@@ -4,7 +4,7 @@
 	    </script>
 	    </script>
 	    <div id="feature">
-		<h4>4th February 2013</h4>
+		<h4>4TH FEBRUARY 2013</h4>
 		<h3>PRETTY <br/>SHINY <br/>THINGS</h3>
 		<div class="info">
 		    <h5>The EP</h5>
