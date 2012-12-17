@@ -72,7 +72,7 @@ _-_-                                          -__ /\\     ,,
 		<div id="tr"></div>
 		<div id="rightnav"><h2><a href="music.php">MUSIC</a></h2><h2><a href="gigs.php">GIGS</a></h2><h2><a href="blog/">BLOG</a></h2></div>
 		<div id="logo">
-		    <a href="index.php"><img src="images/HearsePileupLogo.png" alt="Hearse Pileup" /></a>
+		    <a href="home.php"><img src="images/HearsePileupLogo.png" alt="Hearse Pileup" /></a>
 		</div>
 		<div id="leftnav"><h2><a href="bio.php">BIO</a></h2><h2 class="grey">MERCH</h2><h2><a href="contact.php">CONTACT</a></h2></div>
 	    </header>

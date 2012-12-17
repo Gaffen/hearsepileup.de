@@ -363,3 +363,33 @@ footer{
 }
 
 .clr{clear: both;}
+
+
+/* ==|== Holding Page =====================================================
+   Author:
+   ========================================================================== */
+
+.watchthisspace{
+  width: 940px;
+  margin: 80px auto;
+  img{
+    float: left;
+  }
+  .countdown{
+    width: 700px;
+    float: left;
+    font-family: 'BigMummyRegular', sans-serif;
+    font-size: 80px;
+  }
+}
+
+.ticktock{
+  font-size: 100px;
+  line-height: 91px;
+  float: left;
+  position: static;
+  margin: 0 0 0 20px;
+  span{
+    float: right;
+  }
+}
