@@ -1407,15 +1407,32 @@ footer {
     float: left; }
   .watchthisspace .countdown {
     width: 700px;
-    float: left;
+    float: right;
     font-family: 'BigMummyRegular', sans-serif;
-    font-size: 80px; }
+    font-size: 80px;
+    text-align: right; }
+  .watchthisspace #nextgig {
+    float: right;
+    position: relative;
+    margin: 20px 0px 0 0; }
+    .watchthisspace #nextgig img {
+      float: none; }
+  .watchthisspace h1 {
+    font-family: 'MuseoSlab', sans-serif;
+    position: static;
+    text-align: right;
+    margin-right: 0px;
+    font-size: 76px;
+    line-height: 0; }
+  .watchthisspace h2 {
+    font-family: 'BigMummyRegular', sans-serif;
+    text-align: right; }
 
 .ticktock {
   font-size: 100px;
   line-height: 91px;
-  float: left;
+  float: right;
   position: static;
-  margin: 0 0 0 20px; }
+  margin: 0 0 0 0; }
   .ticktock span {
     float: right; }
