@@ -48,7 +48,7 @@ _-_-                                          -__ /\\     ,,
 		    } else {
 			//var prettyDate = data["resultsPage"]["results"]["event"][0]["displayName"].match(/\(.*\)/).toString();
 			//prettyDate = prettyDate.substring(1, prettyDate.length - 1);
-			$("#nextgig").append('<p>' + data["resultsPage"]["results"]["event"][0]["displayName"] + ' &#64; <a href="' + data["resultsPage"]["results"]["event"][0]["venue"]["uri"] + '" target="_blank">' + data["resultsPage"]["results"]["event"][0]["venue"]["displayName"] + '</a><br/>' + '<strong>' + data["resultsPage"]["results"]["event"][0]["location"]["city"] + '<br/><a href="' + data["resultsPage"]["results"]["event"][0]["uri"] + '" target="_blank">Click for details</a><p>');
+			//$("#nextgig").append('<p>' + data["resultsPage"]["results"]["event"][0]["displayName"] + ' &#64; <a href="' + data["resultsPage"]["results"]["event"][0]["venue"]["uri"] + '" target="_blank">' + data["resultsPage"]["results"]["event"][0]["venue"]["displayName"] + '</a><br/>' + '<strong>' + data["resultsPage"]["results"]["event"][0]["location"]["city"] + '<br/><a href="' + data["resultsPage"]["results"]["event"][0]["uri"] + '" target="_blank">Click for details</a><p>');
 		    }
 		}
 	    });
@@ -64,10 +64,10 @@ _-_-                                          -__ /\\     ,,
   SHINY<br/>
   THINGS</h2>
   <div class="countdown"></div>
-  <div id="nextgig">
+<!--  <div id="nextgig">
 		<a href="http://www.songkick.com/artists/5287493-hearse-pileup" title="Gig listings courtesy of the Songkick API"><img src="images/songkick.png" /></a><h4>EP LAUNCH:</h4>
 	    </div>
-  </div>
+  </div>-->
   
       <!-- JavaScript at the bottom for fast page loading -->
     <script type="text/javascript" src="js/script.js"></script>
@@ -87,7 +87,7 @@ _-_-                                          -__ /\\     ,,
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
     $(function () {
-    $('.countdown').countdown({until: new Date(2013, 2-1, 4), compact: true, 
+    $('.countdown').countdown({until: new Date(2013, 2-1, 4), timezone: -12, compact: true, 
     description: ''});
     });
     </script>
