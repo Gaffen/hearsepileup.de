@@ -61,14 +61,14 @@ function ThreeSixtyPlayer() {
     autoPlay: false,   // start playing the first sound right away
     allowMultiple: false,  // let many sounds play at once (false = only one sound playing at a time)
     loadRingColor: '#000', // how much has loaded
-    playRingColor: '#a84012', // how much has played
-    backgroundRingColor: '#eeeeee', // color shown underneath load + play ("not yet loaded" color)
+    playRingColor: '#fff', // how much has played
+    backgroundRingColor: '#262626', // color shown underneath load + play ("not yet loaded" color)
 
     // optional segment/annotation (metadata) stuff..
     segmentRingColor: 'rgba(255,255,255,0.33)', // metadata/annotation (segment) colors
     segmentRingColorAlt: 'rgba(0,0,0,0.1)',
     loadRingColorMetadata: '#ddd', // "annotations" load color
-    playRingColorMetadata: 'rgba(128,192,256,0.9)', // how much has played when metadata is present
+    playRingColorMetadata: 'rgba(255,255,255,0.9)', // how much has played when metadata is present
 
     circleDiameter: null, // set dynamically according to values from CSS
     circleRadius: null,
@@ -80,21 +80,21 @@ function ThreeSixtyPlayer() {
     // optional: spectrum or EQ graph in canvas (not supported in IE <9, too slow via ExCanvas)
     useWaveformData: false,
     waveformDataColor: '#fff',
-    waveformDataDownsample: 3, // use only one in X (of a set of 256 values) - 1 means all 256
+    waveformDataDownsample: 10, // use only one in X (of a set of 256 values) - 1 means all 256
     waveformDataOutside: false,
     waveformDataConstrain: false, // if true, +ve values only - keep within inside circle
     waveformDataLineRatio: 0.64,
 
     // "spectrum frequency" option
     useEQData: false,
-    eqDataColor: '#ffca28',
+    eqDataColor: '#fff',
     eqDataDownsample: 4, // use only one in X (of 256 values)
     eqDataOutside: true,
     eqDataLineRatio: 0.54,
 
     // enable "amplifier" (canvas pulses like a speaker) effect
     usePeakData: true,
-    peakDataColor: '#ffca28',
+    peakDataColor: '#fff',
     peakDataOutside: true,
     peakDataLineRatio: 0.5,
 
@@ -329,7 +329,7 @@ function ThreeSixtyPlayer() {
     resume: function() {
       pl.removeClass(this._360data.oUIBox,this._360data.className);
       this._360data.className = pl.css.sPlaying;
-      pl.addClass(this._360data.oUIBox,this._360data.className);      
+      pl.addClass(this._360data.oUIBox,this._360data.className);
     },
 
     finish: function() {
@@ -483,7 +483,7 @@ function ThreeSixtyPlayer() {
         showHMSTime: has_vis,
         amplifier: (has_vis && self.config.usePeakData?0.9:1), // TODO: x1 if not being used, else use dynamic "how much to amplify by" value
         radiusMax: diameter*0.175, // circle radius
-        width:0,
+        width:20,
         widthMax: diameter*0.4, // width of the outer ring
         lastValues: {
           bytesLoaded: 0,
@@ -766,7 +766,7 @@ function ThreeSixtyPlayer() {
   this.getArcEndpointCoords = function(radius, radians) {
 
     return {
-      x: radius * Math.cos(radians), 
+      x: radius * Math.cos(radians),
       y: radius * Math.sin(radians)
     };
 
@@ -839,7 +839,6 @@ function ThreeSixtyPlayer() {
 
     if (timeNow !== this._360data.lastTime) {
       this._360data.lastTime = timeNow;
-      this._360data.oTiming.innerHTML = timeNow;
     }
 
     // draw spectrum, if applicable
@@ -892,8 +891,8 @@ function ThreeSixtyPlayer() {
       startAngle = 0;
       endAngle = 0;
       waveData = null;
-      innerRadius = (self.config.waveformDataOutside?1:(self.config.waveformDataConstrain?0.5:0.565));
-      scale = (self.config.waveformDataOutside?0.7:0.75);
+      innerRadius = (self.config.waveformDataOutside?1:(self.config.waveformDataConstrain?0.5:0.35));
+      scale = (self.config.waveformDataOutside?0.7:5);
       perItemAngle = self.deg2rad((360/sampleCount)*self.config.waveformDataLineRatio); // 0.85 = clean pixel lines at 150? // self.deg2rad(360*(Math.max(1,downSample-1))/sampleCount);
       for (i=0; i<dataLength; i+=downSample) {
         startAngle = self.deg2rad(360*(i/(sampleCount)*1/downSample)); // +0.67 - counter for spacing
@@ -913,8 +912,8 @@ function ThreeSixtyPlayer() {
       downSample = Math.max(1,downSample); // make sure it's at least 1
       eqSamples = 192; // drop the last 25% of the spectrum (>16500 Hz), most stuff won't actually use it.
       sampleCount = (eqSamples/downSample);
-      innerRadius = (self.config.eqDataOutside?1:0.565);
-      direction = (self.config.eqDataOutside?-1:1);
+      innerRadius = (self.config.eqDataOutside?0:0.0);
+      direction = (self.config.eqDataOutside?0:0);
       scale = (self.config.eqDataOutside?0.5:0.75);
       startAngle = 0;
       endAngle = 0;
@@ -938,7 +937,7 @@ function ThreeSixtyPlayer() {
           nPeak = (nPeak||oSound.eqData[i]);
         }
         oSound._360data.amplifier = (self.config.useAmplifier?(0.9+(nPeak*0.1)):1);
-        oSound._360data.radiusMax = oSound._360data.circleDiameter*0.175*oSound._360data.amplifier;
+        oSound._360data.radiusMax = oSound._360data.circleDiameter*0.02*oSound._360data.amplifier;
         oSound._360data.widthMax = oSound._360data.circleDiameter*0.4*oSound._360data.amplifier;
         oSound._360data.radius = parseInt(oSound._360data.radiusMax*oSound._360data.amplifier, 10);
         oSound._360data.width = parseInt(oSound._360data.widthMax*oSound._360data.amplifier, 10);
@@ -1068,7 +1067,7 @@ function ThreeSixtyPlayer() {
           oUI.appendChild(o2);
           window.G_vmlCanvasManager.initElement(o2); // Apply ExCanvas compatibility magic
           oCanvas = document.getElementById(oID);
-        } else { 
+        } else {
           // add a handler for the button
           oCanvas = oLinks[i].parentNode.getElementsByTagName('canvas')[0];
         }
@@ -1199,7 +1198,7 @@ ThreeSixtyPlayer.prototype.VUMeter = function(oParent) {
         // for debugging VU images
         /*
         var o = document.createElement('img');
-        o.style.marginRight = '5px'; 
+        o.style.marginRight = '5px';
         o.src = vuMeterData[i][j];
         document.documentElement.appendChild(o);
         */

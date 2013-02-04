@@ -1,0 +1,25 @@
+// font-face fonts
+// see http://compass-style.org/docs/reference/compass/css3/font_face/
+
+//@import "compass/css3/font-face"
+@font-face {
+    font-family: 'MuseoSlab';
+    src: url('../fonts/museo_slab_100-webfont.eot');
+    src: url('../fonts/museo_slab_100-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo_slab_100-webfont.woff') format('woff'),
+         url('../fonts/museo_slab_100-webfont.ttf') format('truetype'),
+         url('../fonts/museo_slab_100-webfont.svg#ArvoRegular') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MKStencilsansBlack';
+    src: url('../fonts/MKStencilsansBlack.eot');
+    src: url('../fonts/MKStencilsansBlack.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MKStencilsansBlack.woff') format('woff'),
+         url('../fonts/MKStencilsansBlack.ttf') format('truetype'),
+         url('../fonts/MKStencilsansBlack.svg#ArvoRegular') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}

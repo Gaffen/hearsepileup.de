@@ -24,7 +24,7 @@ _-_-                                          -__ /\\     ,,
     <title>HEARSE PILEUP</title>
 	<meta content="Hearse Pileup; Zombie Rock and Roll" name="description" />
 	<meta content="Matt, Gaffen, Matthew, Music, QOTSA, Dead Weather, Tony Hoang, Wojciech Tybus, Birthday Party, Tone-Deaf Messiah" name="keywords" />
-	<link rel="stylesheet" type="text/css" href="css/HearseLooks.css?ver=0.1" />
+	<link rel="stylesheet" type="text/css" href="css/style.css?ver=0.1" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<link rel="shortcut icon" href="favicon.png" />
@@ -44,75 +44,174 @@ _-_-                                          -__ /\\     ,,
 		success:    function(data){
 
 		    if(data["resultsPage"]["totalEntries"] === 0 || data == null){
-			$("#nextgig").append('<p><strong>No new Hearse gigs for now</strong> <br/>we must be busy getting drunk,<br/>come back soon for more gigs!<p>');
+			$("#nextgig").append('<p><strong>No new Hearse gigs for now</strong> <br/>we must be busy getting drunk, come back soon for more gigs!<p>');
 		    } else {
-			//var prettyDate = data["resultsPage"]["results"]["event"][0]["displayName"].match(/\(.*\)/).toString();
-			//prettyDate = prettyDate.substring(1, prettyDate.length - 1);
-			//$("#nextgig").append('<p>' + data["resultsPage"]["results"]["event"][0]["displayName"] + ' &#64; <a href="' + data["resultsPage"]["results"]["event"][0]["venue"]["uri"] + '" target="_blank">' + data["resultsPage"]["results"]["event"][0]["venue"]["displayName"] + '</a><br/>' + '<strong>' + data["resultsPage"]["results"]["event"][0]["location"]["city"] + '<br/><a href="' + data["resultsPage"]["results"]["event"][0]["uri"] + '" target="_blank">Click for details</a><p>');
+			var prettyDate = data["resultsPage"]["results"]["event"][0]["displayName"].match(/\(.*\)/).toString();
+			prettyDate = prettyDate.substring(1, prettyDate.length - 1);
+			$("#nextgig").append('<p>' + data["resultsPage"]["results"]["event"][0]["displayName"] + ' ' + data["resultsPage"]["results"]["event"][0]["location"]["city"]+'<p>');
+            $('.giglink').attr('href', data["resultsPage"]["results"]["event"][0]["uri"]).attr('target', '_blank');
+
+            //+ ' &#64; <a href="' + data["resultsPage"]["results"]["event"][0]["venue"]["uri"] + '" target="_blank">' + data["resultsPage"]["results"]["event"][0]["venue"]["displayName"] + '</a><br/>' + '<strong>' + data["resultsPage"]["results"]["event"][0]["location"]["city"] + '<br/><a href="' + data["resultsPage"]["results"]["event"][0]["uri"] + '" target="_blank">Click for details</a>
 		    }
 		}
 	    });
 	});
     </script>
 </head>
-
 <body>
-  <div class="watchthisspace">
-  <h1>HEARSE PILEUP</h1>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div id="prompt"><h1 style="font-size: 30px; text-align: left; padding-left: 340px;"><span class="text"></span><span class="dots"></span></h1></div>
-  <ul class="loading" style="list-style: none; margin: none; padding: 0; display: none;">
-    <li>
-        Buffering anger
-    </li>
-    <li>
-        Reticulating splines
-    </li>
-    <li>
-        Reanimating corpses
-    </li>
-    <li>
-        Building sales engine
-    </li>
-    <li>
-        Killing bugs
-    </li>
-    <li>
-        Training code monkeys
-    </li>
-    <li>
-        Dividing by zero
-    </li>
-    <li>
-        OH SHI-
-    </li>
-    <li>
-        Kicking ass
-    </li>
-    <li>
-        Chewing bubblegum
-    </li>
-    <li>
-        Out of gum
-    </li>
-    <li>
-        Taking names
-    </li>
-    <li>
-        Drinking tequila
-    </li>
-  </ul>
-<!--  <div id="nextgig">
-		<a href="http://www.songkick.com/artists/5287493-hearse-pileup" title="Gig listings courtesy of the Songkick API"><img src="images/songkick.png" /></a><h4>EP LAUNCH:</h4>
-	    </div>
-  </div>-->
+    <div id="wrapper">
+        <div id="container" class="main">
+            <header class="main_header">
+                <div class="logo left"><h1 class="visuallyhidden">HEARSE PILEUP</h1></div>
+                <a class="giglink" href="#">
+                    <div class="gig_information right">
+                        <h4 class="item_title">NEXT<br/><span>GIG</span></h4><div id="nextgig"></div>
+                    </div>
+                </a>
+            </header>
+            <div class="main_banner">
+                <img src="images/ep_artwork.jpg" />
+                <div class="main_text">
+                    <h2 class="slab first">The debut EP</h2>
+                    <h2 class="stencil">PRETTY SHINY THINGS</h2>
+                    <h2 class="slab second">Pretty Shiny Things &nbsp;&#149;&nbsp;  Last Time  &nbsp;&#149;&nbsp;  Generation Y</h2>
+                </div>
+                <h3 class="actiontext slab">ON SALE NOW FOR ONLY &pound;3<br/>CLICK HERE TO PURCHASE</h3>
+            </div>
+            <div class="above_fold clearfix">
+                <div class="player">
+                    <div class="ui360 ui360-vis">
+                    <a href="music/pretty_shiny_things.mp3">Pretty Shiny Things<br/><span>4:40</span></a>
+                    </div>
+                </div>
+                <div class="player">
+                    <div class="ui360 ui360-vis">
+                    <a href="music/last_time.mp3">Last Time<br/><span>3:58</span></a>
+                    </div>
+                    </div>
+                <div class="player">
+                    <div class="ui360 ui360-vis">
+                    <a href="music/generation_y.mp3">Generation Y<br/><span>4:25</span></a>
+                    </div>
+                </div>
+                <div class="three_col left">
+                    <div class="social clearfix">
+                        <div class="column">
+                            <a href="" class="facebook"></a>
+                            <a href="" class="twitter"></a>
+                            <a href="" class="soundcloud"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="three_col left">
+                    <h6>Newsletter Signup</h6>
+                    <form action="http://hearsepileup.us6.list-manage.com/subscribe/post" method="POST">
+                        <input type="hidden" name="u" value="4724a5095edd201a3cecb6360">
+                        <input type="hidden" name="id" value="c5487bab87">
+                        <div class="signup_input">
+                            <label for="MERGE1">Full Name</label>
+                            <input type="text" name="MERGE1" id="MERGE1" size="25" value="">
+                        </div>
+                        <div class="signup_input">
+                            <label for="MERGE0">Email Address<span class="asterisk">*</span></label>
+                            <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
+                        </div>
+                        <input type="submit" class="signup_submit" name="submit" value="SUBMIT">
+                    </form>
+                </div>
+            </div>
+            <div class="sexy_line clear"></div>
+            <div class="outer_space clearfix">
+                <div class="single_col left">
+                    <h3 class="align_right" >ABOUT</h3>
+                </div>
+                <div class="five_col left">
+                    <p>Hearse Pileup is the sound of rock 'n' roll for the undead. As the earth becomes a ticking timebomb of war, cataclysmic environmental disaster and gross over consumption there is only one message to our music:</p>
 
-      <!-- JavaScript at the bottom for fast page loading -->
+                    <p>SOMETHING IS VERY, VERY WRONG</p>
+
+                    <p>Spitting fire and pissing vinegar, Hearse Pileup are part nostalgic throwback to 70's/80's stoner/punk rock and part anarchic doomsayers. Heavily influenced by the likes of Motorhead, Queens of the Stone Age, Iggy pop and Black Sabbath, Hearse Pileup bring balls-to-the-wall hard Rock 'n' Roll back into the 21st century.</p>
+
+                    <p>Hearse Pileup have had many London-based gigs and have just finished recording their soon to be released EP at Dropout studio. They have just released a short free-to-download live album on bandcamp, and for the most recent news you can subscribe to their newsletter.</p>
+                </div>
+                <div class="single_col left">
+                    &nbsp;<br/>
+                    &nbsp;<br/>
+                    &nbsp;<br/>
+                    &nbsp;<br/>
+                </div>
+                <div class="five_col left">
+                    <a href="" class="cta clearfix">
+                        <h4 class="item_title left">LIVE ALBUM<br/>DOWNLOAD</h4>
+                        <span class="bandcamp left"></span>
+                    </a>
+                    <a href="" class="cta ep clearfix">
+                        <h4 class="item_title left">LIMITED<br/><span class="first">EDITION</span><br/><span class="second">PURCHASE</span></h4>
+                        <h4 class="ep_purchase">PRETTY SHINY THINGS <span>EP</span></h4>
+                    </a>
+                    <div class="youtube_gallery">
+                        <a href="http://www.youtube.com/user/HearsePileup" class="youtube left"></a>
+                        <a href="http://www.youtube.com/watch?v=XyzIz2gaIcI" class="one left"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="main_footer clearfix">
+            <div class="main">
+                <p class="copyright left">&copy; 2013 Hearse Pileup  All rights reserved.</p>
+                <p class="contact right">Contact: <a href="mailto:email@hearsepileup.de">email@hearsepileup.de</a></p>
+            </div>
+        </footer>
+    </div>
+    <!-- JavaScript at the bottom for fast page loading -->
+    <!--[if IE]><script type="text/javascript" src="script/excanvas.js"></script><![endif]-->
+    <script type="text/javascript" src="js/libs/360/berniecode-animator.js"></script>
+
+  <!--  the core stuff -->
+    <script type="text/javascript" src="js/libs/360/soundmanager2-jsmin.js"></script>
+    <script type="text/javascript" src="js/libs/360/360player.js"></script>
+    <script type="text/javascript">
+
+        soundManager.url = 'swf/'; // path to directory containing SM2 SWF
+
+        soundManager.useFastPolling = true; // increased JS callback frequency, combined with useHighPerformance = true
+
+        threeSixtyPlayer.config.scaleFont = (navigator.userAgent.match(/msie/i)?false:true);
+        threeSixtyPlayer.config.showHMSTime = true;
+
+        // enable some spectrum stuffs
+
+        threeSixtyPlayer.config.useWaveformData = true;
+        threeSixtyPlayer.config.useEQData = true;
+
+        // enable this in SM2 as well, as needed
+
+        if (threeSixtyPlayer.config.useWaveformData) {
+          soundManager.flash9Options.useWaveformData = true;
+        }
+        if (threeSixtyPlayer.config.useEQData) {
+          soundManager.flash9Options.useEQData = true;
+        }
+        if (threeSixtyPlayer.config.usePeakData) {
+          soundManager.flash9Options.usePeakData = true;
+        }
+
+        if (threeSixtyPlayer.config.useWaveformData || threeSixtyPlayer.flash9Options.useEQData || threeSixtyPlayer.flash9Options.usePeakData) {
+          // even if HTML5 supports MP3, prefer flash so the visualization features can be used.
+          soundManager.preferFlash = true;
+        }
+
+        // favicon is expensive CPU-wise, but can be used.
+        if (window.location.href.match(/hifi/i)) {
+          threeSixtyPlayer.config.useFavIcon = true;
+        }
+
+        if (window.location.href.match(/html5/i)) {
+          // for testing IE 9, etc.
+          soundManager.useHTML5Audio = true;
+        }
+
+    </script>
     <script type="text/javascript" src="js/script.js"></script>
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
     <script type="text/javascript" src="js/lightbox.js"></script>
@@ -124,43 +223,12 @@ _-_-                                          -__ /\\     ,,
     <!-- end scripts -->
 
     <script>
-    dotIt = 0;
-    setInterval(function(){
-        dotIt = ++dotIt % 4;
-        $('#prompt h1').find('.dots').html(Array(dotIt+1).join("."));
-    }, 500);
-
-    var textItem = Math.floor(Math.random()*$('.loading li').length -1) +1;
-
-    $('#prompt h1').find('.text').html($('.loading li:nth-child('+textItem+')').html());
-    setInterval(function(){
-        $('#prompt h1').find('.text').html($('.loading li:nth-child('+textItem+')').html());
-        console.log(textItem);
-        if(textItem < $('.loading li').length){
-            textItem++;
-        } else {
-            textItem = 1;
-        }
-    }, 6000);
-
-//    i = 0;
-//setInterval(function() {
-//    i = ++i % 4;
-//    $(".loading").find('li').html("loading"+Array(i+1).join("."));
-//}, 500);
 
     var _gaq=[['_setAccount','UA-9918791-5'],['_trackPageview'],['_trackPageLoadTime']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
-
-  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started -->
-  <!--[if lt IE 7 ]>
-    <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-    <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-  <![endif]-->
 
 </body>
 </html>

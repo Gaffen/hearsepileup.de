@@ -1,0 +1,58 @@
+// This file must be imported before loading html5-boilerplate
+
+// base
+$line-height: 1.4 !default;
+$font-color: #fff !default;
+$body-text: 10px;
+$background-color: #000;
+
+$slabSerif: 'MuseoSlab', Helvetica, Arial, sans-serif;
+$sans: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$stencil: "MKStencilsansBlack", Helvetica, Arial, sans-serif;
+
+$link-color: #00e !default;
+$link-hover-color: #06e !default;
+$link-visited-color: #551a8b !default;
+
+$selected-font-color: #fff !default;
+$selected-background-color: #890000 !default;
+
+$invalid-background-color: #f0dddd !default;
+
+$dark-grey: #101010;
+$medium-grey: #262626;
+$light-grey: #464646;
+
+$images_x2: '../images_x2/';
+$images: '../images/';
+
+
+img{
+    display: block;
+}
+
+.align_right{
+    text-align: right;
+}
+
+.right{
+    float: right;
+}
+
+.left{
+    float: left;
+}
+
+.clear{
+    clear: both;
+}
+
+.slab{
+    font-family: $slabSerif;
+    font-weight: 100;
+}
+
+.stencil{
+    font-family: $stencil;
+    font-weight: 100;
+}

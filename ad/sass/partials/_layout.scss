@@ -1,0 +1,37 @@
+#wrapper{
+    width: 100%;
+    text-align: center;
+}
+.main{
+    margin: auto;
+    width: 980px;
+    text-align: left;
+    position: relative;
+}
+
+.main_header{
+    margin: 50px 0 0 0;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.three_col{
+    width: 220px;
+    margin: 10px;
+}
+
+.outer_space{
+    margin: 10px;
+}
+
+.single_col{
+    width: 60px;
+    margin: 10px;
+}
+
+.five_col{
+    width: 380px;
+    margin: 10px;
+}

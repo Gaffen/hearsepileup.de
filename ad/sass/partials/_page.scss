@@ -1,0 +1,32 @@
+@import "compass/css3";
+
+//-----------------------------------------------
+// The following html5-boilerplate styles should
+// probably be customized for each site
+//-----------------------------------------------
+body, select, input, textarea {
+    color: $font-color;
+    background: $background-color;
+  // Set your base font here, to apply evenly
+    font-family: $sans;
+    font-weight: 300;
+    font-size: $body-text;
+    line-height: 15px;
+}
+
+//-----------------------------------
+// Add your own custom styles below
+//-----------------------------------
+
+@import "layout";
+@import "modules";
+
+body {}
+
+#container {}
+
+header {}
+
+#main {}
+
+footer {}
