@@ -59,11 +59,54 @@ _-_-                                          -__ /\\     ,,
 <body>
   <div class="watchthisspace">
   <h1>HEARSE PILEUP</h1>
-  <img src="images/ticktock.jpg" />
-  <h2 class="ticktock">PRETTY<br/>
-  SHINY<br/>
-  THINGS</h2>
-  <div class="countdown"></div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div id="prompt"><h1 style="font-size: 30px; text-align: left; padding-left: 340px;"><span class="text"></span><span class="dots"></span></h1></div>
+  <ul class="loading" style="list-style: none; margin: none; padding: 0; display: none;">
+    <li>
+        Buffering anger
+    </li>
+    <li>
+        Reticulating splines
+    </li>
+    <li>
+        Reanimating corpses
+    </li>
+    <li>
+        Building sales engine
+    </li>
+    <li>
+        Killing bugs
+    </li>
+    <li>
+        Training code monkeys
+    </li>
+    <li>
+        Dividing by zero
+    </li>
+    <li>
+        OH SHI-
+    </li>
+    <li>
+        Kicking ass
+    </li>
+    <li>
+        Chewing bubblegum
+    </li>
+    <li>
+        Out of gum
+    </li>
+    <li>
+        Taking names
+    </li>
+    <li>
+        Drinking tequila
+    </li>
+  </ul>
 <!--  <div id="nextgig">
 		<a href="http://www.songkick.com/artists/5287493-hearse-pileup" title="Gig listings courtesy of the Songkick API"><img src="images/songkick.png" /></a><h4>EP LAUNCH:</h4>
 	    </div>
@@ -78,18 +121,38 @@ _-_-                                          -__ /\\     ,,
     <!-- scripts concatenated and minified via build script -->
     <script defer src="js/plugins.js"></script>
     <script defer src="js/script.js"></script>
-    <script defer src="js/jquery.countdown.min.js"></script>
     <!-- end scripts -->
 
     <script>
+    dotIt = 0;
+    setInterval(function(){
+        dotIt = ++dotIt % 4;
+        $('#prompt h1').find('.dots').html(Array(dotIt+1).join("."));
+    }, 500);
+
+    var textItem = Math.floor(Math.random()*$('.loading li').length -1) +1;
+
+    $('#prompt h1').find('.text').html($('.loading li:nth-child('+textItem+')').html());
+    setInterval(function(){
+        $('#prompt h1').find('.text').html($('.loading li:nth-child('+textItem+')').html());
+        console.log(textItem);
+        if(textItem < $('.loading li').length){
+            textItem++;
+        } else {
+            textItem = 1;
+        }
+    }, 6000);
+
+//    i = 0;
+//setInterval(function() {
+//    i = ++i % 4;
+//    $(".loading").find('li').html("loading"+Array(i+1).join("."));
+//}, 500);
+
     var _gaq=[['_setAccount','UA-9918791-5'],['_trackPageview'],['_trackPageLoadTime']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
-    $(function () {
-    $('.countdown').countdown({until: new Date(2013, 2-1, 4), timezone: -13, compact: true,
-    description: ''});
-    });
     </script>
 
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
