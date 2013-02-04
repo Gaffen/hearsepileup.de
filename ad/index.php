@@ -32,31 +32,6 @@ _-_-                                          -__ /\\     ,,
     <script src="js/libs/modernizr-2.0.6.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.4.min.js"><\/script>')</script>
-    <script type="text/javascript">
-	$(document).ready(function() {
-
-	    $.ajax({
-
-		url:  "http://api.songkick.com/api/3.0/artists/5287493/calendar.json?apikey=dzuyzOvYY0uXyUcS&jsoncallback=?",
-
-		dataType:   "jsonp", // <== JSON-P request
-
-		success:    function(data){
-
-		    if(data["resultsPage"]["totalEntries"] === 0 || data == null){
-			$("#nextgig").append('<p><strong>No new Hearse gigs for now</strong> <br/>we must be busy getting drunk, come back soon for more gigs!<p>');
-		    } else {
-			var prettyDate = data["resultsPage"]["results"]["event"][0]["displayName"].match(/\(.*\)/).toString();
-			prettyDate = prettyDate.substring(1, prettyDate.length - 1);
-			$("#nextgig").append('<p>' + data["resultsPage"]["results"]["event"][0]["displayName"] + ' ' + data["resultsPage"]["results"]["event"][0]["location"]["city"]+'<p>');
-            $('.giglink').attr('href', data["resultsPage"]["results"]["event"][0]["uri"]).attr('target', '_blank');
-
-            //+ ' &#64; <a href="' + data["resultsPage"]["results"]["event"][0]["venue"]["uri"] + '" target="_blank">' + data["resultsPage"]["results"]["event"][0]["venue"]["displayName"] + '</a><br/>' + '<strong>' + data["resultsPage"]["results"]["event"][0]["location"]["city"] + '<br/><a href="' + data["resultsPage"]["results"]["event"][0]["uri"] + '" target="_blank">Click for details</a>
-		    }
-		}
-	    });
-	});
-    </script>
 </head>
 <body>
     <div id="wrapper">
@@ -69,15 +44,17 @@ _-_-                                          -__ /\\     ,,
                     </div>
                 </a>
             </header>
-            <div class="main_banner">
-                <img src="images/ep_artwork.jpg" />
-                <div class="main_text">
-                    <h2 class="slab first">The debut EP</h2>
-                    <h2 class="stencil">PRETTY SHINY THINGS</h2>
-                    <h2 class="slab second">Pretty Shiny Things &nbsp;&#149;&nbsp;  Last Time  &nbsp;&#149;&nbsp;  Generation Y</h2>
-                </div>
-                <h3 class="actiontext slab">ON SALE NOW FOR ONLY &pound;3<br/>CLICK HERE TO PURCHASE</h3>
-            </div>
+            <a href="http://hearsepileup.bandcamp.com/album/pretty-shiny-things" target="blank_">
+              <div class="main_banner">
+                  <img src="images/ep_artwork.jpg" />
+                  <div class="main_text">
+                      <h2 class="slab first">The debut EP</h2>
+                      <h2 class="stencil">PRETTY SHINY THINGS</h2>
+                      <h2 class="slab second">Pretty Shiny Things &nbsp;&#149;&nbsp;  Last Time  &nbsp;&#149;&nbsp;  Generation Y</h2>
+                  </div>
+                  <h3 class="actiontext slab">ON SALE NOW FOR ONLY &pound;3<br/>CLICK HERE TO PURCHASE</h3>
+              </div>
+            </a>
             <div class="above_fold clearfix">
                 <div class="player">
                     <div class="ui360 ui360-vis">
@@ -97,9 +74,9 @@ _-_-                                          -__ /\\     ,,
                 <div class="three_col left">
                     <div class="social clearfix">
                         <div class="column">
-                            <a href="" class="facebook"></a>
-                            <a href="" class="twitter"></a>
-                            <a href="" class="soundcloud"></a>
+                            <a href="http://www.facebook.com/Hearse.Pileup" target="_blank" class="facebook"></a>
+                            <a href="https://twitter.com/HearsePileup" target="_blank" class="twitter"></a>
+                            <a href="https://soundcloud.com/hearse-pileup" target="_blank" class="soundcloud"></a>
                         </div>
                     </div>
                 </div>
@@ -141,11 +118,11 @@ _-_-                                          -__ /\\     ,,
                     &nbsp;<br/>
                 </div>
                 <div class="five_col left">
-                    <a href="" class="cta clearfix">
+                    <a href="http://hearsepileup.bandcamp.com/album/hearse-pileup-live" class="cta clearfix">
                         <h4 class="item_title left">LIVE ALBUM<br/>DOWNLOAD</h4>
                         <span class="bandcamp left"></span>
                     </a>
-                    <a href="" class="cta ep clearfix">
+                    <a href="http://hearsepileup.bandcamp.com/album/pretty-shiny-things" class="cta ep clearfix">
                         <h4 class="item_title left">LIMITED<br/><span class="first">EDITION</span><br/><span class="second">PURCHASE</span></h4>
                         <h4 class="ep_purchase">PRETTY SHINY THINGS <span>EP</span></h4>
                     </a>
@@ -210,7 +187,29 @@ _-_-                                          -__ /\\     ,,
           // for testing IE 9, etc.
           soundManager.useHTML5Audio = true;
         }
+	$(document).ready(function() {
 
+	    $.ajax({
+
+		url:  "http://api.songkick.com/api/3.0/artists/5287493/calendar.json?apikey=dzuyzOvYY0uXyUcS&jsoncallback=?",
+
+		dataType:   "jsonp", // <== JSON-P request
+
+		success:    function(data){
+
+		    if(data["resultsPage"]["totalEntries"] === 0 || data == null){
+			$("#nextgig").append('<p><strong>No new Hearse gigs for now</strong> <br/>we must be busy getting drunk, come back soon for more gigs!<p>');
+		    } else {
+			var prettyDate = data["resultsPage"]["results"]["event"][0]["displayName"].match(/\(.*\)/).toString();
+			prettyDate = prettyDate.substring(1, prettyDate.length - 1);
+			$("#nextgig").append('<p>' + data["resultsPage"]["results"]["event"][0]["displayName"] + ' ' + data["resultsPage"]["results"]["event"][0]["location"]["city"]+'<p>');
+            $('.giglink').attr('href', data["resultsPage"]["results"]["event"][0]["uri"]).attr('target', '_blank');
+
+            //+ ' &#64; <a href="' + data["resultsPage"]["results"]["event"][0]["venue"]["uri"] + '" target="_blank">' + data["resultsPage"]["results"]["event"][0]["venue"]["displayName"] + '</a><br/>' + '<strong>' + data["resultsPage"]["results"]["event"][0]["location"]["city"] + '<br/><a href="' + data["resultsPage"]["results"]["event"][0]["uri"] + '" target="_blank">Click for details</a>
+		    }
+		}
+	    });
+	});
     </script>
     <script type="text/javascript" src="js/script.js"></script>
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->

@@ -543,7 +543,7 @@ body, select, input, textarea {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /* line 93, ../sass/partials/_modules.scss */
   .above_fold {
-    background: url(../images_x2/logo.jpg) top center no-repeat;
+    background: url(../images_x2/fold_glow.jpg) top center no-repeat;
     background-size: 940px 30px;
   }
 }
