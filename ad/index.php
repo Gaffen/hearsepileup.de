@@ -68,12 +68,12 @@ _-_-                                          -__ /\\     ,,
 		<a href="http://www.songkick.com/artists/5287493-hearse-pileup" title="Gig listings courtesy of the Songkick API"><img src="images/songkick.png" /></a><h4>EP LAUNCH:</h4>
 	    </div>
   </div>-->
-  
+
       <!-- JavaScript at the bottom for fast page loading -->
     <script type="text/javascript" src="js/script.js"></script>
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
     <script type="text/javascript" src="js/lightbox.js"></script>
-    
+
 
     <!-- scripts concatenated and minified via build script -->
     <script defer src="js/plugins.js"></script>
@@ -87,7 +87,7 @@ _-_-                                          -__ /\\     ,,
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
     $(function () {
-    $('.countdown').countdown({until: new Date(2013, 2-1, 4), timezone: -12, compact: true, 
+    $('.countdown').countdown({until: new Date(2013, 2-1, 4), timezone: -13, compact: true,
     description: ''});
     });
     </script>
