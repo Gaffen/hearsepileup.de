@@ -24,7 +24,7 @@ _-_-                                          -__ /\\     ,,
     <title>HEARSE PILEUP</title>
 	<meta content="Hearse Pileup; Zombie Rock and Roll" name="description" />
 	<meta content="Matt, Gaffen, Matthew, Music, QOTSA, Dead Weather, Tony Hoang, Wojciech Tybus, Birthday Party, Tone-Deaf Messiah" name="keywords" />
-	<link rel="stylesheet" type="text/css" href="css/style.css?ver=0.2" />
+	<link rel="stylesheet" type="text/css" href="css/style.css?ver=0.3" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<link rel="shortcut icon" href="favicon.png" />
