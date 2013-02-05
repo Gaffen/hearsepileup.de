@@ -53,7 +53,7 @@
         right: 0;
     }
     .stencil{
-        color: $medium-grey;
+        color: $light-grey;
         font-size: 35px;
         margin: 0;
     }
@@ -65,7 +65,7 @@
     .second{
         font-size: 17px;
         margin: 0;
-        color: $medium-grey;
+        color: $light-grey;
     }
     .actiontext{
         font-size: 18px;
@@ -75,7 +75,7 @@
         line-height: 25px;
         margin: 13px 0;
         text-align: right;
-        color: $medium-grey;
+        color: $light-grey;
     }
 }
 
@@ -91,7 +91,7 @@
     only screen and (min--moz-device-pixel-ratio: 1.5),
     only screen and (min-device-pixel-ratio: 1.5) {
     .above_fold{
-        background: url(#{$images_x2}logo.jpg) top center no-repeat;
+        background: url(#{$images_x2}fold_glow.jpg) top center no-repeat;
         background-size: 940px 30px;
     }
 }
@@ -114,7 +114,7 @@
     only screen and (min--moz-device-pixel-ratio: 1.5),
     only screen and (min-device-pixel-ratio: 1.5) {
         .a{
-            background: url(#{$images_x2}social_icons.png) top center no-repeat;
+            background: url(#{$images_x2}social_icons.png);
             background-size: 124px 186px;
         }
     }
@@ -149,6 +149,7 @@
         border: 0;
         display: block;
         padding: 7px 7px 7px 101px;
+        width: 110px;
     }
 }
 
