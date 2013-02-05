@@ -112,18 +112,17 @@
         height: 62px;
         background: url(#{$images}social_icons.png);
         margin-bottom: 2px;
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (-o-min-device-pixel-ratio: 3/2),
+        only screen and (min--moz-device-pixel-ratio: 1.5),
+        only screen and (min-device-pixel-ratio: 1.5) {
+          background: url(#{$images_x2}social_icons.png);
+          background-size: 124px 186px;
+          background-position-x: 62px;
+        }
         background-position-x: 62px;
         &:hover{
             background-position-x: 0px;
-        }
-    }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-    only screen and (-o-min-device-pixel-ratio: 3/2),
-    only screen and (min--moz-device-pixel-ratio: 1.5),
-    only screen and (min-device-pixel-ratio: 1.5) {
-        .a{
-            background: url(#{$images_x2}social_icons.png);
-            background-size: 124px 186px;
         }
     }
     .facebook{
@@ -139,6 +138,17 @@
     }
     .column{
         display: inline-block;
+    }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5) {
+    .social{
+        .a{
+            background: url(#{$images_x2}social_icons.jpg);
+            background-size: 124px 186px;
+        }
     }
 }
 
