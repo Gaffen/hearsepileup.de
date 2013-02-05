@@ -767,28 +767,27 @@ input[type="submit"] {
   background: url(../images/playerback.jpg) top no-repeat;
   width: 140px;
   height: 190px;
-  overflow: hidden;
   float: left;
   margin: 10px;
 }
-/* line 8, ../sass/partials/_circleplayer.scss */
+/* line 7, ../sass/partials/_circleplayer.scss */
 .player span {
   color: #464646;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 17, ../sass/partials/_circleplayer.scss */
+  /* line 16, ../sass/partials/_circleplayer.scss */
   .player {
     background: url(../images_x2/playerback.jpg) top no-repeat;
   }
 }
-/* line 22, ../sass/partials/_circleplayer.scss */
+/* line 21, ../sass/partials/_circleplayer.scss */
 .sm2-timing {
   display: none;
 }
 
 /* larger canvas, spectrum + EQ visualization and other items */
-/* line 30, ../sass/partials/_circleplayer.scss */
+/* line 29, ../sass/partials/_circleplayer.scss */
 .ui360-vis,
 .ui360-vis .sm2-360ui,
 .sm2-inline-list .ui360-vis {
@@ -797,7 +796,7 @@ input[type="submit"] {
   height: 180px;
 }
 
-/* line 36, ../sass/partials/_circleplayer.scss */
+/* line 35, ../sass/partials/_circleplayer.scss */
 .ui360-vis {
   position: relative;
   /* a little extra spacing */
@@ -811,12 +810,12 @@ input[type="submit"] {
   /* (~109px) initial play button position */
 }
 
-/* line 47, ../sass/partials/_circleplayer.scss */
+/* line 46, ../sass/partials/_circleplayer.scss */
 .sm2-inline-list .ui360-vis {
   cursor: pointer;
 }
 
-/* line 51, ../sass/partials/_circleplayer.scss */
+/* line 50, ../sass/partials/_circleplayer.scss */
 .ui360-vis a {
   font-size: 10px;
   white-space: nowrap;
@@ -831,19 +830,19 @@ input[type="submit"] {
   color: white;
 }
 
-/* line 63, ../sass/partials/_circleplayer.scss */
+/* line 62, ../sass/partials/_circleplayer.scss */
 .sm2-inline-list .ui360-vis a {
   line-height: 256px;
   top: auto;
 }
 
-/* line 68, ../sass/partials/_circleplayer.scss */
+/* line 67, ../sass/partials/_circleplayer.scss */
 .ui360-vis .sm2-360ui {
   margin-left: -268px;
   margin-top: -21px;
 }
 
-/* line 73, ../sass/partials/_circleplayer.scss */
+/* line 72, ../sass/partials/_circleplayer.scss */
 .ui360-vis .sm2-timing {
   font: bold 24px "helvetica neue", helvetica, monaco, lucida, terminal, monospace;
   color: #fff;
@@ -853,13 +852,13 @@ input[type="submit"] {
   text-shadow: 2px 2px 0 #a84114;
 }
 
-/* line 83, ../sass/partials/_circleplayer.scss */
+/* line 82, ../sass/partials/_circleplayer.scss */
 .sm2-inline-list .ui360-vis,
 .sm2-inline-list .ui360-vis .sm2-360ui {
   margin-left: 0px;
 }
 
-/* line 87, ../sass/partials/_circleplayer.scss */
+/* line 86, ../sass/partials/_circleplayer.scss */
 .sm2-inline-list .ui360-vis {
   margin: 8px 13px 7px 0px;
   padding-left: 0px;
@@ -867,7 +866,7 @@ input[type="submit"] {
   /* initial play button position */
 }
 
-/* line 93, ../sass/partials/_circleplayer.scss */
+/* line 92, ../sass/partials/_circleplayer.scss */
 .sm2-inline-list .ui360-vis .sm2-360ui {
   border: 1px solid #eeeeee;
   /* offset the border */
@@ -875,7 +874,7 @@ input[type="submit"] {
   margin-top: -1px;
 }
 
-/* line 100, ../sass/partials/_circleplayer.scss */
+/* line 99, ../sass/partials/_circleplayer.scss */
 .sm2-inline-list .ui360-vis a {
   position: absolute;
   display: inline;
@@ -902,13 +901,13 @@ input[type="submit"] {
   border-radius: 0px;
 }
 
-/* line 121, ../sass/partials/_circleplayer.scss */
+/* line 120, ../sass/partials/_circleplayer.scss */
 .sm2-inline-list .ui360 a:hover {
   background-color: transparent;
   /* reset */
 }
 
-/* line 128, ../sass/partials/_circleplayer.scss */
+/* line 127, ../sass/partials/_circleplayer.scss */
 .sm2-inline-list .ui360-vis:hover .sm2-360ui,
 .sm2-inline-list .ui360-vis a.sm2_link:hover,
 .sm2-inline-list .ui360-vis a.sm2_link:active,
@@ -917,7 +916,7 @@ input[type="submit"] {
 }
 
 /* Use a bigger loading image for this layout */
-/* line 136, ../sass/partials/_circleplayer.scss */
+/* line 135, ../sass/partials/_circleplayer.scss */
 .ui360-vis .sm2-360btn,
 .ui360-vis .sm2-360ui.sm2_paused .sm2-360btn,
 .ui360-vis .sm2-360ui.sm2_playing .sm2-360btn {
@@ -928,7 +927,7 @@ input[type="submit"] {
   border-radius: none;
 }
 
-/* line 146, ../sass/partials/_circleplayer.scss */
+/* line 145, ../sass/partials/_circleplayer.scss */
 .ui360-vis,
 .ui360-vis .sm2-360ui.sm2_paused .sm2-360btn,
 .ui360-vis .sm2-360btn-default {
@@ -939,7 +938,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* line 156, ../sass/partials/_circleplayer.scss */
+/* line 155, ../sass/partials/_circleplayer.scss */
 .ui360-vis:hover .sm2-360btn,
 .ui360-vis .sm2-360btn-default:hover,
 .ui360-vis .sm2-360ui.sm2_paused .sm2-360btn:hover {
@@ -948,7 +947,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* line 164, ../sass/partials/_circleplayer.scss */
+/* line 163, ../sass/partials/_circleplayer.scss */
 .ui360-vis .sm2-360ui.sm2_playing .sm2-360btn:hover,
 .ui360-vis .sm2-360btn-playing:hover {
   background: transparent url(../images/player_controls.png) no-repeat 50% 0%;
@@ -956,7 +955,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* line 170, ../sass/partials/_circleplayer.scss */
+/* line 169, ../sass/partials/_circleplayer.scss */
 .ui360-vis {
   /* non-JS / before-loaded state */
   background-position: 21% 50%;
@@ -964,27 +963,27 @@ input[type="submit"] {
   /* IE 6-only: special crap GIF */
 }
 
-/* line 176, ../sass/partials/_circleplayer.scss */
+/* line 175, ../sass/partials/_circleplayer.scss */
 .ui360-vis .sm2-360btn-default {
   /* real button, post-loaded state */
   _background: transparent url(360-button-vis-play.gif) no-repeat 50% 50%;
   /* IE 6-only: special crap GIF */
 }
 
-/* line 181, ../sass/partials/_circleplayer.scss */
+/* line 180, ../sass/partials/_circleplayer.scss */
 .ui360-vis .sm2-360ui.sm2_dragging .sm2-360btn {
   visibility: hidden;
 }
 
 /* General warning: Beta-ish. Code could be a bit cleaner. */
-/* line 188, ../sass/partials/_circleplayer.scss */
+/* line 187, ../sass/partials/_circleplayer.scss */
 .ui360,
 .sm2-360ui {
   /* canvas container */
   position: relative;
 }
 
-/* line 193, ../sass/partials/_circleplayer.scss */
+/* line 192, ../sass/partials/_circleplayer.scss */
 .ui360,
 .sm2-360ui {
   min-width: 50px;
@@ -992,19 +991,19 @@ input[type="submit"] {
   min-height: 50px;
 }
 
-/* line 198, ../sass/partials/_circleplayer.scss */
+/* line 197, ../sass/partials/_circleplayer.scss */
 .sm2-360ui {
   width: 50px;
   height: 50px;
 }
 
-/* line 204, ../sass/partials/_circleplayer.scss */
+/* line 203, ../sass/partials/_circleplayer.scss */
 .ui360,
 .ui360 * {
   vertical-align: middle;
 }
 
-/* line 208, ../sass/partials/_circleplayer.scss */
+/* line 207, ../sass/partials/_circleplayer.scss */
 .sm2-360ui {
   position: relative;
   display: inline-block;
@@ -1017,14 +1016,14 @@ input[type="submit"] {
   */
 }
 
-/* line 219, ../sass/partials/_circleplayer.scss */
+/* line 218, ../sass/partials/_circleplayer.scss */
 .sm2-360ui.sm2_playing,
 .sm2-360ui.sm2_paused {
   /* bump on top when active */
   z-index: 10;
 }
 
-/* line 224, ../sass/partials/_circleplayer.scss */
+/* line 223, ../sass/partials/_circleplayer.scss */
 .ui360 a {
   /* .sm2_link class added to playable links by SM2 */
   float: left;
@@ -1039,21 +1038,21 @@ input[type="submit"] {
   /* make room for UI at left */
 }
 
-/* line 234, ../sass/partials/_circleplayer.scss */
+/* line 233, ../sass/partials/_circleplayer.scss */
 .ui360 a.sm2_link {
   /* SM2 has now started */
   text-indent: 0px;
   /* UI now in place. */
 }
 
-/* line 242, ../sass/partials/_circleplayer.scss */
+/* line 241, ../sass/partials/_circleplayer.scss */
 .ui360 .sm2-canvas {
   position: absolute;
   left: 0px;
   top: 0px;
 }
 
-/* line 248, ../sass/partials/_circleplayer.scss */
+/* line 247, ../sass/partials/_circleplayer.scss */
 .ui360 .sm2-timing {
   position: absolute;
   display: block;
@@ -1068,13 +1067,13 @@ input[type="submit"] {
   line-height: 50px;
 }
 
-/* line 262, ../sass/partials/_circleplayer.scss */
+/* line 261, ../sass/partials/_circleplayer.scss */
 .ui360 .sm2-timing.alignTweak {
   text-indent: 1px;
   /* devious center-alignment tweak for Safari (might break things for others.) */
 }
 
-/* line 266, ../sass/partials/_circleplayer.scss */
+/* line 265, ../sass/partials/_circleplayer.scss */
 .ui360 .sm2-cover {
   position: absolute;
   left: 0px;
@@ -1087,7 +1086,7 @@ input[type="submit"] {
   /* old-skool bug: IE 9 won't catch mouse events otherwise. /smash */
 }
 
-/* line 277, ../sass/partials/_circleplayer.scss */
+/* line 276, ../sass/partials/_circleplayer.scss */
 .ui360 .sm2-360btn {
   position: absolute;
   display: block;
@@ -1108,13 +1107,13 @@ input[type="submit"] {
   z-index: 3;
 }
 
-/* line 297, ../sass/partials/_circleplayer.scss */
+/* line 296, ../sass/partials/_circleplayer.scss */
 .ui360 .sm2-360data {
   display: inline-block;
   font-family: helvetica;
 }
 
-/* line 304, ../sass/partials/_circleplayer.scss */
+/* line 303, ../sass/partials/_circleplayer.scss */
 .sm2-inline-block .ui360 .sm2-360btn,
 .ui360 .sm2-360ui.sm2_playing .sm2-360btn,
 .ui360 .sm2-360ui.sm2_paused .sm2-360btn {
@@ -1125,14 +1124,14 @@ input[type="submit"] {
   margin-top: -25px;
 }
 
-/* line 313, ../sass/partials/_circleplayer.scss */
+/* line 312, ../sass/partials/_circleplayer.scss */
 .ui360 .sm2-360ui.sm2_playing .sm2-cover,
 .ui360 .sm2-360ui.sm2_paused .sm2-cover {
   display: block;
 }
 
 /* this could be optimized a fair bit. */
-/* line 321, ../sass/partials/_circleplayer.scss */
+/* line 320, ../sass/partials/_circleplayer.scss */
 .ui360,
 .ui360 .sm2-360btn-default,
 .ui360 .sm2-360ui.sm2_paused .sm2-360btn {
@@ -1141,7 +1140,7 @@ input[type="submit"] {
   background-repeat: no-repeat;
 }
 
-/* line 328, ../sass/partials/_circleplayer.scss */
+/* line 327, ../sass/partials/_circleplayer.scss */
 .ui360 {
   /*
    "fake" button shown before SM2 has started, non-JS/non-SM2 case etc.
@@ -1152,7 +1151,7 @@ input[type="submit"] {
   /* IE 6-only: special crap GIF */
 }
 
-/* line 338, ../sass/partials/_circleplayer.scss */
+/* line 337, ../sass/partials/_circleplayer.scss */
 .ui360 .sm2-360btn-default,
 .ui360 .sm2-360ui.sm2_paused .sm2-360btn {
   background-position: 50% 100%;
@@ -1160,30 +1159,30 @@ input[type="submit"] {
   /* IE 6-only: special crap GIF */
 }
 
-/* line 344, ../sass/partials/_circleplayer.scss */
+/* line 343, ../sass/partials/_circleplayer.scss */
 .ui360 .sm2-360btn-default,
 .ui360 .sm2-360ui.sm2_paused .sm2-360btn {
   cursor: pointer;
 }
 
-/* line 348, ../sass/partials/_circleplayer.scss */
+/* line 347, ../sass/partials/_circleplayer.scss */
 .ui360 .sm2-360ui.sm2_playing .sm2-timing {
   visibility: visible;
 }
 
-/* line 352, ../sass/partials/_circleplayer.scss */
+/* line 351, ../sass/partials/_circleplayer.scss */
 .ui360 .sm2-360ui.sm2_buffering .sm2-timing {
   visibility: hidden;
 }
 
-/* line 357, ../sass/partials/_circleplayer.scss */
+/* line 356, ../sass/partials/_circleplayer.scss */
 .ui360 .sm2-360ui.sm2_dragging .sm2-timing,
 .ui360 .sm2-360ui.sm2_dragging .sm2-360btn:hover + .sm2-timing {
   /* paused + dragging */
   visibility: visible;
 }
 
-/* line 365, ../sass/partials/_circleplayer.scss */
+/* line 364, ../sass/partials/_circleplayer.scss */
 .ui360 .sm2-360ui.sm2_playing .sm2-360btn,
 .ui360 .sm2-360ui.sm2_dragging .sm2-360btn,
 .ui360 .sm2-360ui.sm2_dragging .sm2-360btn:hover,
@@ -1193,7 +1192,7 @@ input[type="submit"] {
   background-position: bottom 50%;
 }
 
-/* line 372, ../sass/partials/_circleplayer.scss */
+/* line 371, ../sass/partials/_circleplayer.scss */
 .ui360 .sm2-360ui.sm2_buffering .sm2-360btn,
 .ui360 .sm2-360ui.sm2_buffering .sm2-360btn:hover {
   background: transparent url(icon_loading_spinner.gif) no-repeat 50% 50%;
@@ -1202,7 +1201,7 @@ input[type="submit"] {
 }
 
 /* inline list style */
-/* line 381, ../sass/partials/_circleplayer.scss */
+/* line 380, ../sass/partials/_circleplayer.scss */
 .sm2-inline-list .ui360,
 .sm2-inline-block .ui360 {
   position: relative;
@@ -1212,41 +1211,41 @@ input[type="submit"] {
   margin-bottom: -15px;
 }
 
-/* line 389, ../sass/partials/_circleplayer.scss */
+/* line 388, ../sass/partials/_circleplayer.scss */
 .sm2-inline-list .ui360 {
   /* inline player: minor tweak, tighten spacing */
   margin-right: -2px;
 }
 
-/* line 394, ../sass/partials/_circleplayer.scss */
+/* line 393, ../sass/partials/_circleplayer.scss */
 .sm2-inline-block .ui360 {
   margin-right: 8px;
 }
 
-/* line 398, ../sass/partials/_circleplayer.scss */
+/* line 397, ../sass/partials/_circleplayer.scss */
 .sm2-inline-list .ui360 a {
   display: none;
 }
 
 /* annotations */
-/* line 404, ../sass/partials/_circleplayer.scss */
+/* line 403, ../sass/partials/_circleplayer.scss */
 ul.ui360playlist {
   list-style-type: none;
 }
 
-/* line 409, ../sass/partials/_circleplayer.scss */
+/* line 408, ../sass/partials/_circleplayer.scss */
 ul.ui360playlist,
 ul.ui360playlist li {
   margin: 0px;
   padding: 0px;
 }
 
-/* line 414, ../sass/partials/_circleplayer.scss */
+/* line 413, ../sass/partials/_circleplayer.scss */
 div.ui360 div.metadata {
   display: none;
 }
 
-/* line 419, ../sass/partials/_circleplayer.scss */
+/* line 418, ../sass/partials/_circleplayer.scss */
 div.ui360 a span.metadata,
 div.ui360 a span.metadata * {
   /* name of track, note etc. */
@@ -1258,7 +1257,7 @@ div.ui360 a span.metadata * {
  * ------------------------------
  * Flash positioning and flashblock / clicktoflash handling
  */
-/* line 430, ../sass/partials/_circleplayer.scss */
+/* line 429, ../sass/partials/_circleplayer.scss */
 #sm2-container {
   /**
    * where the SM2 flash movie goes. by default, relative container.
@@ -1272,7 +1271,7 @@ div.ui360 a span.metadata * {
   _overflow: hidden;
 }
 
-/* line 444, ../sass/partials/_circleplayer.scss */
+/* line 443, ../sass/partials/_circleplayer.scss */
 #sm2-container object,
 #sm2-container embed {
   /**
@@ -1288,7 +1287,7 @@ div.ui360 a span.metadata * {
   max-height: 48px;
 }
 
-/* line 458, ../sass/partials/_circleplayer.scss */
+/* line 457, ../sass/partials/_circleplayer.scss */
 #sm2-container.swf_timedout {
   /* expand to show the timed-out SWF content */
   position: relative;
@@ -1296,7 +1295,7 @@ div.ui360 a span.metadata * {
   height: 48px;
 }
 
-/* line 467, ../sass/partials/_circleplayer.scss */
+/* line 466, ../sass/partials/_circleplayer.scss */
 #sm2-container.swf_timedout,
 #sm2-container.swf_timedout object,
 #sm2-container.swf_timedout embed {
@@ -1308,14 +1307,14 @@ div.ui360 a span.metadata * {
   min-height: 48px;
 }
 
-/* line 476, ../sass/partials/_circleplayer.scss */
+/* line 475, ../sass/partials/_circleplayer.scss */
 #sm2-container.swf_unblocked {
   /* SWF unblocked, or was never blocked to begin with; try to collapse container as much as possible. */
   width: 1px;
   height: 1px;
 }
 
-/* line 485, ../sass/partials/_circleplayer.scss */
+/* line 484, ../sass/partials/_circleplayer.scss */
 #sm2-container.swf_loaded object,
 #sm2-container.swf_loaded embed,
 #sm2-container.swf_unblocked object,
@@ -1325,13 +1324,13 @@ div.ui360 a span.metadata * {
   top: -9999em;
 }
 
-/* line 491, ../sass/partials/_circleplayer.scss */
+/* line 490, ../sass/partials/_circleplayer.scss */
 #sm2-container.swf_error {
   /* when there is a fatal error (flash loaded, but SM2 failed) */
   display: none;
 }
 
-/* line 497, ../sass/partials/_circleplayer.scss */
+/* line 496, ../sass/partials/_circleplayer.scss */
 #sm2-container.high_performance,
 #sm2-container.high_performance.swf_timeout {
   /* "high performance" case: keep on-screen at all times */
@@ -1339,7 +1338,7 @@ div.ui360 a span.metadata * {
   position: fixed;
 }
 
-/* line 503, ../sass/partials/_circleplayer.scss */
+/* line 502, ../sass/partials/_circleplayer.scss */
 #sm2-container.high_performance {
   overflow: hidden;
   _top: -9999px;
@@ -1356,13 +1355,13 @@ div.ui360 a span.metadata * {
   /* try to stay on top */
 }
 
-/* line 518, ../sass/partials/_circleplayer.scss */
+/* line 517, ../sass/partials/_circleplayer.scss */
 #sm2-container.high_performance.swf_loaded,
 #sm2-container.high_performance.swf_unblocked {
   z-index: auto;
 }
 
-/* line 525, ../sass/partials/_circleplayer.scss */
+/* line 524, ../sass/partials/_circleplayer.scss */
 #sm2-container.high_performance.swf_loaded,
 #sm2-container.high_performance.swf_unblocked,
 #sm2-container.high_performance.swf_unblocked object,
@@ -1376,7 +1375,7 @@ div.ui360 a span.metadata * {
   width: 8px;
 }
 
-/* line 535, ../sass/partials/_circleplayer.scss */
+/* line 534, ../sass/partials/_circleplayer.scss */
 #sm2-container.high_performance.swf_loaded {
   /* stay bottom/left */
   top: auto;
@@ -1384,7 +1383,7 @@ div.ui360 a span.metadata * {
   left: 0px;
 }
 
-/* line 545, ../sass/partials/_circleplayer.scss */
+/* line 544, ../sass/partials/_circleplayer.scss */
 #sm2-container.high_performance.swf_loaded object,
 #sm2-container.high_performance.swf_loaded embed,
 #sm2-container.high_performance.swf_unblocked object,
@@ -1394,7 +1393,7 @@ div.ui360 a span.metadata * {
   top: auto;
 }
 
-/* line 551, ../sass/partials/_circleplayer.scss */
+/* line 550, ../sass/partials/_circleplayer.scss */
 #sm2-container.high_performance.swf_timedout {
   z-index: 99;
   /* try to stay on top */
