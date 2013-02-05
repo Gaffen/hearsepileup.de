@@ -118,17 +118,17 @@ _-_-                                          -__ /\\     ,,
                     &nbsp;<br/>
                 </div>
                 <div class="five_col left">
-                    <a href="http://hearsepileup.bandcamp.com/album/hearse-pileup-live" class="cta clearfix">
+                    <a href="http://hearsepileup.bandcamp.com/album/hearse-pileup-live" target="blank_" class="cta clearfix">
                         <h4 class="item_title left">LIVE ALBUM<br/>DOWNLOAD</h4>
                         <span class="bandcamp left"></span>
                     </a>
-                    <a href="http://hearsepileup.bandcamp.com/album/pretty-shiny-things" class="cta ep clearfix">
+                    <a href="http://hearsepileup.bandcamp.com/album/pretty-shiny-things" target="blank_" class="cta ep clearfix">
                         <h4 class="item_title left">LIMITED<br/><span class="first">EDITION</span><br/><span class="second">PURCHASE</span></h4>
                         <h4 class="ep_purchase">PRETTY SHINY THINGS <span>EP</span></h4>
                     </a>
                     <div class="youtube_gallery">
-                        <a href="http://www.youtube.com/user/HearsePileup" class="youtube left"></a>
-                        <a href="http://www.youtube.com/watch?v=XyzIz2gaIcI" class="one left"></a>
+                        <a href="http://www.youtube.com/user/HearsePileup" target="blank_" class="youtube left"></a>
+                        <a href="http://www.youtube.com/watch?v=XyzIz2gaIcI" target="blank_" class="one left"></a>
                     </div>
                 </div>
             </div>
