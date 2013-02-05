@@ -35,6 +35,9 @@
             font-size: 14px;
         }
     }
+    &:hover{
+        border-color: #fff;
+    }
 }
 
 .giglink{
@@ -76,6 +79,11 @@
         margin: 13px 0;
         text-align: right;
         color: $light-grey;
+    }
+    &:hover{
+        .actiontext{
+            color: #fff;
+        }
     }
 }
 
