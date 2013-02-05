@@ -44,7 +44,6 @@ _-_-                                          -__ /\\     ,,
                     </div>
                 </a>
             </header>
-            <a href="http://hearsepileup.bandcamp.com/album/pretty-shiny-things" target="blank_">
               <div class="main_banner">
                   <img src="images/ep_artwork.jpg" />
                   <div class="main_text">
@@ -52,23 +51,24 @@ _-_-                                          -__ /\\     ,,
                       <h2 class="stencil">PRETTY SHINY THINGS</h2>
                       <h2 class="slab second">Pretty Shiny Things &nbsp;&#149;&nbsp;  Last Time  &nbsp;&#149;&nbsp;  Generation Y</h2>
                   </div>
-                  <h3 class="actiontext slab">ON SALE NOW FOR ONLY &pound;3<br/>CLICK HERE TO PURCHASE</h3>
+                  <a href="http://hearsepileup.bandcamp.com/album/pretty-shiny-things" target="blank_">
+                    <h3 class="actiontext slab">ON SALE NOW FOR ONLY &pound;3<br/>CLICK HERE TO PURCHASE</h3>
+                  </a>
               </div>
-            </a>
             <div class="above_fold clearfix">
                 <div class="player">
                     <div class="ui360 ui360-vis">
-                    <a href="music/pretty_shiny_things.mp3">Pretty Shiny Things<br/><span>4:40</span></a>
+                    <a href="music/pretty_shiny_things.mp3">Pretty Shiny Things<br/><span>2:49</span></a>
                     </div>
                 </div>
                 <div class="player">
                     <div class="ui360 ui360-vis">
-                    <a href="music/last_time.mp3">Last Time<br/><span>3:58</span></a>
+                    <a href="music/last_time.mp3">Last Time<br/><span>3:52</span></a>
                     </div>
                     </div>
                 <div class="player">
                     <div class="ui360 ui360-vis">
-                    <a href="music/generation_y.mp3">Generation Y<br/><span>4:25</span></a>
+                    <a href="music/generation_y.mp3">Generation Y<br/><span>2:57</span></a>
                     </div>
                 </div>
                 <div class="three_col left">

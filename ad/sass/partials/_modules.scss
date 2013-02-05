@@ -24,6 +24,7 @@
     p{
         margin: 4px 16px 6px 10px;
         line-height: 16px;
+        color: #fff;
     }
     .item_title{
         font-size: 10px;
@@ -79,9 +80,7 @@
         margin: 13px 0;
         text-align: right;
         color: $light-grey;
-    }
-    &:hover{
-        .actiontext{
+        &:hover{
             color: #fff;
         }
     }

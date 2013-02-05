@@ -469,8 +469,9 @@ body, select, input, textarea {
 .gig_information p {
   margin: 4px 16px 6px 10px;
   line-height: 16px;
+  color: #fff;
 }
-/* line 28, ../sass/partials/_modules.scss */
+/* line 29, ../sass/partials/_modules.scss */
 .gig_information .item_title {
   font-size: 10px;
   line-height: 15px;
@@ -478,53 +479,53 @@ body, select, input, textarea {
   padding-right: 9px;
   border-right: 1px solid #262626;
 }
-/* line 34, ../sass/partials/_modules.scss */
+/* line 35, ../sass/partials/_modules.scss */
 .gig_information .item_title span {
   font-size: 14px;
 }
-/* line 38, ../sass/partials/_modules.scss */
+/* line 39, ../sass/partials/_modules.scss */
 .gig_information:hover {
   border-color: #fff;
 }
 
-/* line 43, ../sass/partials/_modules.scss */
+/* line 44, ../sass/partials/_modules.scss */
 .giglink {
   color: #fff;
   text-decoration: none;
 }
 
-/* line 48, ../sass/partials/_modules.scss */
+/* line 49, ../sass/partials/_modules.scss */
 .main_banner {
   position: relative;
   border-bottom: 1px solid #262626;
   margin: 0 20px;
 }
-/* line 52, ../sass/partials/_modules.scss */
+/* line 53, ../sass/partials/_modules.scss */
 .main_banner .main_text {
   line-height: 34px;
   position: absolute;
   top: 230px;
   right: 0;
 }
-/* line 58, ../sass/partials/_modules.scss */
+/* line 59, ../sass/partials/_modules.scss */
 .main_banner .stencil {
   color: #464646;
   font-size: 35px;
   margin: 0;
 }
-/* line 63, ../sass/partials/_modules.scss */
+/* line 64, ../sass/partials/_modules.scss */
 .main_banner .first {
   font-size: 20px;
   text-align: right;
   margin: 0;
 }
-/* line 68, ../sass/partials/_modules.scss */
+/* line 69, ../sass/partials/_modules.scss */
 .main_banner .second {
   font-size: 17px;
   margin: 0;
   color: #464646;
 }
-/* line 73, ../sass/partials/_modules.scss */
+/* line 74, ../sass/partials/_modules.scss */
 .main_banner .actiontext {
   font-size: 18px;
   position: absolute;
@@ -535,12 +536,12 @@ body, select, input, textarea {
   text-align: right;
   color: #464646;
 }
-/* line 84, ../sass/partials/_modules.scss */
-.main_banner:hover .actiontext {
+/* line 83, ../sass/partials/_modules.scss */
+.main_banner .actiontext:hover {
   color: #fff;
 }
 
-/* line 90, ../sass/partials/_modules.scss */
+/* line 89, ../sass/partials/_modules.scss */
 .above_fold {
   margin: 0 10px;
   background: url(../images/fold_glow.jpg) top center no-repeat;
@@ -549,17 +550,17 @@ body, select, input, textarea {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 101, ../sass/partials/_modules.scss */
+  /* line 100, ../sass/partials/_modules.scss */
   .above_fold {
     background: url(../images_x2/fold_glow.jpg) top center no-repeat;
     background-size: 940px 30px;
   }
 }
-/* line 107, ../sass/partials/_modules.scss */
+/* line 106, ../sass/partials/_modules.scss */
 .social {
   text-align: center;
 }
-/* line 109, ../sass/partials/_modules.scss */
+/* line 108, ../sass/partials/_modules.scss */
 .social a {
   display: block;
   width: 62px;
@@ -568,49 +569,49 @@ body, select, input, textarea {
   margin-bottom: 2px;
   background-position-x: 62px;
 }
-/* line 116, ../sass/partials/_modules.scss */
+/* line 115, ../sass/partials/_modules.scss */
 .social a:hover {
   background-position-x: 0px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 124, ../sass/partials/_modules.scss */
+  /* line 123, ../sass/partials/_modules.scss */
   .social .a {
     background: url(../images_x2/social_icons.png);
     background-size: 124px 186px;
   }
 }
-/* line 129, ../sass/partials/_modules.scss */
+/* line 128, ../sass/partials/_modules.scss */
 .social .facebook {
   background-position-y: 0;
 }
-/* line 133, ../sass/partials/_modules.scss */
+/* line 132, ../sass/partials/_modules.scss */
 .social .twitter {
   background-position-y: 124px;
 }
-/* line 137, ../sass/partials/_modules.scss */
+/* line 136, ../sass/partials/_modules.scss */
 .social .soundcloud {
   background-position-y: 62px;
 }
-/* line 140, ../sass/partials/_modules.scss */
+/* line 139, ../sass/partials/_modules.scss */
 .social .column {
   display: inline-block;
 }
 
-/* line 145, ../sass/partials/_modules.scss */
+/* line 144, ../sass/partials/_modules.scss */
 .signup_input {
   border: 1px solid #262626;
   font-size: 10px;
   position: relative;
   margin-bottom: 10px;
 }
-/* line 150, ../sass/partials/_modules.scss */
+/* line 149, ../sass/partials/_modules.scss */
 .signup_input label {
   color: #262626;
   font-weight: bold;
   position: absolute;
   margin: 6px;
 }
-/* line 156, ../sass/partials/_modules.scss */
+/* line 155, ../sass/partials/_modules.scss */
 .signup_input input {
   border: 0;
   display: block;
@@ -618,14 +619,14 @@ body, select, input, textarea {
   width: 110px;
 }
 
-/* line 164, ../sass/partials/_modules.scss */
+/* line 163, ../sass/partials/_modules.scss */
 input[type="submit"] {
   font-size: 10px;
   font-weight: bold;
   padding: 10px 0;
 }
 
-/* line 170, ../sass/partials/_modules.scss */
+/* line 169, ../sass/partials/_modules.scss */
 .signup_submit {
   width: 80px;
   float: right;
@@ -646,12 +647,12 @@ input[type="submit"] {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#181818', endColorstr='#000000',GradientType=0 );
   /* IE6-9 */
 }
-/* line 181, ../sass/partials/_modules.scss */
+/* line 180, ../sass/partials/_modules.scss */
 .signup_submit:hover {
   border-color: #fff;
 }
 
-/* line 186, ../sass/partials/_modules.scss */
+/* line 185, ../sass/partials/_modules.scss */
 .sexy_line {
   margin: 30px 0;
   height: 1px;
@@ -659,7 +660,7 @@ input[type="submit"] {
   background: -webkit-gradient(linear, 0 0, 100% 0, from(black), to(black), color-stop(50%, #262626));
 }
 
-/* line 193, ../sass/partials/_modules.scss */
+/* line 192, ../sass/partials/_modules.scss */
 .cta {
   border: 1px solid #262626;
   margin: 10px 0 30px 0;
@@ -667,39 +668,39 @@ input[type="submit"] {
   text-decoration: none;
   position: relative;
 }
-/* line 199, ../sass/partials/_modules.scss */
+/* line 198, ../sass/partials/_modules.scss */
 .cta .item_title {
   padding: 11px 10px 11px 8px;
   margin: 4px 0;
   border-right: 1px solid #262626;
 }
-/* line 205, ../sass/partials/_modules.scss */
+/* line 204, ../sass/partials/_modules.scss */
 .cta:hover .bandcamp {
   background-position: top;
 }
-/* line 208, ../sass/partials/_modules.scss */
+/* line 207, ../sass/partials/_modules.scss */
 .cta:hover .ep_purchase {
   color: #fff;
 }
 
-/* line 215, ../sass/partials/_modules.scss */
+/* line 214, ../sass/partials/_modules.scss */
 .ep .item_title {
   font-size: 14px;
   padding-bottom: 4px;
   padding-top: 4px;
 }
-/* line 220, ../sass/partials/_modules.scss */
+/* line 219, ../sass/partials/_modules.scss */
 .ep .first {
   display: block;
   margin: 0px 0 -18px 0;
 }
-/* line 224, ../sass/partials/_modules.scss */
+/* line 223, ../sass/partials/_modules.scss */
 .ep .second {
   font-size: 11px;
   line-height: 11px;
 }
 
-/* line 230, ../sass/partials/_modules.scss */
+/* line 229, ../sass/partials/_modules.scss */
 .ep_purchase {
   font-family: "MKStencilsansBlack", Helvetica, Arial, sans-serif;
   font-size: 21px;
@@ -708,12 +709,12 @@ input[type="submit"] {
   text-align: center;
   margin: 20px 0;
 }
-/* line 237, ../sass/partials/_modules.scss */
+/* line 236, ../sass/partials/_modules.scss */
 .ep_purchase span {
   font-family: "MuseoSlab", Helvetica, Arial, sans-serif;
 }
 
-/* line 242, ../sass/partials/_modules.scss */
+/* line 241, ../sass/partials/_modules.scss */
 .bandcamp {
   background: url(../images/bandcamp.png) bottom no-repeat;
   display: block;
@@ -726,7 +727,7 @@ input[type="submit"] {
   margin-left: -60px;
 }
 
-/* line 254, ../sass/partials/_modules.scss */
+/* line 253, ../sass/partials/_modules.scss */
 .youtube {
   display: block;
   background: url(../images/youtube.jpg) bottom no-repeat;
@@ -737,7 +738,7 @@ input[type="submit"] {
   margin-top: 12px;
 }
 
-/* line 265, ../sass/partials/_modules.scss */
+/* line 264, ../sass/partials/_modules.scss */
 .youtube_gallery .one {
   background: url(../youtube_gallery/01.jpg) top no-repeat;
   width: 136px;
@@ -745,27 +746,27 @@ input[type="submit"] {
   display: block;
   margin-left: 20px;
 }
-/* line 271, ../sass/partials/_modules.scss */
+/* line 270, ../sass/partials/_modules.scss */
 .youtube_gallery .one:hover {
   background-position-y: bottom;
 }
 
-/* line 277, ../sass/partials/_modules.scss */
+/* line 276, ../sass/partials/_modules.scss */
 .main_footer {
   background: #101010;
 }
-/* line 279, ../sass/partials/_modules.scss */
+/* line 278, ../sass/partials/_modules.scss */
 .main_footer p {
   margin: 0;
 }
 
-/* line 284, ../sass/partials/_modules.scss */
+/* line 283, ../sass/partials/_modules.scss */
 .copyright {
   margin: 0;
   padding: 2px 20px;
 }
 
-/* line 289, ../sass/partials/_modules.scss */
+/* line 288, ../sass/partials/_modules.scss */
 .contact {
   padding: 2px 20px;
 }
