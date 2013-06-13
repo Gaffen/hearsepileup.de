@@ -60,15 +60,15 @@ function ThreeSixtyPlayer() {
     playNext: false,   // stop after one sound, or play through list until end
     autoPlay: false,   // start playing the first sound right away
     allowMultiple: false,  // let many sounds play at once (false = only one sound playing at a time)
-    loadRingColor: '#000', // how much has loaded
-    playRingColor: '#fff', // how much has played
-    backgroundRingColor: '#262626', // color shown underneath load + play ("not yet loaded" color)
+    loadRingColor: '#ccc', // how much has loaded
+    playRingColor: '#000', // how much has played
+    backgroundRingColor: '#eee', // color shown underneath load + play ("not yet loaded" color)
 
     // optional segment/annotation (metadata) stuff..
     segmentRingColor: 'rgba(255,255,255,0.33)', // metadata/annotation (segment) colors
     segmentRingColorAlt: 'rgba(0,0,0,0.1)',
     loadRingColorMetadata: '#ddd', // "annotations" load color
-    playRingColorMetadata: 'rgba(255,255,255,0.9)', // how much has played when metadata is present
+    playRingColorMetadata: 'rgba(128,192,256,0.9)', // how much has played when metadata is present
 
     circleDiameter: null, // set dynamically according to values from CSS
     circleRadius: null,
@@ -79,28 +79,30 @@ function ThreeSixtyPlayer() {
 
     // optional: spectrum or EQ graph in canvas (not supported in IE <9, too slow via ExCanvas)
     useWaveformData: false,
-    waveformDataColor: '#fff',
-    waveformDataDownsample: 10, // use only one in X (of a set of 256 values) - 1 means all 256
+    waveformDataColor: '#0099ff',
+    waveformDataDownsample: 3, // use only one in X (of a set of 256 values) - 1 means all 256
     waveformDataOutside: false,
     waveformDataConstrain: false, // if true, +ve values only - keep within inside circle
     waveformDataLineRatio: 0.64,
 
     // "spectrum frequency" option
     useEQData: false,
-    eqDataColor: '#fff',
+    eqDataColor: '#339933',
     eqDataDownsample: 4, // use only one in X (of 256 values)
     eqDataOutside: true,
     eqDataLineRatio: 0.54,
 
     // enable "amplifier" (canvas pulses like a speaker) effect
     usePeakData: true,
-    peakDataColor: '#fff',
+    peakDataColor: '#ff33ff',
     peakDataOutside: true,
     peakDataLineRatio: 0.5,
 
     useAmplifier: true, // "pulse" like a speaker
 
     fontSizeMax: null, // set according to CSS
+
+    scaleArcWidth: 1,  // thickness factor of playback progress ring
 
     useFavIcon: false // Experimental (also requires usePeakData: true).. Try to draw a "VU Meter" in the favicon area, if browser supports it (Firefox + Opera as of 2009)
 
@@ -329,7 +331,7 @@ function ThreeSixtyPlayer() {
     resume: function() {
       pl.removeClass(this._360data.oUIBox,this._360data.className);
       this._360data.className = pl.css.sPlaying;
-      pl.addClass(this._360data.oUIBox,this._360data.className);
+      pl.addClass(this._360data.oUIBox,this._360data.className);      
     },
 
     finish: function() {
@@ -428,7 +430,7 @@ function ThreeSixtyPlayer() {
       } else {
         // different sound
         thisSound.togglePause(); // start playing current
-        sm._writeDebug('sound different than last sound: '+self.lastSound.sID);
+        sm._writeDebug('sound different than last sound: '+self.lastSound.id);
         if (!self.config.allowMultiple && self.lastSound) {
           self.stopSound(self.lastSound);
         }
@@ -451,6 +453,7 @@ function ThreeSixtyPlayer() {
        onresume:self.events.resume,
        onfinish:self.events.finish,
        onbufferchange:self.events.bufferchange,
+       type:(o.type||null),
        whileloading:self.events.whileloading,
        whileplaying:self.events.whileplaying,
        useWaveformData:(has_vis && self.config.useWaveformData),
@@ -483,7 +486,7 @@ function ThreeSixtyPlayer() {
         showHMSTime: has_vis,
         amplifier: (has_vis && self.config.usePeakData?0.9:1), // TODO: x1 if not being used, else use dynamic "how much to amplify by" value
         radiusMax: diameter*0.175, // circle radius
-        width:20,
+        width:0,
         widthMax: diameter*0.4, // width of the outer ring
         lastValues: {
           bytesLoaded: 0,
@@ -560,7 +563,7 @@ function ThreeSixtyPlayer() {
        return false;
      }
      thisSound._360data.animating = 0;
-     soundManager._writeDebug('fanOut: '+thisSound.sID+': '+thisSound._360data.oLink.href);
+     soundManager._writeDebug('fanOut: '+thisSound.id+': '+thisSound._360data.oLink.href);
      thisSound._360data.oAnim.seekTo(1); // play to end
      window.setTimeout(function() {
        // oncomplete hack
@@ -576,7 +579,7 @@ function ThreeSixtyPlayer() {
        return false;
      }
      thisSound._360data.animating = -1;
-     soundManager._writeDebug('fanIn: '+thisSound.sID+': '+thisSound._360data.oLink.href);
+     soundManager._writeDebug('fanIn: '+thisSound.id+': '+thisSound._360data.oLink.href);
      // massive hack
      thisSound._360data.oAnim.seekTo(0); // play to end
      window.setTimeout(function() {
@@ -602,10 +605,10 @@ function ThreeSixtyPlayer() {
 
   this.stopSound = function(oSound) {
 
-    soundManager._writeDebug('stopSound: '+oSound.sID);
-    soundManager.stop(oSound.sID);
+    soundManager._writeDebug('stopSound: '+oSound.id);
+    soundManager.stop(oSound.id);
     if (!isTouchDevice) { // iOS 4.2+ security blocks onfinish() -> playNext() if we set a .src in-between(?)
-      soundManager.unload(oSound.sID);
+      soundManager.unload(oSound.id);
     }
 
   };
@@ -766,7 +769,7 @@ function ThreeSixtyPlayer() {
   this.getArcEndpointCoords = function(radius, radians) {
 
     return {
-      x: radius * Math.cos(radians),
+      x: radius * Math.cos(radians), 
       y: radius * Math.sin(radians)
     };
 
@@ -809,6 +812,7 @@ function ThreeSixtyPlayer() {
   this.updatePlaying = function() {
 
     var timeNow = (this._360data.showHMSTime?self.getTime(this.position,true):parseInt(this.position/1000, 10));
+    var ringScaleFactor = self.config.scaleArcWidth;
 
     if (this.bytesLoaded) {
       this._360data.lastValues.bytesLoaded = this.bytesLoaded;
@@ -823,13 +827,15 @@ function ThreeSixtyPlayer() {
       this._360data.lastValues.durationEstimate = this.durationEstimate;
     }
 
-    self.drawSolidArc(this._360data.oCanvas,self.config.backgroundRingColor,this._360data.width,this._360data.radius,self.deg2rad(fullCircle),false);
+    // background ring
+    self.drawSolidArc(this._360data.oCanvas,self.config.backgroundRingColor,this._360data.width,this._360data.radius * ringScaleFactor,self.deg2rad(fullCircle),false);
 
-    self.drawSolidArc(this._360data.oCanvas,(this._360data.metadata?self.config.loadRingColorMetadata:self.config.loadRingColor),this._360data.width,this._360data.radius,self.deg2rad(fullCircle*(this._360data.lastValues.bytesLoaded/this._360data.lastValues.bytesTotal)),0,true);
+    // loaded ring
+    self.drawSolidArc(this._360data.oCanvas,(this._360data.metadata?self.config.loadRingColorMetadata:self.config.loadRingColor),this._360data.width,this._360data.radius * ringScaleFactor,self.deg2rad(fullCircle*(this._360data.lastValues.bytesLoaded/this._360data.lastValues.bytesTotal)),0,true);
 
     // don't draw if 0 (full black circle in Opera)
     if (this._360data.lastValues.position !== 0) {
-      self.drawSolidArc(this._360data.oCanvas,(this._360data.metadata?self.config.playRingColorMetadata:self.config.playRingColor),this._360data.width,this._360data.radius,self.deg2rad((this._360data.didFinish===1?fullCircle:fullCircle*(this._360data.lastValues.position/this._360data.lastValues.durationEstimate))),0,true);
+      self.drawSolidArc(this._360data.oCanvas,(this._360data.metadata?self.config.playRingColorMetadata:self.config.playRingColor),this._360data.width,this._360data.radius * ringScaleFactor,self.deg2rad((this._360data.didFinish===1?fullCircle:fullCircle*(this._360data.lastValues.position/this._360data.lastValues.durationEstimate))),0,true);
     }
 
     // metadata goes here
@@ -839,6 +845,7 @@ function ThreeSixtyPlayer() {
 
     if (timeNow !== this._360data.lastTime) {
       this._360data.lastTime = timeNow;
+      this._360data.oTiming.innerHTML = timeNow;
     }
 
     // draw spectrum, if applicable
@@ -891,8 +898,8 @@ function ThreeSixtyPlayer() {
       startAngle = 0;
       endAngle = 0;
       waveData = null;
-      innerRadius = (self.config.waveformDataOutside?1:(self.config.waveformDataConstrain?0.5:0.35));
-      scale = (self.config.waveformDataOutside?0.7:5);
+      innerRadius = (self.config.waveformDataOutside?1:(self.config.waveformDataConstrain?0.5:0.565));
+      scale = (self.config.waveformDataOutside?0.7:0.75);
       perItemAngle = self.deg2rad((360/sampleCount)*self.config.waveformDataLineRatio); // 0.85 = clean pixel lines at 150? // self.deg2rad(360*(Math.max(1,downSample-1))/sampleCount);
       for (i=0; i<dataLength; i+=downSample) {
         startAngle = self.deg2rad(360*(i/(sampleCount)*1/downSample)); // +0.67 - counter for spacing
@@ -901,7 +908,7 @@ function ThreeSixtyPlayer() {
         if (waveData<0 && self.config.waveformDataConstrain) {
           waveData = Math.abs(waveData);
         }
-        self.drawSolidArc(oSound._360data.oCanvas,self.config.waveformDataColor,oSound._360data.width*innerRadius,oSound._360data.radius*scale*1.25*waveData,endAngle,startAngle,true);
+        self.drawSolidArc(oSound._360data.oCanvas,self.config.waveformDataColor,oSound._360data.width*innerRadius*(2-self.config.scaleArcWidth),oSound._360data.radius*scale*1.25*waveData,endAngle,startAngle,true);
       }
     }
 
@@ -912,8 +919,8 @@ function ThreeSixtyPlayer() {
       downSample = Math.max(1,downSample); // make sure it's at least 1
       eqSamples = 192; // drop the last 25% of the spectrum (>16500 Hz), most stuff won't actually use it.
       sampleCount = (eqSamples/downSample);
-      innerRadius = (self.config.eqDataOutside?0:0.0);
-      direction = (self.config.eqDataOutside?0:0);
+      innerRadius = (self.config.eqDataOutside?1:0.565);
+      direction = (self.config.eqDataOutside?-1:1);
       scale = (self.config.eqDataOutside?0.5:0.75);
       startAngle = 0;
       endAngle = 0;
@@ -937,7 +944,7 @@ function ThreeSixtyPlayer() {
           nPeak = (nPeak||oSound.eqData[i]);
         }
         oSound._360data.amplifier = (self.config.useAmplifier?(0.9+(nPeak*0.1)):1);
-        oSound._360data.radiusMax = oSound._360data.circleDiameter*0.02*oSound._360data.amplifier;
+        oSound._360data.radiusMax = oSound._360data.circleDiameter*0.175*oSound._360data.amplifier;
         oSound._360data.widthMax = oSound._360data.circleDiameter*0.4*oSound._360data.amplifier;
         oSound._360data.radius = parseInt(oSound._360data.radiusMax*oSound._360data.amplifier, 10);
         oSound._360data.width = parseInt(oSound._360data.widthMax*oSound._360data.amplifier, 10);
@@ -1067,7 +1074,7 @@ function ThreeSixtyPlayer() {
           oUI.appendChild(o2);
           window.G_vmlCanvasManager.initElement(o2); // Apply ExCanvas compatibility magic
           oCanvas = document.getElementById(oID);
-        } else {
+        } else { 
           // add a handler for the button
           oCanvas = oLinks[i].parentNode.getElementsByTagName('canvas')[0];
         }
@@ -1198,7 +1205,7 @@ ThreeSixtyPlayer.prototype.VUMeter = function(oParent) {
         // for debugging VU images
         /*
         var o = document.createElement('img');
-        o.style.marginRight = '5px';
+        o.style.marginRight = '5px'; 
         o.src = vuMeterData[i][j];
         document.documentElement.appendChild(o);
         */
@@ -1353,17 +1360,19 @@ ThreeSixtyPlayer.prototype.Metadata = function(oSound, oParent) {
 
 if (navigator.userAgent.match(/webkit/i) && navigator.userAgent.match(/mobile/i)) {
   // iPad, iPhone etc.
-  soundManager.useHTML5Audio = true;
+  soundManager.setup({
+    useHTML5Audio: true
+  });
 }
 
-soundManager.html5PollingInterval = 50; // increased framerate for whileplaying() etc.
-soundManager.debugMode = (window.location.href.match(/debug=1/i)); // disable or enable debug output
-soundManager.consoleOnly = true;
-soundManager.flashVersion = 9;
-soundManager.useHighPerformance = true;
-soundManager.useFlashBlock = true;
-
-// soundManager.useFastPolling = true; // for more aggressive, faster UI updates (higher CPU use)
+soundManager.setup({
+  html5PollingInterval: 50, // increased framerate for whileplaying() etc.
+  debugMode: (window.location.href.match(/debug=1/i)), // disable or enable debug output
+  consoleOnly: true,
+  flashVersion: 9,
+  useHighPerformance: true,
+  useFlashBlock: true
+});
 
 // FPS data, testing/debug only
 if (soundManager.debugMode) {

@@ -30,8 +30,8 @@ _-_-                                          -__ /\\     ,,
 	<link rel="shortcut icon" href="favicon.png" />
 
     <script src="js/libs/modernizr-2.0.6.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.4.min.js"><\/script>')</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>')</script>
 </head>
 <body>
     <div id="wrapper">
@@ -149,44 +149,15 @@ _-_-                                          -__ /\\     ,,
     <script type="text/javascript" src="js/libs/360/360player.js"></script>
     <script type="text/javascript">
 
-        soundManager.url = 'swf/'; // path to directory containing SM2 SWF
+    soundManager.setup({
+      // path to directory containing SM2 SWF
+      preferFlash: false,
+      url: 'swf/'
 
-        soundManager.useFastPolling = true; // increased JS callback frequency, combined with useHighPerformance = true
+    });
 
-        threeSixtyPlayer.config.scaleFont = (navigator.userAgent.match(/msie/i)?false:true);
-        threeSixtyPlayer.config.showHMSTime = true;
+    
 
-        // enable some spectrum stuffs
-
-        threeSixtyPlayer.config.useWaveformData = true;
-        threeSixtyPlayer.config.useEQData = true;
-
-        // enable this in SM2 as well, as needed
-
-        if (threeSixtyPlayer.config.useWaveformData) {
-          soundManager.flash9Options.useWaveformData = true;
-        }
-        if (threeSixtyPlayer.config.useEQData) {
-          soundManager.flash9Options.useEQData = true;
-        }
-        if (threeSixtyPlayer.config.usePeakData) {
-          soundManager.flash9Options.usePeakData = true;
-        }
-
-        if (threeSixtyPlayer.config.useWaveformData || threeSixtyPlayer.flash9Options.useEQData || threeSixtyPlayer.flash9Options.usePeakData) {
-          // even if HTML5 supports MP3, prefer flash so the visualization features can be used.
-          soundManager.preferFlash = true;
-        }
-
-        // favicon is expensive CPU-wise, but can be used.
-        if (window.location.href.match(/hifi/i)) {
-          threeSixtyPlayer.config.useFavIcon = true;
-        }
-
-        if (window.location.href.match(/html5/i)) {
-          // for testing IE 9, etc.
-          soundManager.useHTML5Audio = true;
-        }
 	$(document).ready(function() {
 
 	    $.ajax({
@@ -209,6 +180,7 @@ _-_-                                          -__ /\\     ,,
 		    }
 		}
 	    });
+
 	});
     </script>
     <script type="text/javascript" src="js/script.js"></script>

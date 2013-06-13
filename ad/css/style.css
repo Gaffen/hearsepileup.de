@@ -155,7 +155,7 @@ kbd,
 pre,
 samp {
   font-family: monospace, serif;
-  _font-family: "courier new", monospace;
+  _font-family: 'courier new', monospace;
   font-size: 1em;
 }
 
@@ -278,7 +278,7 @@ form {
 
 /* line 272, ../sass/partials/h5bp/_normalize.scss */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -864,7 +864,7 @@ input[type="submit"] {
 
 /* line 74, ../sass/partials/_circleplayer.scss */
 .ui360-vis .sm2-timing {
-  font: bold 24px "helvetica neue", helvetica, monaco, lucida, terminal, monospace;
+  font: bold 24px "helvetica neue",helvetica,monaco,lucida,terminal,monospace;
   color: #fff;
   text-align: center;
   line-height: 256px;
@@ -888,7 +888,7 @@ input[type="submit"] {
 
 /* line 94, ../sass/partials/_circleplayer.scss */
 .sm2-inline-list .ui360-vis .sm2-360ui {
-  border: 1px solid #eeeeee;
+  border: 1px solid #eee;
   /* offset the border */
   margin-left: -1px;
   margin-top: -1px;
@@ -1075,13 +1075,13 @@ input[type="submit"] {
 /* line 249, ../sass/partials/_circleplayer.scss */
 .ui360 .sm2-timing {
   position: absolute;
-  display: block;
+  display: none;
   left: 0px;
   top: 0px;
   width: 100%;
   height: 100%;
   margin: 0px;
-  font: 11px "helvetica neue", helvetica, monaco, lucida, terminal, monospace;
+  font: 11px "helvetica neue",helvetica,monaco,lucida,terminal,monospace;
   color: #666;
   text-align: center;
   line-height: 50px;
@@ -1490,7 +1490,7 @@ div.ui360 a span.metadata * {
   /* line 11, ../sass/partials/h5bp/_media.scss */
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -1521,7 +1521,7 @@ div.ui360 a span.metadata * {
   /* line 42, ../sass/partials/h5bp/_media.scss */
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 

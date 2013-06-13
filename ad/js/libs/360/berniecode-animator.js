@@ -1,21 +1,21 @@
 ﻿/** @license
 	Animator.js 1.1.9
-
+	
 	This library is released under the BSD license:
 
 	Copyright (c) 2006, Bernard Sumption. All rights reserved.
-
+	
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
-
+	
 	Redistributions of source code must retain the above copyright notice, this
 	list of conditions and the following disclaimer. Redistributions in binary
 	form must reproduce the above copyright notice, this list of conditions and
 	the following disclaimer in the documentation and/or other materials
 	provided with the distribution. Neither the name BernieCode nor
 	the names of its contributors may be used to endorse or promote products
-	derived from this software without specific prior written permission.
-
+	derived from this software without specific prior written permission. 
+	
 	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 	AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
 	IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
@@ -111,7 +111,7 @@ Animator.prototype = {
 		} else {
 			this.state += movement;
 		}
-
+		
 		try {
 			this.propagate();
 		} finally {
@@ -155,11 +155,11 @@ Animator.makeArray = function(o) {
 Animator.camelize = function(string) {
 	var oStringList = string.split('-');
 	if (oStringList.length == 1) return oStringList[0];
-
+	
 	var camelizedString = string.indexOf('-') == 0
 		? oStringList[0].charAt(0).toUpperCase() + oStringList[0].substring(1)
 		: oStringList[0];
-
+	
 	for (var i = 1, len = oStringList.length; i < len; i++) {
 		var s = oStringList[i];
 		camelizedString += s.charAt(0).toUpperCase() + s.substring(1);
@@ -177,13 +177,13 @@ Animator.apply = function(el, style, options) {
 // gravitational acceleration, higher values for an exaggerated effect
 Animator.makeEaseIn = function(a) {
 	return function(state) {
-		return Math.pow(state, a*2);
+		return Math.pow(state, a*2); 
 	}
 }
 // as makeEaseIn but for deceleration
 Animator.makeEaseOut = function(a) {
 	return function(state) {
-		return 1 - Math.pow(1 - state, a*2);
+		return 1 - Math.pow(1 - state, a*2); 
 	}
 }
 // make a transition function that, like an object with momentum being attracted to a point,
@@ -191,11 +191,11 @@ Animator.makeEaseOut = function(a) {
 Animator.makeElastic = function(bounces) {
 	return function(state) {
 		state = Animator.tx.easeInOut(state);
-		return ((1-Math.cos(state * Math.PI * bounces)) * (1 - state)) + state;
+		return ((1-Math.cos(state * Math.PI * bounces)) * (1 - state)) + state; 
 	}
 }
 // make an Attack Decay Sustain Release envelope that starts and finishes on the same level
-//
+// 
 Animator.makeADSR = function(attackEnd, decayEnd, sustainEnd, sustainLevel) {
 	if (sustainLevel == null) sustainLevel = 0.5;
 	return function(state) {
@@ -216,11 +216,11 @@ Animator.makeADSR = function(attackEnd, decayEnd, sustainEnd, sustainLevel) {
 Animator.makeBounce = function(bounces) {
 	var fn = Animator.makeElastic(bounces);
 	return function(state) {
-		state = fn(state);
+		state = fn(state); 
 		return state <= 1 ? state : 2-state;
 	}
 }
-
+ 
 // pre-made transition functions to use with the 'transition' option
 Animator.tx = {
 	easeInOut: function(pos){
@@ -365,7 +365,7 @@ DiscreteStyleSubject.prototype = {
 	setState: function(state) {
 		var j=0;
 		for (var i=0; i<this.els.length; i++) {
-			this.els[i].style[this.property] = state <= this.threshold ? this.from : this.to;
+			this.els[i].style[this.property] = state <= this.threshold ? this.from : this.to; 
 		}
 	},
 	inspect: function() {
@@ -408,7 +408,7 @@ function CSSStyleSubject(els, style1, style2) {
 			if (window.DEBUG) alert("No to style provided for '" + prop + '"');
 			continue;
 		}
-
+		
 		if (from = ColorStyleSubject.parseColor(fromProp)) {
 			to = ColorStyleSubject.parseColor(toProp);
 			type = ColorStyleSubject;
@@ -472,7 +472,7 @@ CSSStyleSubject.prototype = {
 			el.className = oldClass;
 		}
 		return rtn;
-
+		
 	},
 	setState: function(state) {
 		for (var i=0; i<this.subjects.length; i++) {
@@ -487,7 +487,7 @@ CSSStyleSubject.prototype = {
 		return str;
 	}
 }
-// get the current value of a css property,
+// get the current value of a css property, 
 CSSStyleSubject.getStyle = function(el, property){
 	var style;
 	if(document.defaultView && document.defaultView.getComputedStyle){
@@ -657,7 +657,7 @@ Accordion.prototype = {
 			shift: 0,
 			// the first page to show
 			initialSection: 0,
-			// if set to true, document.location.hash will be used to preserve the open section across page reloads
+			// if set to true, document.location.hash will be used to preserve the open section across page reloads 
 			rememberance: true,
 			// constructor arguments to the Animator objects
 			animatorOptions: {}
