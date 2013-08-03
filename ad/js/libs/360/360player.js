@@ -78,9 +78,9 @@ function ThreeSixtyPlayer() {
     scaleFont: true,  // also set the font size (if possible) while animating the circle
 
     // optional: spectrum or EQ graph in canvas (not supported in IE <9, too slow via ExCanvas)
-    useWaveformData: false,
-    waveformDataColor: '#0099ff',
-    waveformDataDownsample: 3, // use only one in X (of a set of 256 values) - 1 means all 256
+    useWaveformData: true,
+    waveformDataColor: '#000',
+    waveformDataDownsample: 5, // use only one in X (of a set of 256 values) - 1 means all 256
     waveformDataOutside: false,
     waveformDataConstrain: false, // if true, +ve values only - keep within inside circle
     waveformDataLineRatio: 0.64,

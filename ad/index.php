@@ -135,7 +135,7 @@ _-_-                                          -__ /\\     ,,
         </div>
         <footer class="main_footer clearfix">
             <div class="main">
-                <p class="copyright left">&copy; 2013 Hearse Pileup  All rights reserved.</p>
+                <p class="copyright left"><span class="cc"></span> <?php echo date("Y");?> Hearse Pileup - Attribution-NonCommercial.</p>
                 <p class="contact right">Contact: <a href="mailto:email@hearsepileup.de">email@hearsepileup.de</a></p>
             </div>
         </footer>
@@ -151,8 +151,7 @@ _-_-                                          -__ /\\     ,,
 
     soundManager.setup({
       // path to directory containing SM2 SWF
-      preferFlash: false,
-      url: 'swf/'
+      url: 'flashblock/'
 
     });
 

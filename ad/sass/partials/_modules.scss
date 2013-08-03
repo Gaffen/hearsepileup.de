@@ -300,4 +300,19 @@ input[type="submit"]{
     padding: 2px 20px;
 }
 
+.cc{
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url(#{$images}cc.svg);
+    float: left;
+    margin-right: 4px;
+}
+
+.no-svg{
+    .cc{
+        background: url(#{$images}cc.jpg);
+    }
+}
+
 @import "circleplayer";
