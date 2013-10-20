@@ -53,8 +53,6 @@
  font-size:10px;
  white-space:nowrap;
  text-indent:0px; /* undo inline style */
- top:230px; /* ehh. */
- margin-left: -163px;
  width: 140px;
  display: block;
  text-align: center;
@@ -139,10 +137,11 @@
  height:48px;
  margin-left:-24px;
  margin-top:-24px;
- border-radius: none;
+ border-radius: 0;
+ top: 50%;
+ left: 50%;
 }
 
-.ui360-vis,
 .ui360-vis .sm2-360ui.sm2_paused .sm2-360btn,
 .ui360-vis .sm2-360btn-default {
  background:transparent url(#{$images}player_controls.png) no-repeat 50% 0%;
@@ -223,13 +222,11 @@
 }
 
 .ui360 a { /* .sm2_link class added to playable links by SM2 */
- float:left;
- display:inline;
+ display:block;
  position:relative;
  text-decoration:none;
- left:3px; /* slight spacing on left UI */
  top:157px; /* vertical align */
- text-indent:50px; /* make room for UI at left */
+ text-indent:0px; /* make room for UI at left */
 }
 
 .ui360 a.sm2_link { /* SM2 has now started */
@@ -278,8 +275,6 @@
 .ui360 .sm2-360btn {
  position:absolute;
  display:block;
- top:50%;
- left:50%;
 /*
  width:22px;
  height:22px;
@@ -317,22 +312,12 @@
 
 /* this could be optimized a fair bit. */
 
-.ui360,
 .ui360 .sm2-360btn-default,
 .ui360 .sm2-360ui.sm2_paused .sm2-360btn {
  background:transparent url(#{$images}player_controls.png) top no-repeat;
  //background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAwCAYAAAALiLqjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxMjU2OUY5NTY3MTkxMUUyQUVCMTk3RUMxNEJBQTlBRCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxMjU2OUY5NjY3MTkxMUUyQUVCMTk3RUMxNEJBQTlBRCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjEyNTY5RjkzNjcxOTExRTJBRUIxOTdFQzE0QkFBOUFEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjEyNTY5Rjk0NjcxOTExRTJBRUIxOTdFQzE0QkFBOUFEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+PO2UzQAAAItJREFUeNrsl0EOgCAMBKnxJk/xUf4MfZUv8YztwQsmQtGqJLvJngqZZFsIUIzRWapzxgLge0B/UUvHi5R19AAAAAB44i6izF5CDwAAAIAXAYHtqwnyfM9YtLLHgrUnlwJEG3uyBBwK7MESoIqsFlAcmfmY/jKihe2bG1PTgzZrIklN+OkDcFu7AAMA99f+NBD/i0sAAAAASUVORK5CYII=);
  *background-image: url(#{$images}player_controls.png);
  background-repeat: no-repeat;
-}
-
-.ui360 {
- /*
-  "fake" button shown before SM2 has started, non-JS/non-SM2 case etc.
-  background image will be removed via JS, in threeSixyPlayer.init()
- */
- background-position: 14px 50%;
- _background:transparent url(360-button-play.gif) no-repeat 14px 50%; /* IE 6-only: special crap GIF */
 }
 
 .ui360 .sm2-360btn-default,
