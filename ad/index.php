@@ -23,8 +23,8 @@ _-_-                                          -__ /\\     ,,
 
     <title>HEARSE PILEUP</title>
 	<meta content="Hearse Pileup; Zombie Rock and Roll" name="description" />
-	<meta content="Matt, Gaffen, Matthew, Music, QOTSA, Dead Weather, Tony Hoang, Wojciech Tybus, Birthday Party, Tone-Deaf Messiah" name="keywords" />
-	<link rel="stylesheet" type="text/css" href="css/style.css?ver=0.3" />
+	<meta content="Matt, Gaffen, Matthew, Music, QOTSA, Dead Weather, Tony Hoang, Tone-Deaf Messiah" name="keywords" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css?ver=0.3" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<link rel="shortcut icon" href="favicon.png" />
@@ -51,9 +51,11 @@ _-_-                                          -__ /\\     ,,
                       <h2 class="stencil">PRETTY SHINY THINGS</h2>
                       <h2 class="slab second">Pretty Shiny Things &nbsp;&#149;&nbsp;  Last Time  &nbsp;&#149;&nbsp;  Generation Y</h2>
                   </div>
-                  <a href="http://hearsepileup.bandcamp.com/album/pretty-shiny-things" target="blank_">
-                    <h3 class="actiontext slab">ON SALE NOW FOR ONLY &pound;3<br/>CLICK HERE TO PURCHASE</h3>
-                  </a>
+                  <div id="ep_cta">
+                      <a href="http://hearsepileup.bandcamp.com/album/pretty-shiny-things" target="blank_">
+                        <h3 class="actiontext slab">ON SALE NOW FOR ONLY &pound;3<br/>CLICK HERE TO PURCHASE</h3>
+                      </a>
+                  </div>
               </div>
             <div class="above_fold clearfix">
                 <div class="player">
@@ -85,13 +87,15 @@ _-_-                                          -__ /\\     ,,
                     <form action="http://hearsepileup.us6.list-manage.com/subscribe/post" method="POST">
                         <input type="hidden" name="u" value="4724a5095edd201a3cecb6360">
                         <input type="hidden" name="id" value="c5487bab87">
-                        <div class="signup_input">
-                            <label for="MERGE1">Full Name</label>
-                            <input type="text" name="MERGE1" id="MERGE1" size="25" value="">
+                        <div class="signup_input clearfix">
+                            <label for="MERGE1">Full Name
+                                <input type="text" name="MERGE1" id="MERGE1" size="25" value="">
+                            </label>
                         </div>
-                        <div class="signup_input">
-                            <label for="MERGE0">Email Address<span class="asterisk">*</span></label>
-                            <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
+                        <div class="signup_input clearfix">
+                            <label for="MERGE0">Email Address<span class="asterisk">*</span>
+                                <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
+                            </label>
                         </div>
                         <input type="submit" class="signup_submit" name="submit" value="SUBMIT">
                     </form>
