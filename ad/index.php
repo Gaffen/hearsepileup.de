@@ -84,7 +84,7 @@ _-_-                                          -__ /\\     ,,
                 </div>
                 <div class="three_col left">
                     <h6>Newsletter Signup</h6>
-                    <form action="http://hearsepileup.us6.list-manage.com/subscribe/post" method="POST">
+                    <form action="//hearsepileup.us6.list-manage.com/subscribe/post" method="POST">
                         <input type="hidden" name="u" value="4724a5095edd201a3cecb6360">
                         <input type="hidden" name="id" value="c5487bab87">
                         <div class="signup_input clearfix">
@@ -131,8 +131,8 @@ _-_-                                          -__ /\\     ,,
                         <h4 class="ep_purchase">PRETTY SHINY THINGS <span>EP</span></h4>
                     </a>
                     <div class="youtube_gallery">
-                        <a href="http://www.youtube.com/user/HearsePileup" target="blank_" class="youtube left"></a>
-                        <a href="http://www.youtube.com/watch?v=XyzIz2gaIcI" target="blank_" class="one left"></a>
+                        <a href="//www.youtube.com/user/HearsePileup" target="blank_" class="youtube left"></a>
+                        <a href="//www.youtube.com/watch?v=XyzIz2gaIcI" target="blank_" class="one left"></a>
                     </div>
                 </div>
             </div>
