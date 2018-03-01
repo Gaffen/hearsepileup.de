@@ -52,7 +52,7 @@ _-_-                                          -__ /\\     ,,
                       <h2 class="slab second">Pretty Shiny Things &nbsp;&#149;&nbsp;  Last Time  &nbsp;&#149;&nbsp;  Generation Y</h2>
                   </div>
                   <div id="ep_cta">
-                      <a href="http://hearsepileup.bandcamp.com/album/pretty-shiny-things" target="blank_">
+                      <a href="//hearsepileup.bandcamp.com/album/pretty-shiny-things" target="blank_">
                         <h3 class="actiontext slab">ON SALE NOW FOR ONLY &pound;3<br/>CLICK HERE TO PURCHASE</h3>
                       </a>
                   </div>
@@ -76,7 +76,7 @@ _-_-                                          -__ /\\     ,,
                 <div class="three_col left">
                     <div class="social clearfix">
                         <div class="column">
-                            <a href="http://www.facebook.com/Hearse.Pileup" target="_blank" class="facebook"></a>
+                            <a href="https://www.facebook.com/Hearse.Pileup" target="_blank" class="facebook"></a>
                             <a href="https://twitter.com/HearsePileup" target="_blank" class="twitter"></a>
                             <a href="https://soundcloud.com/hearse-pileup" target="_blank" class="soundcloud"></a>
                         </div>
@@ -122,11 +122,11 @@ _-_-                                          -__ /\\     ,,
                     &nbsp;<br/>
                 </div>
                 <div class="five_col left">
-                    <a href="http://hearsepileup.bandcamp.com/album/hearse-pileup-live" target="blank_" class="cta clearfix">
+                    <a href="//hearsepileup.bandcamp.com/album/hearse-pileup-live" target="blank_" class="cta clearfix">
                         <h4 class="item_title left">LIVE ALBUM<br/>DOWNLOAD</h4>
                         <span class="bandcamp left"></span>
                     </a>
-                    <a href="http://hearsepileup.bandcamp.com/album/pretty-shiny-things" target="blank_" class="cta ep clearfix">
+                    <a href="//hearsepileup.bandcamp.com/album/pretty-shiny-things" target="blank_" class="cta ep clearfix">
                         <h4 class="item_title left">LIMITED<br/><span class="first">EDITION</span><br/><span class="second">PURCHASE</span></h4>
                         <h4 class="ep_purchase">PRETTY SHINY THINGS <span>EP</span></h4>
                     </a>
@@ -159,13 +159,13 @@ _-_-                                          -__ /\\     ,,
 
     });
 
-    
+
 
 	$(document).ready(function() {
 
 	    $.ajax({
 
-		url:  "http://api.songkick.com/api/3.0/artists/5287493/calendar.json?apikey=dzuyzOvYY0uXyUcS&jsoncallback=?",
+		url:  "//api.songkick.com/api/3.0/artists/5287493/calendar.json?apikey=dzuyzOvYY0uXyUcS&jsoncallback=?",
 
 		dataType:   "jsonp", // <== JSON-P request
 
